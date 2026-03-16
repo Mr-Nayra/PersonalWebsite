@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700');
+      .bg { fill: #6C63FF; }
+      .text {
+        font-family: 'Caveat', cursive;
+        font-size: 280px;
+        font-weight: 700;
+        fill: #ffffff;
+      }
+    </style>
+  </defs>
+  <rect width="512" height="512" rx="128" class="bg" />
+  <text x="50%" y="54%" text-anchor="middle" dominant-baseline="middle" class="text" letter-spacing="-5">AR</text>
+</svg>

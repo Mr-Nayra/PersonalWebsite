@@ -1,0 +1,16 @@
+{
+  "name": "Aryan Rawther — AI & Web Consulting",
+  "short_name": "Aryan Rawther",
+  "description": "AI automation, SEO, and web development consulting by Aryan Rawther / Apex Mind LLP.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0A0A0F",
+  "theme_color": "#6C63FF",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
