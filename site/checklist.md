@@ -28,8 +28,8 @@ Here is a complete checklist of all the pages on the website:
 
 ### Case Studies (7 pages)
 - [ ] `/case-studies`
-- [x] `/case-studies/seo-internal-linking-ai-agent`
-- [x] `/case-studies/autonomous-inbound-email-agent`
+- [ ] `/case-studies/seo-internal-linking-ai-agent`
+- [ ] `/case-studies/autonomous-inbound-email-agent`
 - [ ] `/case-studies/speclens-ai-procurement-saas`
 - [ ] `/case-studies/photoshoprequest-ai-editor`
 - [ ] `/case-studies/healthcare-rcm-automation`

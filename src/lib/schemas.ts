@@ -29,7 +29,7 @@ export function organizationSchema() {
     logo: `${SITE_URL}/images/og/logo.png`,
     sameAs: [
       "https://www.linkedin.com/in/aryanrawther",
-      "https://github.com/aryanrawther",
+      "https://github.com/Mr-Nayra",
     ],
     founder: {
       "@type": "Person",
@@ -56,7 +56,7 @@ export function personSchema() {
     url: SITE_URL,
     sameAs: [
       "https://www.linkedin.com/in/aryanrawther",
-      "https://github.com/aryanrawther",
+      "https://github.com/Mr-Nayra",
     ],
     address: {
       "@type": "PostalAddress",
@@ -192,6 +192,95 @@ export function softwareApplicationSchema({
       price: "0",
       priceCurrency: "USD",
     },
+  };
+}
+
+export function localBusinessSchema({
+  name,
+  description,
+  url,
+  areaServed,
+  addressLocality,
+}: {
+  name: string;
+  description: string;
+  url: string;
+  areaServed: string | string[];
+  addressLocality: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    name: COMPANY_NAME,
+    description,
+    url: `${SITE_URL}${url}`,
+    founder: {
+      "@type": "Person",
+      name: PERSON_NAME,
+    },
+    address: {
+      "@type": "PostalAddress",
+      addressLocality,
+      addressCountry: "IN",
+    },
+    areaServed,
+    sameAs: [
+      "https://www.linkedin.com/in/aryanrawther",
+      "https://github.com/Mr-Nayra",
+    ],
+    contactPoint: {
+      "@type": "ContactPoint",
+      contactType: "customer support",
+      email: "contact.aryanrawther@gmail.com",
+      availableLanguage: ["English", "Hindi"],
+    },
+  };
+}
+
+export function itemListSchema(
+  items: { name: string; description: string; url: string }[]
+) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    itemListElement: items.map((item, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: item.name,
+      description: item.description,
+      url: `${SITE_URL}${item.url}`,
+    })),
+  };
+}
+
+export function contactPageSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: COMPANY_NAME,
+    url: SITE_URL,
+    founder: {
+      "@type": "Person",
+      name: PERSON_NAME,
+      jobTitle: "Founder & Principal Consultant",
+    },
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Bengaluru",
+      addressCountry: "IN",
+    },
+    contactPoint: [
+      {
+        "@type": "ContactPoint",
+        contactType: "sales",
+        email: "contact.aryanrawther@gmail.com",
+        availableLanguage: ["English", "Hindi"],
+      },
+    ],
+    sameAs: [
+      "https://www.linkedin.com/in/aryanrawther",
+      "https://github.com/Mr-Nayra",
+    ],
   };
 }
 

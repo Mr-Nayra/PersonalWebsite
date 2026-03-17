@@ -56,7 +56,7 @@ export default function ProductsPage() {
               <p className="text-text-muted text-sm mt-0.5">Contributions welcome on all open source projects.</p>
             </div>
             <a
-              href="https://github.com/aryanrawther"
+              href="https://github.com/Mr-Nayra"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-4 py-2 rounded-btn border border-border text-text-secondary hover:text-accent-primary hover:border-accent-primary transition-all text-sm font-medium whitespace-nowrap"

@@ -12,7 +12,7 @@ export const siteData = {
     email: "hello@aetherminds.in",
     whatsapp: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "917905206587",
     linkedin: "https://www.linkedin.com/in/aryanrawther",
-    github: "https://github.com/aryanrawther",
+    github: "https://github.com/Mr-Nayra",
   },
 
   stats: [

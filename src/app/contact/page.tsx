@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumb } from "@/components/ui/Breadcrumb";
 import { siteData } from "@/data/site-data";
+import { contactPageSchema } from "@/lib/schemas";
 
 export const metadata: Metadata = {
   title: "Hire Aryan Rawther — AI Automation, SEO & Web Development | Contact Apex Mind LLP",
@@ -27,6 +28,10 @@ export default function ContactPage() {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(contactPageSchema()) }}
+      />
       {/* Hero */}
       <section className="aurora-bg pt-32 pb-16">
         <div className="container relative z-10 max-w-2xl">

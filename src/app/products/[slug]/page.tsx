@@ -93,7 +93,7 @@ const productData: Record<string, {
       "Web developers building AI-optimised sites",
     ],
     techStack: ["Next.js", "TypeScript"],
-    githubUrl: "https://github.com/aryanrawther/geo-checker",
+    githubUrl: "https://github.com/Mr-Nayra/geo-checker",
     applicationCategory: "WebApplication",
     publishedAt: "2024-12-01",
   },
