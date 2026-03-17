@@ -121,7 +121,7 @@ const data: ServicePageData = {
         "I provide post-launch support (duration defined in the SOW), help you interpret early user feedback, and can assist with the next phase of development. Many clients continue with me on a retainer or milestone basis after MVP launch.",
     },
   ],
-  relatedCaseStudies: [caseStudiesPreview[1], caseStudiesPreview[0]],
+  relatedCaseStudies: caseStudiesPreview.filter(cs => cs.service.includes("SaaS Product Development")),
 };
 
 export default function SaaSDevelopmentPage() {

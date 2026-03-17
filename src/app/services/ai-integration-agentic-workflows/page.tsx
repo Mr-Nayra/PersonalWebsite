@@ -126,7 +126,7 @@ const data: ServicePageData = {
       answer: "My approach is value-driven, not trend-driven. We start with an 'AI feature audit' to find where intelligence genuinely improves the user outcome. Then, I design integration architectures that augment your existing codebase without breaking it — focusing heavily on production reliability, prompt architecture, and cost/latency optimisation."
     }
   ],
-  relatedCaseStudies: caseStudiesPreview,
+  relatedCaseStudies: caseStudiesPreview.filter(cs => cs.service.includes("AI Integration & Agentic Workflows")),
 };
 
 export default function AIIntegrationPage() {

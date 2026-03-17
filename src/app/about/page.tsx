@@ -323,15 +323,16 @@ export default function AboutPage() {
                 </Link>
               </div>
               {/* Lifestyle photos grid */}
-              <div className="grid grid-cols-3 gap-2">
-                {["Gym", "Travel", "Books"].map((label) => (
-                  <div
-                    key={label}
-                    className="aspect-square rounded-card bg-bg-elevated border border-border flex items-center justify-center"
-                  >
-                    <p className="text-text-muted text-xs text-center px-2">[{label} photo]</p>
-                  </div>
-                ))}
+              <div className="grid grid-cols-3 gap-2 sm:gap-4">
+                <div className="aspect-square rounded-card border border-border relative overflow-hidden group">
+                  <Image src="/images/beyond-work/gym-primary.webp" alt="Gym" fill className="object-cover group-hover:scale-105 transition-transform duration-500" sizes="(max-width: 768px) 33vw, 16vw" />
+                </div>
+                <div className="aspect-square rounded-card border border-border relative overflow-hidden group">
+                  <Image src="/images/beyond-work/travel-city.webp" alt="Travel" fill className="object-cover group-hover:scale-105 transition-transform duration-500" sizes="(max-width: 768px) 33vw, 16vw" />
+                </div>
+                <div className="aspect-square rounded-card border border-border relative overflow-hidden group">
+                  <Image src="/images/beyond-work/street-dogs-petting.webp" alt="Street Dogs" fill className="object-cover group-hover:scale-105 transition-transform duration-500" sizes="(max-width: 768px) 33vw, 16vw" />
+                </div>
               </div>
             </div>
           </div>

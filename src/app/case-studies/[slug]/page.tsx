@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
+import Image from "next/image";
 import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
 import { AskAIButton } from "@/components/ui/AskAIButton";
@@ -21,10 +22,12 @@ const caseStudyContent: Record<
     client: string;
     timeline: string;
     problem: string[];
-    approach: { title: string; description: string }[];
+    approach: { title: string; description: string; image?: { src: string; alt: string } }[];
     results: { metric: string; label: string }[];
     takeaways: string[];
     excerpt: string;
+    heroImage?: { src: string; alt: string };
+    resultsImage?: { src: string; alt: string };
   }
 > = {
   "seo-internal-linking-ai-agent": {
@@ -36,6 +39,14 @@ const caseStudyContent: Record<
     date: "2024-10-01",
     client: "Internal Tool",
     timeline: "4 weeks",
+    heroImage: {
+      src: "/images/case-studies/seo-agent-hero.png",
+      alt: "AI-powered network graph visualization of website internal linking structure",
+    },
+    resultsImage: {
+      src: "/images/case-studies/seo-agent-results.png",
+      alt: "Before and after comparison showing 20 hours per week of manual audit time reduced to near zero with AI automation",
+    },
     excerpt:
       "Built a dual-agent LangGraph system using Firecrawl and Python to autonomously map, graph, and optimize internal linking structures and backlink quality for a 400+ page website.",
     problem: [
@@ -48,10 +59,18 @@ const caseStudyContent: Record<
       {
         title: "Site Ingestion & Graphing",
         description: "Used Firecrawl to scrape all 400 site pages in under 20 minutes. A custom Python script mapped all inbound and outbound links, visually graphing the site architecture to instantly expose orphan pages.",
+        image: {
+          src: "/images/case-studies/seo-agent-site-graph.png",
+          alt: "Force-directed node graph showing website architecture with healthy pages in cyan and orphan pages highlighted in orange",
+        },
       },
       {
         title: "Internal Linking Agent",
         description: "Engineered a LangGraph agent that reads the summaries of all pages. When a new page is published, the agent instantly recommends the most contextually relevant existing pages to link to, providing exact priority and rationale. It also flags anomalies, successfully identifying legacy pages that needed to be de-indexed.",
+        image: {
+          src: "/images/case-studies/seo-agent-workflow.png",
+          alt: "Dual-agent workflow diagram showing Firecrawl to Python processing to LangGraph agents to web dashboard",
+        },
       },
       {
         title: "Backlink Evaluation Agent",
@@ -60,6 +79,10 @@ const caseStudyContent: Record<
       {
         title: "Web Dashboard",
         description: "Wrapped the python logic in a clean web dashboard for the SEO team to run audits and view link graphs effortlessly.",
+        image: {
+          src: "/images/case-studies/seo-agent-dashboard.png",
+          alt: "Dark-themed SEO dashboard showing internal linking node graph and link recommendations panel",
+        },
       },
     ],
     results: [
@@ -406,6 +429,20 @@ export default async function CaseStudyPage({ params }: { params: Promise<Params
             </h1>
             <p className="font-mono text-accent-secondary text-2xl font-bold">{cs.result}</p>
           </div>
+
+          {/* Hero image */}
+          {cs.heroImage && (
+            <div className="mt-10 rounded-card overflow-hidden border border-border">
+              <Image
+                src={cs.heroImage.src}
+                alt={cs.heroImage.alt}
+                width={1200}
+                height={630}
+                className="w-full h-auto"
+                priority
+              />
+            </div>
+          )}
         </div>
       </section>
 
@@ -454,16 +491,29 @@ export default async function CaseStudyPage({ params }: { params: Promise<Params
           {/* The Approach */}
           <div className="mb-12">
             <h2 className="text-2xl font-bold text-text-primary mb-6">The Approach</h2>
-            <div className="space-y-6">
+            <div className="space-y-8">
               {cs.approach.map((step, i) => (
-                <div key={i} className="flex gap-5">
-                  <div className="w-8 h-8 rounded-full bg-accent-primary/10 border border-accent-primary/20 flex items-center justify-center text-accent-primary text-sm font-mono font-bold flex-shrink-0 mt-0.5">
-                    {i + 1}
+                <div key={i}>
+                  <div className="flex gap-5">
+                    <div className="w-8 h-8 rounded-full bg-accent-primary/10 border border-accent-primary/20 flex items-center justify-center text-accent-primary text-sm font-mono font-bold flex-shrink-0 mt-0.5">
+                      {i + 1}
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-text-primary mb-2">{step.title}</h3>
+                      <p className="text-text-secondary leading-relaxed">{step.description}</p>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="font-semibold text-text-primary mb-2">{step.title}</h3>
-                    <p className="text-text-secondary leading-relaxed">{step.description}</p>
-                  </div>
+                  {step.image && (
+                    <div className="mt-4 ml-0 sm:ml-[52px] rounded-card overflow-hidden border border-border">
+                      <Image
+                        src={step.image.src}
+                        alt={step.image.alt}
+                        width={1000}
+                        height={560}
+                        className="w-full h-auto"
+                      />
+                    </div>
+                  )}
                 </div>
               ))}
             </div>
@@ -472,6 +522,20 @@ export default async function CaseStudyPage({ params }: { params: Promise<Params
           {/* The Results */}
           <div className="mb-12">
             <h2 className="text-2xl font-bold text-text-primary mb-6">The Results</h2>
+
+            {/* Results image */}
+            {cs.resultsImage && (
+              <div className="mb-6 rounded-card overflow-hidden border border-border">
+                <Image
+                  src={cs.resultsImage.src}
+                  alt={cs.resultsImage.alt}
+                  width={1000}
+                  height={560}
+                  className="w-full h-auto"
+                />
+              </div>
+            )}
+
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-6">
               {cs.results.map((result) => (
                 <div

@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { CaseStudyCard } from "@/components/ui/CaseStudyCard";
 import { cn } from "@/lib/utils";
+import { motion, AnimatePresence } from "framer-motion";
 
 // Define the available filter categories
 const FILTER_CATEGORIES = [
@@ -22,6 +23,24 @@ interface CaseStudyItem {
   excerpt?: string;
 }
 
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { staggerChildren: 0.12 },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, scale: 0.95, y: 20 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    y: 0,
+    transition: { type: "spring", stiffness: 100, damping: 15 },
+  },
+};
+
 export function CaseStudiesGrid({ caseStudies }: { caseStudies: CaseStudyItem[] }) {
   const [activeFilter, setActiveFilter] = useState("All");
 
@@ -29,7 +48,6 @@ export function CaseStudiesGrid({ caseStudies }: { caseStudies: CaseStudyItem[] 
     activeFilter === "All"
       ? caseStudies
       : caseStudies.filter((cs) => {
-          // Check if the case study has the active filter in its array of services
           const services = Array.isArray(cs.service) ? cs.service : [cs.service];
           return services.includes(activeFilter);
         });
@@ -54,15 +72,19 @@ export function CaseStudiesGrid({ caseStudies }: { caseStudies: CaseStudyItem[] 
       </div>
 
       {filteredStudies.length > 0 ? (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+          key={activeFilter}
+        >
           {filteredStudies.map((cs) => (
-            <CaseStudyCard
-              key={cs.slug}
-              {...cs}
-              className="animate-fade-in"
-            />
+            <motion.div key={cs.slug} variants={itemVariants} className="h-full">
+              <CaseStudyCard {...cs} />
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       ) : (
         <div className="text-center py-20 rounded-card border border-border border-dashed">
           <p className="text-text-muted">No case studies found for this category.</p>

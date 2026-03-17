@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/Button";
 import { Breadcrumb } from "@/components/ui/Breadcrumb";
 import { caseStudiesPreview } from "@/data/site-data";
 import { CaseStudiesGrid } from "@/components/sections/case-studies/CaseStudiesGrid";
+import { TechBackground } from "@/components/ui/TechBackground";
 
 export const metadata: Metadata = {
   title: "Case Studies — AI Automation, SEO & SaaS Results | Aryan Rawther, Apex Mind LLP",
@@ -39,9 +40,10 @@ export default function CaseStudiesPage() {
       </section>
 
       {/* Case studies grid and filter */}
-      <section className="section-padding">
-        <div className="container">
-          
+      <section className="relative section-padding overflow-hidden">
+        <TechBackground />
+        
+        <div className="container relative z-10">
           <CaseStudiesGrid caseStudies={caseStudiesPreview} />
 
           <div className="mt-16 text-center pt-8 border-t border-border/50">

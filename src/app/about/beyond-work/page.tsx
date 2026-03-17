@@ -62,14 +62,18 @@ export default function BeyondWorkPage() {
 
           {/* Hero photo collage */}
           <div className="mt-10 grid grid-cols-2 md:grid-cols-4 gap-3">
-            {["Gym", "Street Dogs", "Books", "Travel"].map((label) => (
-              <div
-                key={label}
-                className="aspect-[4/3] rounded-card bg-bg-elevated border border-border flex items-center justify-center"
-              >
-                <p className="text-text-muted text-xs">[{label} photo]</p>
-              </div>
-            ))}
+            <div className="aspect-[4/3] rounded-card border border-border relative overflow-hidden">
+              <Image src="/images/beyond-work/gym-primary.webp" alt="Gym" fill className="object-cover" sizes="(max-width: 768px) 50vw, 25vw" />
+            </div>
+            <div className="aspect-[4/3] rounded-card border border-border relative overflow-hidden">
+              <Image src="/images/beyond-work/street-dogs-petting.webp" alt="Street Dogs" fill className="object-cover" sizes="(max-width: 768px) 50vw, 25vw" />
+            </div>
+            <div className="aspect-[4/3] rounded-card bg-bg-elevated border border-border flex items-center justify-center">
+              <p className="text-text-muted text-xs">[Books photo]</p>
+            </div>
+            <div className="aspect-[4/3] rounded-card border border-border relative overflow-hidden">
+              <Image src="/images/beyond-work/travel-city.webp" alt="Travel" fill className="object-cover" sizes="(max-width: 768px) 50vw, 25vw" />
+            </div>
           </div>
         </div>
       </section>
@@ -125,15 +129,13 @@ export default function BeyondWorkPage() {
           {/* Gym */}
           <div className="mb-16">
             <h2 className="text-2xl font-bold text-text-primary mb-6">Fitness & Gym</h2>
-            <div className="grid grid-cols-2 gap-3 mb-6">
-              {["Gym photo 1", "Gym photo 2"].map((label) => (
-                <div
-                  key={label}
-                  className="aspect-video rounded-card bg-bg-elevated border border-border flex items-center justify-center"
-                >
-                  <p className="text-text-muted text-xs">[{label}]</p>
-                </div>
-              ))}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-8 mb-6 max-w-xl">
+              <div className="aspect-[4/5] sm:aspect-square rounded-card border border-border relative overflow-hidden">
+                <Image src="/images/beyond-work/gym-primary.webp" alt="Gym primary" fill className="object-cover" sizes="(max-width: 768px) 100vw, 50vw" />
+              </div>
+              <div className="aspect-[4/5] sm:aspect-square rounded-card border border-border relative overflow-hidden">
+                <Image src="/images/beyond-work/gym-workout.webp" alt="Gym Workout" fill className="object-cover" sizes="(max-width: 768px) 100vw, 50vw" />
+              </div>
             </div>
             <div className="space-y-4 text-text-secondary leading-relaxed">
               <p>
@@ -147,7 +149,7 @@ export default function BeyondWorkPage() {
 
           {/* Street Dogs */}
           <div className="mb-16">
-            <h2 className="text-2xl font-bold text-text-primary mb-6">Street Dogs</h2>
+            <h2 className="text-2xl font-bold text-text-primary mb-6">Dogs</h2>
             <div className="space-y-4 text-text-secondary leading-relaxed mb-8">
               <p>
                 I was once eating food in the college canteen when a stray dog came and sat next to me. I decided to give him some of my chicken, and the immense satisfaction I got from that simple act shifted something in me. From that day on, I started feeding all the street dogs I came across.
@@ -157,19 +159,19 @@ export default function BeyondWorkPage() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div className="aspect-[4/5] rounded-card border border-border relative overflow-hidden">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-8 max-w-xl">
+              <div className="aspect-[4/5] sm:aspect-square rounded-card border border-border relative overflow-hidden">
                 <Image
-                  src="/images/dogs/feeding-street-puppies.webp"
+                  src="/images/beyond-work/street-dogs-puppies.webp"
                   alt="Feeding street puppies"
                   fill
                   className="object-cover"
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />
               </div>
-              <div className="aspect-[4/5] rounded-card border border-border relative overflow-hidden">
+              <div className="aspect-[4/5] sm:aspect-square rounded-card border border-border relative overflow-hidden">
                 <Image
-                  src="/images/dogs/petting-street-dog.webp"
+                  src="/images/beyond-work/street-dogs-petting.webp"
                   alt="Petting a street dog"
                   fill
                   className="object-cover"
@@ -190,17 +192,13 @@ export default function BeyondWorkPage() {
               </div>
 
               {/* Travel photos */}
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                {["Travel destination 1", "Travel destination 2", "Travel destination 3"].map(
-                  (label) => (
-                    <div
-                      key={label}
-                      className="aspect-[4/3] rounded-card bg-bg-elevated border border-border flex items-center justify-center"
-                    >
-                      <p className="text-text-muted text-xs text-center px-2">[{label}]</p>
-                    </div>
-                  )
-                )}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-8 max-w-xl">
+                <div className="aspect-[4/5] sm:aspect-square rounded-card border border-border relative overflow-hidden">
+                  <Image src="/images/beyond-work/travel-city.webp" alt="Travel City" fill className="object-cover" sizes="(max-width: 768px) 100vw, 50vw" />
+                </div>
+                <div className="aspect-[4/5] sm:aspect-square rounded-card border border-border relative overflow-hidden">
+                  <Image src="/images/beyond-work/travel-mountain.webp" alt="Travel Mountain" fill className="object-cover" sizes="(max-width: 768px) 100vw, 50vw" />
+                </div>
               </div>
 
               <div className="space-y-4 text-text-secondary leading-relaxed">

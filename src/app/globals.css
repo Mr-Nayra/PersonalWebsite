@@ -376,3 +376,49 @@ p {
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
+
+/* =============================================
+   RACING BORDER ANIMATION
+   ============================================= */
+
+@keyframes border-spin {
+  0% { --border-angle: 0deg; }
+  100% { --border-angle: 360deg; }
+}
+
+@property --border-angle {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
+.racing-border {
+  position: relative;
+  padding: 2px;
+  border-radius: var(--radius-card, 8px);
+}
+
+.racing-border::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  border-radius: inherit;
+  background: conic-gradient(
+    from var(--border-angle),
+    transparent 82%,
+    rgba(108, 99, 255, 0.3) 88%,
+    rgba(108, 99, 255, 0.6) 92%,
+    var(--accent-primary) 96%,
+    #a78bfa 99%,
+    #c4b5fd 100%
+  );
+  animation: border-spin 7s linear infinite;
+}
+
+.racing-border > .racing-border-content {
+  position: relative;
+  z-index: 1;
+  border-radius: inherit;
+  background: var(--bg-surface);
+}

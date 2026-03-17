@@ -44,48 +44,68 @@ Here is a complete checklist of all the pages on the website:
 - [ ] `/resources/ai-voice-agents-explainer`
 - [ ] `/resources/nextjs-saas-architecture`
 
-### Glossary (33 pages)
+### Glossary (52 terms)
 - [ ] `/glossary` (Overview)
 
-**AI & Automation**
+**AI & Automation (18)**
 - [ ] `/glossary/agentic-ai`
 - [ ] `/glossary/ai-agent`
 - [ ] `/glossary/ai-orchestration`
+- [ ] `/glossary/chain-of-thought`
 - [ ] `/glossary/context-window`
+- [ ] `/glossary/embeddings`
 - [ ] `/glossary/fine-tuning`
 - [ ] `/glossary/function-calling`
 - [ ] `/glossary/hallucination`
+- [ ] `/glossary/langgraph`
 - [ ] `/glossary/large-language-model`
+- [ ] `/glossary/model-context-protocol`
+- [ ] `/glossary/natural-language-processing`
 - [ ] `/glossary/prompt-engineering`
 - [ ] `/glossary/rag`
 - [ ] `/glossary/rcm`
 - [ ] `/glossary/vector-database`
+- [ ] `/glossary/zero-shot-prompting`
 
-**SEO & GEO**
+**SEO & GEO (18)**
 - [ ] `/glossary/ai-overviews`
+- [ ] `/glossary/backlink`
+- [ ] `/glossary/canonical-tag`
 - [ ] `/glossary/core-web-vitals`
+- [ ] `/glossary/crawl-budget`
+- [ ] `/glossary/domain-authority`
 - [ ] `/glossary/e-e-a-t`
+- [ ] `/glossary/entity-seo`
 - [ ] `/glossary/geo`
+- [ ] `/glossary/internal-linking`
+- [ ] `/glossary/knowledge-graph`
 - [ ] `/glossary/llms-txt`
 - [ ] `/glossary/programmatic-seo`
+- [ ] `/glossary/robots-txt`
 - [ ] `/glossary/search-intent`
 - [ ] `/glossary/semantic-seo`
 - [ ] `/glossary/structured-data`
 - [ ] `/glossary/technical-seo`
 
-**AI Voice**
+**AI Voice (5)**
 - [ ] `/glossary/ivr`
+- [ ] `/glossary/latency`
 - [ ] `/glossary/speech-to-text`
 - [ ] `/glossary/text-to-speech`
+- [ ] `/glossary/voice-cloning`
 
-**Web & SaaS**
+**Web & SaaS (11)**
 - [ ] `/glossary/api`
+- [ ] `/glossary/ci-cd`
 - [ ] `/glossary/headless-architecture`
+- [ ] `/glossary/microservices`
 - [ ] `/glossary/multi-tenant-saas`
 - [ ] `/glossary/mvp`
+- [ ] `/glossary/saas-metrics`
 - [ ] `/glossary/server-side-rendering`
 - [ ] `/glossary/technical-co-founder`
 - [ ] `/glossary/webhook`
+- [ ] `/glossary/websocket`
 
 ### Industries & Locations
 - [ ] `/industries/saas`

@@ -111,7 +111,7 @@ const data: ServicePageData = {
         "Yes — most engagements involve integrating AI into existing tools rather than building from scratch. I work with Google Drive, Egnyte, CRMs, ERPs, and any system with an API. If your tool has a webhook or API, I can connect AI to it.",
     },
   ],
-  relatedCaseStudies: [caseStudiesPreview[0], caseStudiesPreview[2]],
+  relatedCaseStudies: caseStudiesPreview.filter(cs => cs.service.includes("AI Automation Consulting")),
 };
 
 export default function AIAutomationConsultingPage() {

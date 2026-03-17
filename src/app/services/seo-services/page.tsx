@@ -119,7 +119,7 @@ const data: ServicePageData = {
         "Yes. Many clients start with an audit and strategy engagement, then move to a monthly retainer for ongoing content, monitoring, and technical maintenance. Retainer scope is customised to your publishing cadence and growth targets.",
     },
   ],
-  relatedCaseStudies: [caseStudiesPreview[2]],
+  relatedCaseStudies: caseStudiesPreview.filter(cs => cs.service.includes("SEO Services")),
 };
 
 export default function SEOServicesPage() {

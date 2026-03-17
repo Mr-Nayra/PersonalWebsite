@@ -113,7 +113,7 @@ export const caseStudiesPreview = [
     slug: "autonomous-inbound-email-agent",
     title: "Autonomous Inbound Sales & Scheduling Agent",
     industry: "HealthTech",
-    service: ["AI Integration & Agentic Workflows"],
+    service: ["AI Integration & Agentic Workflows", "AI Automation Consulting"],
     result: "Automated 15+ daily inquiries & scheduling",
     excerpt:
       "Engineered an autonomous email agent using Gmail AI/PubSub, Perplexity, and OpenAI to research inbound leads, check calendars, and draft personalized replies instantly, eliminating manual work for the C-suite.",
@@ -122,7 +122,7 @@ export const caseStudiesPreview = [
     slug: "speclens-ai-procurement-saas",
     title: "SpecLens AI — Procurement SaaS",
     industry: "B2B / Procurement",
-    service: ["SaaS Development"],
+    service: ["SaaS Product Development"],
     result: "MVP → live in 8 weeks",
     excerpt:
       "Architected and built a full-stack procurement SaaS platform with AI-powered specification comparison, RFP workflows, and vendor evaluation.",
@@ -131,7 +131,7 @@ export const caseStudiesPreview = [
     slug: "photoshoprequest-ai-editor",
     title: "AI-Powered Photo Editor Pipeline",
     industry: "Consumer / AI SaaS",
-    service: ["SaaS Development", "AI Integration & Agentic Workflows"],
+    service: ["SaaS Product Development", "AI Integration & Agentic Workflows"],
     result: "Automated editor & validator loop",
     excerpt:
       "Built an AI-powered photo editing platform inspired by r/photoshoprequest, featuring an automated editor-validator pipeline using Gemini, Next.js, and PayPal integrations.",
@@ -140,7 +140,7 @@ export const caseStudiesPreview = [
     slug: "healthcare-rcm-automation",
     title: "Healthcare Insurance Verification & RCM Automation",
     industry: "Healthcare / RCM",
-    service: ["AI Integration & Agentic Workflows"],
+    service: ["AI Integration & Agentic Workflows", "AI Automation Consulting"],
     result: "Automated 300 patients/day, replaced 7 FTEs",
     excerpt:
       "Built a custom AI-driven pipeline integrating with eClinicalWorks to automate insurance verification for a US billing company, removing the need for 7 FTEs.",

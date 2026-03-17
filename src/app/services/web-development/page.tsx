@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import { ServicePageTemplate, ServicePageData } from "@/components/sections/ServicePageTemplate";
+import { caseStudiesPreview } from "@/data/site-data";
 
 export const metadata: Metadata = {
   title: "Next.js & React Web Developer India — Full-Stack, FastAPI & TypeScript Consultant",
@@ -126,6 +127,7 @@ const data: ServicePageData = {
         "Scope changes are handled in writing, every time — even small ones. I draft a brief amendment to the SOW describing the change, the impact on timeline, and any cost implications. You approve it before I start. No surprise invoices.",
     },
   ],
+  relatedCaseStudies: caseStudiesPreview.filter(cs => cs.service.includes("Web Development")),
 };
 
 export default function WebDevelopmentPage() {

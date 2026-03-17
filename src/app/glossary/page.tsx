@@ -12,6 +12,42 @@ export const metadata: Metadata = {
 const glossaryTerms = [
   // AI & Automation
   {
+    term: "Chain-of-Thought Prompting",
+    slug: "chain-of-thought",
+    shortDefinition: "A prompting technique where an LLM is guided to show its reasoning step-by-step before arriving at a final answer — dramatically improving accuracy on complex tasks.",
+    category: "AI & Automation",
+  },
+  {
+    term: "Embeddings",
+    slug: "embeddings",
+    shortDefinition: "Numerical representations of text or data that capture semantic meaning — the foundational technology behind semantic search, RAG, and AI similarity matching.",
+    category: "AI & Automation",
+  },
+  {
+    term: "LangGraph",
+    slug: "langgraph",
+    shortDefinition: "A Python framework for building stateful, multi-step AI agent workflows as directed graphs — enabling complex orchestration of LLM calls, tools, and human checkpoints.",
+    category: "AI & Automation",
+  },
+  {
+    term: "Model Context Protocol (MCP)",
+    slug: "model-context-protocol",
+    shortDefinition: "An open standard that defines how AI models connect to external tools, data sources, and services — the 'USB-C port' for AI integrations, developed by Anthropic.",
+    category: "AI & Automation",
+  },
+  {
+    term: "Natural Language Processing (NLP)",
+    slug: "natural-language-processing",
+    shortDefinition: "The branch of AI focused on enabling machines to understand, interpret, and generate human language — the foundational discipline behind LLMs, chatbots, and text analytics.",
+    category: "AI & Automation",
+  },
+  {
+    term: "Zero-Shot Prompting",
+    slug: "zero-shot-prompting",
+    shortDefinition: "Asking an AI model to perform a task without providing any examples — relying entirely on its pre-trained knowledge, in contrast to few-shot or fine-tuned approaches.",
+    category: "AI & Automation",
+  },
+  {
     term: "Agentic AI",
     slug: "agentic-ai",
     shortDefinition: "AI systems designed to plan, reason, use tools, and autonomously execute multi-step tasks — going far beyond single-turn question-and-answer interactions.",
@@ -85,6 +121,54 @@ const glossaryTerms = [
   },
   // SEO & GEO
   {
+    term: "Backlink",
+    slug: "backlink",
+    shortDefinition: "A link from one website to another — one of Google's most important ranking signals, acting as a vote of authority and trustworthiness from one site to another.",
+    category: "SEO & GEO",
+  },
+  {
+    term: "Canonical Tag",
+    slug: "canonical-tag",
+    shortDefinition: "An HTML tag that tells search engines which URL is the authoritative version of a page — preventing duplicate content issues when the same content is accessible at multiple URLs.",
+    category: "SEO & GEO",
+  },
+  {
+    term: "Crawl Budget",
+    slug: "crawl-budget",
+    shortDefinition: "The number of pages search engine crawlers will visit on your site within a given period — a resource that must be managed carefully on large or programmatic sites.",
+    category: "SEO & GEO",
+  },
+  {
+    term: "Domain Authority",
+    slug: "domain-authority",
+    shortDefinition: "A third-party metric (by Moz) that predicts how likely a site is to rank in search results, based primarily on the quality and quantity of its backlink profile.",
+    category: "SEO & GEO",
+  },
+  {
+    term: "Entity SEO",
+    slug: "entity-seo",
+    shortDefinition: "An approach to SEO that optimises for entities — people, organisations, places, concepts — rather than just keywords, aligning with how Google's Knowledge Graph understands the web.",
+    category: "SEO & GEO",
+  },
+  {
+    term: "Internal Linking",
+    slug: "internal-linking",
+    shortDefinition: "Links from one page on a website to another page on the same site — distributing page authority, improving crawlability, and guiding users through related content.",
+    category: "SEO & GEO",
+  },
+  {
+    term: "Knowledge Graph",
+    slug: "knowledge-graph",
+    shortDefinition: "Google's structured database of entities and their relationships — powering Knowledge Panels, AI Overviews, and featured snippets by understanding meaning rather than just keywords.",
+    category: "SEO & GEO",
+  },
+  {
+    term: "robots.txt",
+    slug: "robots-txt",
+    shortDefinition: "A plain-text file at the root of a website that instructs search engine crawlers which pages or directories they should not crawl — the first line of crawl management.",
+    category: "SEO & GEO",
+  },
+  {
     term: "AI Overviews",
     slug: "ai-overviews",
     shortDefinition: "Google's AI-generated answer summaries that appear above organic search results, synthesising information from multiple sources to directly respond to a query.",
@@ -146,6 +230,18 @@ const glossaryTerms = [
   },
   // AI Voice
   {
+    term: "Latency",
+    slug: "latency",
+    shortDefinition: "The delay between a user speaking and the AI voice agent responding — the single most critical metric in voice AI, where delays above 1.5 seconds feel unnatural.",
+    category: "AI Voice",
+  },
+  {
+    term: "Voice Cloning",
+    slug: "voice-cloning",
+    shortDefinition: "The process of creating a synthetic replica of a specific voice using AI — enabling consistent brand voices for AI agents and personalised voice experiences.",
+    category: "AI Voice",
+  },
+  {
     term: "IVR (Interactive Voice Response)",
     slug: "ivr",
     shortDefinition: "A telephony system that interacts with callers through voice prompts and key presses — increasingly replaced by AI voice agents.",
@@ -164,6 +260,30 @@ const glossaryTerms = [
     category: "AI Voice",
   },
   // Web & SaaS
+  {
+    term: "CI/CD",
+    slug: "ci-cd",
+    shortDefinition: "Continuous Integration / Continuous Deployment — the engineering practice of automatically testing and deploying code changes, enabling teams to ship updates safely and frequently.",
+    category: "Web & SaaS",
+  },
+  {
+    term: "Microservices",
+    slug: "microservices",
+    shortDefinition: "An architectural pattern where an application is built as a collection of small, independent services — each handling a specific function and communicating via APIs.",
+    category: "Web & SaaS",
+  },
+  {
+    term: "SaaS Metrics",
+    slug: "saas-metrics",
+    shortDefinition: "The key performance indicators for SaaS businesses — including MRR, ARR, churn rate, LTV, and CAC — used to measure health, growth, and unit economics.",
+    category: "Web & SaaS",
+  },
+  {
+    term: "WebSocket",
+    slug: "websocket",
+    shortDefinition: "A protocol enabling a persistent, bidirectional connection between client and server — essential for real-time features like live chat, AI voice pipelines, and streaming data.",
+    category: "Web & SaaS",
+  },
   {
     term: "API (Application Programming Interface)",
     slug: "api",
