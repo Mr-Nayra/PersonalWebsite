@@ -5,6 +5,7 @@ import { caseStudiesPreview } from "@/data/site-data";
 import { CaseStudiesGrid } from "@/components/sections/case-studies/CaseStudiesGrid";
 import { TechBackground } from "@/components/ui/TechBackground";
 import { AtomBackground } from "@/components/ui/AtomBackground";
+import { itemListSchema } from "@/lib/schemas";
 
 export const metadata: Metadata = {
   title: "Case Studies — AI Automation, SEO & SaaS Results | Apex Mind LLP",
@@ -25,6 +26,20 @@ export const metadata: Metadata = {
 export default function CaseStudiesPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            itemListSchema(
+              caseStudiesPreview.map((cs) => ({
+                name: cs.title,
+                description: cs.result,
+                url: `/case-studies/${cs.slug}`,
+              }))
+            )
+          ),
+        }}
+      />
       {/* Hero */}
       <section className="aurora-bg pt-32 pb-16 overflow-hidden relative">
         <AtomBackground />

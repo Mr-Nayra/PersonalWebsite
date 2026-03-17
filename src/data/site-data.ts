@@ -9,7 +9,7 @@ export const siteData = {
     location: "Bengaluru, India",
     tagline: "I help businesses grow using AI, SEO, and modern web technology.",
     bio: "Founder of Apex Mind LLP. I work at the intersection of AI automation, technical SEO, and software engineering — helping businesses build systems that scale. Based in Bengaluru, working with clients across India and globally.",
-    email: "hello@aetherminds.in",
+    email: "contact.aryanrawther@gmail.com",
     whatsapp: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "917905206587",
     linkedin: "https://www.linkedin.com/in/aryanrawther",
     github: "https://github.com/Mr-Nayra",

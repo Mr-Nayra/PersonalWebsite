@@ -3,6 +3,7 @@ import Link from "next/link";
 import { AskAIButton } from "@/components/ui/AskAIButton";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
+import { itemListSchema } from "@/lib/schemas";
 
 export const metadata: Metadata = {
   title: "Resources — AI, SEO & Web Development Guides",
@@ -70,6 +71,20 @@ export default function ResourcesPage() {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            itemListSchema(
+              resources.map((r) => ({
+                name: r.title,
+                description: r.description,
+                url: `/resources/${r.slug}`,
+              }))
+            )
+          ),
+        }}
+      />
       {/* Hero */}
       <section className="aurora-bg pt-32 pb-16">
         <div className="container relative z-10 max-w-3xl">

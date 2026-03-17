@@ -3,9 +3,10 @@ import { Button } from "@/components/ui/Button";
 import { ProductCard } from "@/components/ui/ProductCard";
 import { Breadcrumb } from "@/components/ui/Breadcrumb";
 import { productsPreview } from "@/data/site-data";
+import { itemListSchema } from "@/lib/schemas";
 
 export const metadata: Metadata = {
-  title: "Products — SaaS Tools & Open Source Projects Built by Aryan Rawther | Apex Mind LLP",
+  title: "Products — SaaS Tools & Open Source Projects | Apex Mind LLP",
   description:
     "SaaS products, open-source tools, and AI applications built by Aryan Rawther (Apex Mind LLP). Includes SpecLens AI (procurement SaaS), MediaMitra (AI media monitoring), and GEO Checker (AI search visibility audit tool).",
   alternates: { canonical: "/products" },
@@ -25,6 +26,20 @@ export const metadata: Metadata = {
 export default function ProductsPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            itemListSchema(
+              productsPreview.map((p) => ({
+                name: p.name,
+                description: p.tagline,
+                url: `/products/${p.slug}`,
+              }))
+            )
+          ),
+        }}
+      />
       {/* Hero */}
       <section className="aurora-bg pt-32 pb-16">
         <div className="container relative z-10 max-w-3xl">

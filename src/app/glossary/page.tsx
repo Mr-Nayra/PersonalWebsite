@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import { AskAIButton } from "@/components/ui/AskAIButton";
+import { itemListSchema } from "@/lib/schemas";
 
 export const metadata: Metadata = {
   title: "AI & SEO Glossary — Key Terms Explained",
@@ -348,6 +349,20 @@ const groupedByCategory = glossaryTerms.reduce<Record<string, typeof glossaryTer
 export default function GlossaryPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            itemListSchema(
+              glossaryTerms.map((t) => ({
+                name: t.term,
+                description: t.shortDefinition,
+                url: `/glossary/${t.slug}`,
+              }))
+            )
+          ),
+        }}
+      />
       {/* Hero */}
       <section className="aurora-bg pt-32 pb-16">
         <div className="container relative z-10 max-w-3xl">
