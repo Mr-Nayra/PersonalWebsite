@@ -119,6 +119,15 @@ export const caseStudiesPreview = [
       "Engineered an autonomous email agent using Gmail AI/PubSub, Perplexity, and OpenAI to research inbound leads, check calendars, and draft personalized replies instantly, eliminating manual work for the C-suite.",
   },
   {
+    slug: "healthcare-rcm-automation",
+    title: "Healthcare Insurance Verification & RCM Automation",
+    industry: "Healthcare / RCM",
+    service: ["AI Integration & Agentic Workflows", "AI Automation Consulting"],
+    result: "Automated 300 patients/day, replaced 7 FTEs",
+    excerpt:
+      "Built a custom AI-driven pipeline integrating with eClinicalWorks to automate insurance verification for a US billing company, removing the need for 7 FTEs.",
+  },
+  {
     slug: "speclens-ai-procurement-saas",
     title: "SpecLens AI — Procurement SaaS",
     industry: "B2B / Procurement",
@@ -136,15 +145,7 @@ export const caseStudiesPreview = [
     excerpt:
       "Built an AI-powered photo editing platform inspired by r/photoshoprequest, featuring an automated editor-validator pipeline using Gemini, Next.js, and PayPal integrations.",
   },
-  {
-    slug: "healthcare-rcm-automation",
-    title: "Healthcare Insurance Verification & RCM Automation",
-    industry: "Healthcare / RCM",
-    service: ["AI Integration & Agentic Workflows", "AI Automation Consulting"],
-    result: "Automated 300 patients/day, replaced 7 FTEs",
-    excerpt:
-      "Built a custom AI-driven pipeline integrating with eClinicalWorks to automate insurance verification for a US billing company, removing the need for 7 FTEs.",
-  },
+  
   {
     slug: "combinehealth-seo-redesign",
     title: "1M Daily Impressions via Tech & AI SEO",

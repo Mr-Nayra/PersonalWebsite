@@ -6,7 +6,7 @@ import { CaseStudiesGrid } from "@/components/sections/case-studies/CaseStudiesG
 import { TechBackground } from "@/components/ui/TechBackground";
 
 export const metadata: Metadata = {
-  title: "Case Studies — AI Automation, SEO & SaaS Results | Aryan Rawther, Apex Mind LLP",
+  title: "Case Studies — AI Automation, SEO & SaaS Results | Apex Mind LLP",
   description:
     "Client case studies from Aryan Rawther (Apex Mind LLP) — AI IVR systems, SaaS MVPs, and organic SEO growth. Real results with specific metrics: 70% call handling reduction, 8-week MVP delivery.",
   alternates: { canonical: "/case-studies" },
