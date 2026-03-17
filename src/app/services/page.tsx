@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 import { Breadcrumb } from "@/components/ui/Breadcrumb";
 import { siteData } from "@/data/site-data";
+import { itemListSchema } from "@/lib/schemas";
 
 export const metadata: Metadata = {
   title: "Services — AI Automation, Technical SEO, Web & SaaS Development | Apex Mind LLP",
@@ -55,6 +56,20 @@ const processOverview = [
 export default function ServicesPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            itemListSchema(
+              siteData.services.map((s) => ({
+                name: s.name,
+                description: s.description,
+                url: s.href,
+              }))
+            )
+          ),
+        }}
+      />
       {/* Hero */}
       <section className="aurora-bg pt-32 pb-20">
         <div className="container relative z-10 max-w-3xl">

@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 import { Breadcrumb } from "@/components/ui/Breadcrumb";
 import { siteData } from "@/data/site-data";
+import { localBusinessSchema } from "@/lib/schemas";
 
 type Params = { location: string };
 
@@ -174,6 +175,12 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
   };
 }
 
+const locationAreaServed: Record<string, string | string[]> = {
+  bangalore: ["Bengaluru", "Bangalore", "Karnataka"],
+  india: ["India", "Mumbai", "Delhi", "Hyderabad", "Chennai", "Pune", "Bengaluru"],
+  remote: "Worldwide",
+};
+
 export default async function LocationPage({ params }: { params: Promise<Params> }) {
   const { location } = await params;
   const data = locationData[location];
@@ -181,6 +188,20 @@ export default async function LocationPage({ params }: { params: Promise<Params>
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            localBusinessSchema({
+              name: data.name,
+              description: data.subheadline,
+              url: `/location/${location}`,
+              areaServed: locationAreaServed[location] ?? data.name,
+              addressLocality: "Bengaluru",
+            })
+          ),
+        }}
+      />
       {/* Hero */}
       <section className="aurora-bg pt-32 pb-16">
         <div className="container relative z-10 max-w-3xl">

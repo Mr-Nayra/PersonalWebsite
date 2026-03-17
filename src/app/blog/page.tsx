@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumb } from "@/components/ui/Breadcrumb";
+import { itemListSchema } from "@/lib/schemas";
 
 export const metadata: Metadata = {
   title: "Blog — AI Automation, Technical SEO, GEO & SaaS Development",
@@ -72,6 +73,20 @@ export default function BlogPage() {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            itemListSchema(
+              placeholderPosts.map((p) => ({
+                name: p.title,
+                description: p.excerpt,
+                url: `/blog/${p.slug}`,
+              }))
+            )
+          ),
+        }}
+      />
       {/* Hero */}
       <section className="aurora-bg pt-32 pb-16">
         <div className="container relative z-10 max-w-3xl">

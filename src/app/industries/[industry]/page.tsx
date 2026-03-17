@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
 import { Breadcrumb } from "@/components/ui/Breadcrumb";
 import { caseStudiesPreview } from "@/data/site-data";
+import { serviceSchema } from "@/lib/schemas";
 
 type Params = { industry: string };
 
@@ -398,6 +399,18 @@ export default async function IndustryPage({ params }: { params: Promise<Params>
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            serviceSchema(
+              `AI & Web Consulting for ${data.name}`,
+              data.subheadline,
+              `/industries/${industry}`
+            )
+          ),
+        }}
+      />
       {/* Hero */}
       <section className="aurora-bg pt-32 pb-16">
         <div className="container relative z-10 max-w-3xl">

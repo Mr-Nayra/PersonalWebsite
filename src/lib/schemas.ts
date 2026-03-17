@@ -77,13 +77,14 @@ export function personSchema() {
   };
 }
 
-export function serviceSchema(name: string, description: string, url: string) {
+export function serviceSchema(name: string, description: string, url: string, dateModified?: string) {
   return {
     "@context": "https://schema.org",
     "@type": "Service",
     name,
     description,
     url: `${SITE_URL}${url}`,
+    dateModified: dateModified || new Date().toISOString().split("T")[0],
     provider: {
       "@type": "Person",
       name: PERSON_NAME,
