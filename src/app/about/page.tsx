@@ -8,22 +8,22 @@ import { personSchema } from "@/lib/schemas";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "About Aryan Rawther — AI Consultant & Founder of Aether Minds LLP, Bengaluru",
+  title: "About Aryan Rawther — AI Consultant & Founder of Apex Mind LLP, Bengaluru",
   description:
-    "Aryan Rawther is an AI automation consultant, technical SEO specialist, and full-stack SaaS developer based in Bengaluru, India. Founder of Aether Minds LLP. Working with startups, SaaS companies, and enterprises across India and globally.",
+    "Aryan Rawther is an AI automation consultant, technical SEO specialist, and full-stack SaaS developer based in Bengaluru, India. Founder of Apex Mind LLP. Working with startups, SaaS companies, and enterprises across India and globally.",
   alternates: { canonical: "/about" },
   keywords: [
     "Aryan Rawther",
-    "Aether Minds LLP founder",
+    "Apex Mind LLP founder",
     "AI consultant Bengaluru",
     "AI automation consultant India",
     "technical SEO specialist India",
     "SaaS developer India",
   ],
   openGraph: {
-    title: "About Aryan Rawther — AI Consultant & Founder of Aether Minds LLP",
+    title: "About Aryan Rawther — AI Consultant & Founder of Apex Mind LLP",
     description:
-      "AI automation consultant, technical SEO specialist, and SaaS developer. Founder of Aether Minds LLP, Bengaluru.",
+      "AI automation consultant, technical SEO specialist, and SaaS developer. Founder of Apex Mind LLP, Bengaluru.",
   },
 };
 
@@ -68,7 +68,7 @@ export default function AboutPage() {
               Aryan Rawther
             </h1>
             <p className="text-text-secondary text-xl leading-relaxed mb-8">
-              Founder of Aether Minds LLP. I work at the intersection of AI automation, technical SEO, and software engineering — helping businesses build systems that actually scale. Based in Bengaluru, working with clients across India and globally.
+              Founder of Apex Mind LLP. I work at the intersection of AI automation, technical SEO, and software engineering — helping businesses build systems that actually scale. Based in Bengaluru, working with clients across India and globally.
             </p>
             <div className="flex gap-4">
               <Button href="/contact" variant="primary">
@@ -105,7 +105,7 @@ export default function AboutPage() {
                 <div className="rounded-card border border-border bg-bg-surface p-5 space-y-3">
                   {[
                     { label: "Location", value: "Bengaluru, India" },
-                    { label: "Entity", value: "Aether Minds LLP" },
+                    { label: "Entity", value: "Apex Mind LLP" },
                     { label: "Markets", value: "India + Global" },
                     { label: "Availability", value: "Open to projects" },
                   ].map((fact) => (
@@ -188,7 +188,7 @@ export default function AboutPage() {
                     AI has changed the economics of building software. What used to require a large team and significant capital can now be done leaner, faster, and smarter. I&apos;ve spent years accumulating the experience to know what good looks like across every layer of a product. The timing is right. The skills are there. And the ambition that&apos;s been running quietly in the background since those school computer labs has never been louder.
                   </p>
                   <p>
-                    That&apos;s what Aether Minds LLP is. I&apos;d like you to be part of what comes next.
+                    That&apos;s what Apex Mind LLP is. I&apos;d like you to be part of what comes next.
                   </p>
                 </div>
 
