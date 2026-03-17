@@ -306,7 +306,7 @@ export async function generateStaticParams() {
 
 const industrySEO: Record<string, { title: string; description: string; keywords: string[] }> = {
   saas: {
-    title: "AI Automation & SEO for SaaS Companies India — Aryan Rawther",
+    title: "AI Automation & SEO for SaaS Companies India",
     description:
       "AI automation consulting and technical SEO for SaaS companies in India. Aryan Rawther (Apex Mind LLP) helps SaaS teams integrate AI features, build organic acquisition channels, and scale their product architecture.",
     keywords: [
@@ -319,7 +319,7 @@ const industrySEO: Record<string, { title: string; description: string; keywords
     ],
   },
   edtech: {
-    title: "AI & Web Development for EdTech Companies India — Aryan Rawther",
+    title: "AI & Web Development for EdTech Companies India",
     description:
       "AI automation and web development for EdTech platforms in India. Build personalised learning systems, improve content discoverability with SEO, and create performant learning interfaces with Next.js.",
     keywords: [
@@ -332,7 +332,7 @@ const industrySEO: Record<string, { title: string; description: string; keywords
     ],
   },
   healthcare: {
-    title: "Healthcare AI Automation India — Voice Agents, Scheduling & Web | Aryan Rawther",
+    title: "Healthcare AI Automation India — Voice Agents, Scheduling & Web",
     description:
       "AI automation and voice agent solutions for healthcare organisations in India. Aryan Rawther (Apex Mind LLP) reduces administrative burden through AI-powered scheduling, call handling, and process automation.",
     keywords: [
@@ -345,7 +345,7 @@ const industrySEO: Record<string, { title: string; description: string; keywords
     ],
   },
   ecommerce: {
-    title: "E-commerce SEO & AI Automation India — Aryan Rawther",
+    title: "E-commerce SEO & AI Automation India",
     description:
       "SEO and AI automation for e-commerce businesses in India. Technical SEO for large product catalogues, programmatic landing pages, Core Web Vitals optimisation, and AI-powered customer service automation.",
     keywords: [
@@ -380,7 +380,7 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
 
   const seo = industrySEO[industry];
   return {
-    title: seo?.title ?? `${data.name} — AI, SEO & Web Development | Aryan Rawther`,
+    title: seo?.title ?? `${data.name} — AI, SEO & Web Development`,
     description: seo?.description ?? data.subheadline,
     keywords: seo?.keywords,
     alternates: { canonical: `/industries/${industry}` },

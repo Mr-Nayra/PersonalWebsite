@@ -11,7 +11,10 @@ import { BlogSection } from "@/components/sections/home/BlogSection";
 import { CtaSection } from "@/components/sections/home/CtaSection";
 
 export const metadata: Metadata = {
-  title: "Aryan Rawther — AI Automation Consultant, Technical SEO & SaaS Developer | Bengaluru",
+  title: {
+    absolute:
+      "Aryan Rawther — AI Automation Consultant, Technical SEO & SaaS Developer | Bengaluru",
+  },
   description:
     "Aryan Rawther — AI automation consultant, technical SEO specialist, and full-stack SaaS developer. Founder of Apex Mind LLP, Bengaluru. Builds LLM integrations, AI agents, programmatic SEO, and B2B SaaS products for clients across India and globally.",
   alternates: { canonical: "/" },

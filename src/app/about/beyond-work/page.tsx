@@ -5,7 +5,7 @@ import { AskAIButton } from "@/components/ui/AskAIButton";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Beyond the Work — Aryan Rawther",
+  title: "Beyond the Work",
   description:
     "The books, gym, and travel that shape how Aryan Rawther thinks, builds, and shows up. The person behind the consultant.",
   alternates: { canonical: "/about/beyond-work" },

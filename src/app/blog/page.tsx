@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Breadcrumb } from "@/components/ui/Breadcrumb";
 
 export const metadata: Metadata = {
-  title: "Blog — AI Automation, Technical SEO, GEO & SaaS Development | Aryan Rawther",
+  title: "Blog — AI Automation, Technical SEO, GEO & SaaS Development",
   description:
     "Practical, in-depth articles on AI automation, LLM integration, technical SEO, GEO (Generative Engine Optimisation), and SaaS development from Aryan Rawther. Written from real client project experience.",
   alternates: { canonical: "/blog" },

@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Terms of Service — Aryan Rawther",
+  title: "Terms of Service",
   description: "Terms of service for aryanrawther.com and Apex Mind LLP.",
   alternates: { canonical: "/terms-of-service" },
 };

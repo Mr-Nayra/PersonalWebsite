@@ -3,7 +3,7 @@ import Link from "next/link";
 import { AskAIButton } from "@/components/ui/AskAIButton";
 
 export const metadata: Metadata = {
-  title: "AI & SEO Glossary — Key Terms Explained | Aryan Rawther",
+  title: "AI & SEO Glossary — Key Terms Explained",
   description:
     "Plain-English definitions of AI, machine learning, SEO, and GEO terms. Written for business owners and non-technical decision-makers.",
   alternates: { canonical: "/glossary" },

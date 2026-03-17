@@ -52,7 +52,7 @@ export function ProductCard({
   return (
     <div
       className={cn(
-        "rounded-card racing-border card-hover",
+        "rounded-card racing-border card-hover h-full",
         status === "coming-soon" && "opacity-80",
         className
       )}

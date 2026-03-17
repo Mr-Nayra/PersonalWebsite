@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import { Button } from "@/components/ui/Button";
 
 export const metadata: Metadata = {
-  title: "Message received — Aryan Rawther",
+  title: "Message received",
   description: "Thanks for reaching out. I'll be in touch shortly.",
   robots: { index: false, follow: false },
 };

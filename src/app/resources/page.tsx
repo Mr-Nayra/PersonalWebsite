@@ -5,7 +5,7 @@ import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 
 export const metadata: Metadata = {
-  title: "Resources — AI, SEO & Web Development Guides | Aryan Rawther",
+  title: "Resources — AI, SEO & Web Development Guides",
   description:
     "In-depth guides and resources on AI automation, technical SEO, GEO, voice agents, and modern web development. Free, practical, and written for decision-makers.",
   alternates: { canonical: "/resources" },

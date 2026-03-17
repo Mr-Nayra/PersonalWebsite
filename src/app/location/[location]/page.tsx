@@ -111,7 +111,7 @@ export async function generateStaticParams() {
 
 const locationSEO: Record<string, { title: string; description: string; keywords: string[] }> = {
   bangalore: {
-    title: "AI Automation Consultant Bangalore — SEO, Voice AI & SaaS Developer | Aryan Rawther",
+    title: "AI Automation Consultant Bangalore — SEO, Voice AI & SaaS Developer",
     description:
       "AI automation consultant based in Bengaluru (Bangalore). Aryan Rawther (Apex Mind LLP) works with Bangalore startups, SaaS companies, and enterprises on AI agents, technical SEO, and full-stack web development. Same timezone, in-person available.",
     keywords: [
@@ -129,7 +129,7 @@ const locationSEO: Record<string, { title: string; description: string; keywords
     ],
   },
   india: {
-    title: "AI Automation & SEO Consultant India — Apex Mind LLP | Aryan Rawther",
+    title: "AI Automation & SEO Consultant India — Apex Mind LLP",
     description:
       "India-based AI automation consultant and technical SEO specialist. Aryan Rawther (Apex Mind LLP) works with companies across India — Mumbai, Delhi, Hyderabad, Chennai, Pune — on AI integration, voice agents, programmatic SEO, and SaaS development.",
     keywords: [
@@ -145,7 +145,7 @@ const locationSEO: Record<string, { title: string; description: string; keywords
     ],
   },
   remote: {
-    title: "Remote AI Development & SEO Consulting — Aryan Rawther Worldwide",
+    title: "Remote AI Development & SEO Consulting — Worldwide",
     description:
       "Remote AI automation consulting, technical SEO, and web development from Aryan Rawther (Apex Mind LLP). Milestone-based delivery, async-first communication, and overlap hours for UK, EU, and US clients.",
     keywords: [
@@ -167,7 +167,7 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
 
   const seo = locationSEO[location];
   return {
-    title: seo?.title ?? `${data.name} — AI & Web Development Consulting | Aryan Rawther`,
+    title: seo?.title ?? `${data.name} — AI & Web Development Consulting`,
     description: seo?.description ?? data.subheadline,
     keywords: seo?.keywords,
     alternates: { canonical: `/location/${location}` },

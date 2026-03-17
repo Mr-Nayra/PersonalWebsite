@@ -109,7 +109,7 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
   if (!product) return { title: "Product Not Found" };
 
   return {
-    title: `${product.name} — by Aryan Rawther`,
+    title: `${product.name}`,
     description: product.tagline,
     alternates: { canonical: `/products/${slug}` },
   };

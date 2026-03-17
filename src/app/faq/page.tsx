@@ -5,7 +5,7 @@ import { Breadcrumb } from "@/components/ui/Breadcrumb";
 import { faqSchema } from "@/lib/schemas";
 
 export const metadata: Metadata = {
-  title: "FAQ — AI Automation, SEO & SaaS Development Questions | Aryan Rawther",
+  title: "FAQ — AI Automation, SEO & SaaS Development Questions",
   description:
     "Answers to common questions about working with Aryan Rawther (Apex Mind LLP) — AI automation consulting fees, SEO timelines, SaaS development process, AI voice agents, and how consulting engagements are structured.",
   alternates: { canonical: "/faq" },

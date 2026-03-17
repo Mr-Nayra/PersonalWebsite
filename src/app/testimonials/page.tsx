@@ -6,7 +6,7 @@ import { siteData } from "@/data/site-data";
 import { reviewSchema } from "@/lib/schemas";
 
 export const metadata: Metadata = {
-  title: "Client Testimonials — Aryan Rawther",
+  title: "Client Testimonials",
   description:
     "Client testimonials for Aryan Rawther (Apex Mind LLP) — AI automation, SEO, and web development projects. Read what clients say about working with Aryan.",
   alternates: { canonical: "/testimonials" },

@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy — Aryan Rawther",
+  title: "Privacy Policy",
   description: "Privacy policy for aryanrawther.com and Apex Mind LLP.",
   alternates: { canonical: "/privacy-policy" },
 };

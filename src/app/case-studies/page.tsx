@@ -4,9 +4,10 @@ import { Breadcrumb } from "@/components/ui/Breadcrumb";
 import { caseStudiesPreview } from "@/data/site-data";
 import { CaseStudiesGrid } from "@/components/sections/case-studies/CaseStudiesGrid";
 import { TechBackground } from "@/components/ui/TechBackground";
+import { AtomBackground } from "@/components/ui/AtomBackground";
 
 export const metadata: Metadata = {
-  title: "Case Studies — AI Automation, SEO & SaaS Results | Aryan Rawther, Apex Mind LLP",
+  title: "Case Studies — AI Automation, SEO & SaaS Results | Apex Mind LLP",
   description:
     "Client case studies from Aryan Rawther (Apex Mind LLP) — AI IVR systems, SaaS MVPs, and organic SEO growth. Real results with specific metrics: 70% call handling reduction, 8-week MVP delivery.",
   alternates: { canonical: "/case-studies" },
@@ -25,7 +26,8 @@ export default function CaseStudiesPage() {
   return (
     <>
       {/* Hero */}
-      <section className="aurora-bg pt-32 pb-16">
+      <section className="aurora-bg pt-32 pb-16 overflow-hidden relative">
+        <AtomBackground />
         <div className="container relative z-10 max-w-3xl">
           <Breadcrumb items={[{ name: "Case Studies", url: "/case-studies" }]} />
           <div className="mt-8">

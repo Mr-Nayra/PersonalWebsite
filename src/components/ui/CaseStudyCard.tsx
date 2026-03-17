@@ -27,15 +27,18 @@ export function CaseStudyCard({
     <Link
       href={`/case-studies/${slug}`}
       className={cn(
-        "group block rounded-card border border-border bg-bg-surface p-6 card-hover flex flex-col gap-4",
+        "group h-full rounded-card border border-border bg-bg-surface p-6 card-hover flex flex-col gap-4",
         className
       )}
     >
       <div className="flex flex-wrap gap-2">
         <Badge variant="industry">{industry}</Badge>
-        {serviceArray.map((s, i) => (
-          <Badge key={i} variant="service">{s}</Badge>
-        ))}
+        {serviceArray.length > 0 && (
+          <Badge variant="service">{serviceArray[0]}</Badge>
+        )}
+        {serviceArray.length > 1 && (
+          <Badge variant="service">+{serviceArray.length - 1} more</Badge>
+        )}
       </div>
 
       <h3 className="font-semibold text-text-primary text-lg group-hover:text-accent-primary transition-colors">

@@ -135,7 +135,7 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
   if (!resource) return { title: "Resource Not Found" };
 
   return {
-    title: `${resource.title} — Aryan Rawther`,
+    title: resource.title,
     description: resource.description,
     alternates: { canonical: `/resources/${slug}` },
   };
