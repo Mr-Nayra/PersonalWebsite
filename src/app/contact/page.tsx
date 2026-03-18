@@ -86,6 +86,26 @@ export default function ContactPage() {
                 </a>
               </div>
 
+              {/* Email */}
+              <div className="rounded-card border border-sky-500/20 bg-sky-500/5 p-6">
+                <h3 className="font-semibold text-text-primary mb-2">
+                  Prefer email?
+                </h3>
+                <p className="text-text-secondary text-sm mb-4">
+                  For formal enquiries, NDAs, or if you&apos;d like to attach files or a brief — email works best.
+                </p>
+                <a
+                  href={`mailto:${siteData.person.email}`}
+                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-btn border border-sky-500/40 text-sky-400 hover:bg-sky-500/10 transition-colors text-sm font-medium"
+                >
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <rect width="20" height="16" x="2" y="4" rx="2" />
+                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                  </svg>
+                  {siteData.person.email}
+                </a>
+              </div>
+
               {/* Response time */}
               <div className="rounded-card border border-border bg-bg-surface p-5">
                 <h3 className="font-semibold text-text-primary text-sm mb-3">What to expect</h3>

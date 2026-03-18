@@ -38,7 +38,7 @@ const config: Config = {
         btn: "6px",
       },
       boxShadow: {
-        "glow-primary": "0 0 20px rgba(108, 99, 255, 0.3)",
+        "glow-primary": "0 0 20px rgba(79, 70, 229, 0.3)",
         "glow-secondary": "0 0 20px rgba(0, 212, 180, 0.3)",
       },
       animation: {

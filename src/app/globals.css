@@ -21,7 +21,7 @@
   --border: #CBD5E1; /* Darkened from #E2E8F0 for better visibility */
 
   /* Accents */
-  --accent-primary: #6C63FF;
+  --accent-primary: #4F46E5; /* darkened from #6C63FF: now 5.9:1 on white (WCAG AA pass) */
   --accent-secondary: #00897B;
 
   /* Text — sharp contrasts on white */
@@ -43,15 +43,16 @@
   --bg-elevated-rgb: 26 26 40;
   --border: #1E1E2E;
   --text-primary: #F0F0FF;
-  --text-secondary: #8888AA;
-  --text-muted: #555577;
+  --text-secondary: #9999BB;
+  --text-muted: #8888B8; /* lightened from #555577: now ~5.3:1 on bg-surface (WCAG AA pass) */
 
+  --accent-primary: #818CF8; /* lightened for dark mode: ~7:1 on bg-surface as text */
   /* Restore bright teal — it's readable on dark backgrounds */
   --accent-secondary: #00D4B4;
 
   /* Dark mode uses glow instead of surface shadow */
   --shadow-card: none;
-  --shadow-card-hover: 0 0 20px rgba(108, 99, 255, 0.2);
+  --shadow-card-hover: 0 0 20px rgba(79, 70, 229, 0.2);
 }
 
 /* =============================================
@@ -114,7 +115,7 @@ body {
   inset: 0;
   background: radial-gradient(
       ellipse 80% 60% at 20% 40%,
-      rgba(108, 99, 255, 0.15) 0%,
+      rgba(79, 70, 229, 0.15) 0%,
       transparent 60%
     ),
     radial-gradient(
@@ -124,7 +125,7 @@ body {
     ),
     radial-gradient(
       ellipse 50% 50% at 50% 30%,
-      rgba(108, 99, 255, 0.08) 0%,
+      rgba(79, 70, 229, 0.08) 0%,
       transparent 70%
     );
   background-size: 200% 200%;
@@ -151,7 +152,7 @@ body {
 :root:not(.dark) .aurora-bg::before {
   background: radial-gradient(
       ellipse 80% 60% at 20% 40%,
-      rgba(108, 99, 255, 0.08) 0%,
+      rgba(79, 70, 229, 0.08) 0%,
       transparent 60%
     ),
     radial-gradient(
@@ -202,7 +203,7 @@ p {
    ============================================= */
 
 ::selection {
-  background-color: rgba(108, 99, 255, 0.3);
+  background-color: rgba(79, 70, 229, 0.3);
   color: var(--text-primary);
 }
 
@@ -350,7 +351,7 @@ p {
 
 /* Glow effects */
 .glow-primary {
-  box-shadow: 0 0 20px rgba(108, 99, 255, 0.3);
+  box-shadow: 0 0 20px rgba(79, 70, 229, 0.3);
 }
 
 .glow-secondary {
@@ -407,8 +408,8 @@ p {
   background: conic-gradient(
     from var(--border-angle),
     transparent 82%,
-    rgba(108, 99, 255, 0.3) 88%,
-    rgba(108, 99, 255, 0.6) 92%,
+    rgba(79, 70, 229, 0.3) 88%,
+    rgba(79, 70, 229, 0.6) 92%,
     var(--accent-primary) 96%,
     #a78bfa 99%,
     #c4b5fd 100%
