@@ -30,7 +30,7 @@ export function SocialProofSection() {
       {/* Subtle background glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-3xl h-full bg-accent-primary/5 blur-[100px] rounded-full pointer-events-none" />
 
-      <AtomBackground />
+      <AtomBackground className="left-1/2 lg:left-3/4 -translate-x-1/2" />
 
       <div className="container relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
