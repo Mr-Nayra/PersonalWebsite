@@ -42,7 +42,6 @@ export default function CaseStudiesPage() {
       />
       {/* Hero */}
       <section className="aurora-bg pt-32 pb-16 overflow-hidden relative">
-        <AtomBackground />
         <div className="container relative z-10 max-w-3xl">
           <Breadcrumb items={[{ name: "Case Studies", url: "/case-studies" }]} />
           <div className="mt-8">
@@ -59,6 +58,8 @@ export default function CaseStudiesPage() {
       {/* Case studies grid and filter */}
       <section className="relative section-padding overflow-hidden">
         <TechBackground />
+        {/* Placed on the left side as requested */}
+        <AtomBackground className="left-0 -translate-x-[30%] opacity-20" />
         
         <div className="container relative z-10">
           <CaseStudiesGrid caseStudies={caseStudiesPreview} />

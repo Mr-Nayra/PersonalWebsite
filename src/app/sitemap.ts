@@ -9,7 +9,7 @@ const staticRoutes: { url: string; changeFrequency: "monthly" | "yearly" | "week
   { url: "/services", changeFrequency: "monthly", priority: 0.9 },
   { url: "/services/ai-automation-consulting", changeFrequency: "monthly", priority: 0.9 },
   { url: "/services/ai-integration", changeFrequency: "monthly", priority: 0.9 },
-  { url: "/services/ai-voice-agents", changeFrequency: "monthly", priority: 0.9 },
+  { url: "/services/ai-integration-agentic-workflows", changeFrequency: "monthly", priority: 0.9 },
   { url: "/services/seo-services", changeFrequency: "monthly", priority: 0.9 },
   { url: "/services/web-development", changeFrequency: "monthly", priority: 0.9 },
   { url: "/services/saas-development", changeFrequency: "monthly", priority: 0.9 },
@@ -24,8 +24,14 @@ const staticRoutes: { url: string; changeFrequency: "monthly" | "yearly" | "week
   { url: "/case-studies/photoshoprequest-ai-editor", changeFrequency: "yearly", priority: 0.7 },
   { url: "/case-studies/healthcare-rcm-automation", changeFrequency: "yearly", priority: 0.7 },
   { url: "/case-studies/combinehealth-seo-redesign", changeFrequency: "yearly", priority: 0.7 },
+  { url: "/case-studies/ai-ivr-insurance-agent", changeFrequency: "yearly", priority: 0.7 },
 
   { url: "/blog", changeFrequency: "weekly", priority: 0.8 },
+  { url: "/blog/how-to-build-ai-agents-with-langchain", changeFrequency: "monthly", priority: 0.7 },
+  { url: "/blog/technical-seo-for-saas-startups", changeFrequency: "monthly", priority: 0.7 },
+  { url: "/blog/building-ai-ivr-twilio-deepgram", changeFrequency: "monthly", priority: 0.7 },
+  { url: "/blog/what-is-geo-generative-engine-optimisation", changeFrequency: "monthly", priority: 0.7 },
+  { url: "/blog/nextjs-15-app-router-performance", changeFrequency: "monthly", priority: 0.7 },
   { url: "/resources", changeFrequency: "monthly", priority: 0.7 },
   { url: "/resources/ai-automation-guide-for-business", changeFrequency: "monthly", priority: 0.7 },
   { url: "/resources/geo-optimisation-guide", changeFrequency: "monthly", priority: 0.7 },
@@ -103,6 +109,7 @@ const staticRoutes: { url: string; changeFrequency: "monthly" | "yearly" | "week
   { url: "/location/remote", changeFrequency: "monthly", priority: 0.6 },
   { url: "/privacy-policy", changeFrequency: "yearly", priority: 0.2 },
   { url: "/terms-of-service", changeFrequency: "yearly", priority: 0.2 },
+  { url: "/thank-you", changeFrequency: "yearly", priority: 0.2 },
   { url: "/sitemap", changeFrequency: "monthly", priority: 0.3 },
 ];
 

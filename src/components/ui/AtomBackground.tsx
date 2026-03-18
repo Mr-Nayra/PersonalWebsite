@@ -1,6 +1,8 @@
-export function AtomBackground() {
+import { cn } from "@/lib/utils";
+
+export function AtomBackground({ className }: { className?: string } = {}) {
   return (
-    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] md:w-[800px] md:h-[800px] lg:w-[1200px] lg:h-[1200px] pointer-events-none opacity-30 select-none flex items-center justify-center z-0">
+    <div className={cn("absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] md:w-[800px] md:h-[800px] lg:w-[1200px] lg:h-[1200px] pointer-events-none opacity-30 select-none flex items-center justify-center z-0", className)}>
       {/* Nucleus */}
       <div className="absolute w-12 h-12 md:w-16 md:h-16 lg:w-24 lg:h-24 bg-gray-500/20 rounded-full blur-[8px]" />
       <div className="absolute w-8 h-8 md:w-12 md:h-12 lg:w-16 lg:h-16 bg-gray-600 rounded-full shadow-[0_0_20px_rgba(75,85,99,0.8)]" />

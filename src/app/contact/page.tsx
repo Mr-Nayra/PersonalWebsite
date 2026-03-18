@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Breadcrumb } from "@/components/ui/Breadcrumb";
 import { siteData } from "@/data/site-data";
 import { contactPageSchema } from "@/lib/schemas";
+import { ContactForm } from "@/components/sections/contact/ContactForm";
 
 export const metadata: Metadata = {
   title: "Hire Aryan Rawther — AI Automation, SEO & Web Development | Contact Apex Mind LLP",
@@ -59,109 +60,7 @@ export default function ContactPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {/* Contact Form */}
             <div>
-              <h2 className="text-xl font-bold text-text-primary mb-6">Send a message</h2>
-              <form className="space-y-4">
-                <div>
-                  <label className="block text-text-secondary text-sm font-medium mb-1.5">
-                    Name <span className="text-accent-primary">*</span>
-                  </label>
-                  <input
-                    type="text"
-                    name="name"
-                    required
-                    placeholder="Your name"
-                    className="w-full px-4 py-3 rounded-btn border border-border bg-bg-surface text-text-primary placeholder-text-muted focus:outline-none focus:border-accent-primary transition-colors text-sm"
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-text-secondary text-sm font-medium mb-1.5">
-                    Email <span className="text-accent-primary">*</span>
-                  </label>
-                  <input
-                    type="email"
-                    name="email"
-                    required
-                    placeholder="your@email.com"
-                    className="w-full px-4 py-3 rounded-btn border border-border bg-bg-surface text-text-primary placeholder-text-muted focus:outline-none focus:border-accent-primary transition-colors text-sm"
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-text-secondary text-sm font-medium mb-1.5">
-                    Company <span className="text-text-muted">(optional)</span>
-                  </label>
-                  <input
-                    type="text"
-                    name="company"
-                    placeholder="Your company"
-                    className="w-full px-4 py-3 rounded-btn border border-border bg-bg-surface text-text-primary placeholder-text-muted focus:outline-none focus:border-accent-primary transition-colors text-sm"
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-text-secondary text-sm font-medium mb-1.5">
-                    Service interested in <span className="text-accent-primary">*</span>
-                  </label>
-                  <select
-                    name="service"
-                    required
-                    className="w-full px-4 py-3 rounded-btn border border-border bg-bg-surface text-text-primary focus:outline-none focus:border-accent-primary transition-colors text-sm"
-                  >
-                    <option value="">Select a service</option>
-                    <option value="ai-automation">AI Automation Consulting</option>
-                    <option value="ai-voice">AI Voice Agents & IVR</option>
-                    <option value="seo">SEO Services</option>
-                    <option value="web-development">Web Development</option>
-                    <option value="saas">SaaS Development</option>
-                    <option value="not-sure">Not sure yet</option>
-                  </select>
-                </div>
-
-                <div>
-                  <label className="block text-text-secondary text-sm font-medium mb-1.5">
-                    Tell me about your project <span className="text-accent-primary">*</span>
-                  </label>
-                  <textarea
-                    name="message"
-                    required
-                    rows={5}
-                    placeholder="What are you trying to build or solve? The more context, the better I can help."
-                    className="w-full px-4 py-3 rounded-btn border border-border bg-bg-surface text-text-primary placeholder-text-muted focus:outline-none focus:border-accent-primary transition-colors text-sm resize-none"
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-text-secondary text-sm font-medium mb-1.5">
-                    Approximate budget <span className="text-text-muted">(optional)</span>
-                  </label>
-                  <select
-                    name="budget"
-                    className="w-full px-4 py-3 rounded-btn border border-border bg-bg-surface text-text-primary focus:outline-none focus:border-accent-primary transition-colors text-sm"
-                  >
-                    <option value="">Prefer not to say</option>
-                    <option value="under-1k">Under ₹1 lakh / $1,000</option>
-                    <option value="1k-5k">₹1–5 lakh / $1,000–$5,000</option>
-                    <option value="5k-15k">₹5–15 lakh / $5,000–$15,000</option>
-                    <option value="15k-plus">₹15 lakh+ / $15,000+</option>
-                  </select>
-                </div>
-
-                <div className="pt-2">
-                  <p className="text-text-muted text-xs mb-4">
-                    No pricing shown on this page. Every engagement is scoped to fit your needs. This form goes directly to my inbox.
-                  </p>
-                  <button
-                    type="submit"
-                    className="w-full py-3 px-6 bg-accent-primary text-white font-medium rounded-btn hover:bg-opacity-90 hover:scale-[1.01] transition-all duration-150 text-sm"
-                  >
-                    Send message →
-                  </button>
-                  <p className="text-text-muted text-xs mt-2 text-center">
-                    [TODO: Wire up form submission — connect to email backend]
-                  </p>
-                </div>
-              </form>
+              <ContactForm />
             </div>
 
             {/* Right sidebar */}
