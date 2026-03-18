@@ -3,8 +3,8 @@ import { Button } from "@/components/ui/Button";
 
 export function HeroSection() {
   return (
-    <section className="aurora-bg min-h-screen flex items-center relative">
-      <div className="container relative z-10 pt-40 pb-24 lg:py-40">
+    <section className="aurora-bg min-h-screen flex items-center relative py-16">
+      <div className="container relative z-10 pb-24 lg:py-40">
         <div className="flex flex-col-reverse lg:grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
           {/* Left Content */}
           <div className="w-full max-w-2xl lg:max-w-none">

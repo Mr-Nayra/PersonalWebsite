@@ -19,7 +19,7 @@ export function AboutSection() {
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
               {/* Decorative overlays */}
-              <div className="absolute inset-0 bg-gradient-to-t from-bg-surface/80 via-transparent to-transparent opacity-60" />
+              <div className="absolute inset-0 bg-gradient-to-t from-bg-surface/80 via-transparent to-transparent opacity-60 hidden dark:block" />
               <div className="absolute inset-0 rounded-2xl border-2 border-accent-primary/20 pointer-events-none transition-colors duration-500 group-hover:border-accent-primary/40" />
             </div>
           </div>
@@ -54,7 +54,7 @@ export function AboutSection() {
               ))}
             </div>
 
-            <div className="flex gap-4">
+            <div className="flex justify-center gap-4">
               <Button href="/about" variant="primary" size="md">
                 Learn more about me →
               </Button>

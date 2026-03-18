@@ -18,7 +18,7 @@
   --bg-elevated-rgb: 241 245 249;
 
   /* Borders — soft and clean */
-  --border: #CBD5E1; /* Darkened from #E2E8F0 for better visibility */
+  --border: #94A3B8;
 
   /* Accents */
   --accent-primary: #4F46E5; /* darkened from #6C63FF: now 5.9:1 on white (WCAG AA pass) */
@@ -30,8 +30,8 @@
   --text-muted: #64748B;
 
   /* Card shadows — elegant diffuse layers */
-  --shadow-card: 0 2px 4px -2px rgba(15, 23, 42, 0.05), 0 4px 6px -1px rgba(15, 23, 42, 0.05), 0 0 0 1px rgba(15, 23, 42, 0.03);
-  --shadow-card-hover: 0 10px 25px -5px rgba(15, 23, 42, 0.08), 0 8px 10px -6px rgba(15, 23, 42, 0.05), 0 0 0 1px rgba(15, 23, 42, 0.05);
+  --shadow-card: 0 2px 4px -2px rgba(15, 23, 42, 0.10), 0 4px 6px -1px rgba(15, 23, 42, 0.10), 0 0 0 1px rgba(15, 23, 42, 0.06);
+  --shadow-card-hover: 0 10px 25px -5px rgba(15, 23, 42, 0.14), 0 8px 10px -6px rgba(15, 23, 42, 0.08), 0 0 0 1px rgba(15, 23, 42, 0.08);
 }
 
 .dark {

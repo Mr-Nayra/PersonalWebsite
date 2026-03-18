@@ -30,7 +30,7 @@ export function SocialProofSection() {
       {/* Subtle background glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-3xl h-full bg-accent-primary/5 blur-[100px] rounded-full pointer-events-none" />
 
-      <AtomBackground className="left-1/2 lg:left-3/4 -translate-x-1/2" />
+      <AtomBackground className="left-full lg:left-3/4 -translate-x-1/2 w-[200vw] h-[200vw] md:w-[800px] md:h-[800px] lg:w-[1200px] lg:h-[1200px]" />
 
       <div className="container relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
@@ -65,7 +65,7 @@ export function SocialProofSection() {
             {stats.map((item) => (
               <div 
                 key={item.label} 
-                className="card-hover p-6 rounded-2xl bg-bg-elevated border border-border/50 relative overflow-hidden group"
+                className="card-hover p-6 rounded-2xl bg-bg-elevated border border-border relative overflow-hidden group"
               >
                 {/* Subtle gradient overlay on hover */}
                 <div className="absolute inset-0 bg-gradient-to-br from-accent-primary/0 to-accent-secondary/0 group-hover:from-accent-primary/5 group-hover:to-accent-secondary/5 transition-colors duration-500" />

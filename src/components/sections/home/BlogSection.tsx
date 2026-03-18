@@ -73,7 +73,7 @@ export function BlogSection() {
             fill="var(--accent-primary)"
             opacity={0}
             animate={{
-              opacity: [0, 0.06, 0.04, 0.06, 0],
+              opacity: [0, 0.12, 0.08, 0.12, 0],
               scale: [0.8, 1.1, 1, 1.1, 0.8],
             }}
             transition={{
