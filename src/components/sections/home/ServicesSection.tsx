@@ -40,10 +40,10 @@ export function ServicesSection() {
           transition={{ duration: 0.6 }}
         >
           <div>
-            <h2 className="text-3xl lg:text-4xl font-bold text-text-primary mb-3">
+            <h2 id="services-heading" className="text-3xl lg:text-4xl font-bold text-text-primary mb-3">
               What I do.
             </h2>
-            <p className="text-text-secondary max-w-xl">
+            <p id="services-description" className="text-text-secondary max-w-xl">
               Five specialised services, one integrated approach. Every engagement starts with understanding your business, not pitching a solution.
             </p>
           </div>

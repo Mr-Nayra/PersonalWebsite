@@ -1,6 +1,10 @@
 import { Metadata } from "next";
 import { ServicePageTemplate, ServicePageData } from "@/components/sections/ServicePageTemplate";
 import { caseStudiesPreview } from "@/data/site-data";
+import { webPageSchema } from "@/lib/schemas";
+
+// Update this date whenever meaningful content changes are made to this page
+const PAGE_LAST_MODIFIED = "2026-03-19";
 
 export const metadata: Metadata = {
   title: "Next.js & React Web Developer India — Full-Stack, FastAPI & TypeScript Consultant",
@@ -131,5 +135,24 @@ const data: ServicePageData = {
 };
 
 export default function WebDevelopmentPage() {
-  return <ServicePageTemplate data={data} />;
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            webPageSchema({
+              title: "Next.js & React Web Developer India — Full-Stack, FastAPI & TypeScript Consultant",
+              description:
+                "Hire a full-stack web developer in India. Aryan Rawther (Apex Mind LLP) builds modern web applications using Next.js, React, TypeScript, FastAPI, and Node.js. Specialising in performance-optimised, SEO-friendly web apps for SaaS companies and startups.",
+              url: "/services/web-development",
+              datePublished: "2026-01-01",
+              dateModified: PAGE_LAST_MODIFIED,
+            })
+          ),
+        }}
+      />
+      <ServicePageTemplate data={data} />
+    </>
+  );
 }

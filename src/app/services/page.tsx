@@ -3,7 +3,10 @@ import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 import { Breadcrumb } from "@/components/ui/Breadcrumb";
 import { siteData } from "@/data/site-data";
-import { itemListSchema } from "@/lib/schemas";
+import { itemListSchema, webPageSchema } from "@/lib/schemas";
+
+// Update this date whenever meaningful content changes are made to this page
+const PAGE_LAST_MODIFIED = "2026-03-19";
 
 export const metadata: Metadata = {
   title: "Services — AI Automation, Technical SEO, Web & SaaS Development | Apex Mind LLP",
@@ -56,6 +59,21 @@ const processOverview = [
 export default function ServicesPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            webPageSchema({
+              title: "Services — AI Automation, Technical SEO, Web & SaaS Development | Apex Mind LLP",
+              description:
+                "Aryan Rawther (Apex Mind LLP) offers AI automation consulting, AI voice agents, technical SEO & GEO, web development, and SaaS product development. Based in Bengaluru, serving clients in India and globally.",
+              url: "/services",
+              datePublished: "2026-01-01",
+              dateModified: PAGE_LAST_MODIFIED,
+            })
+          ),
+        }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{

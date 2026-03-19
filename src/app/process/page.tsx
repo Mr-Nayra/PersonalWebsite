@@ -3,7 +3,10 @@ import { Button } from "@/components/ui/Button";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { Breadcrumb } from "@/components/ui/Breadcrumb";
 import { AskAIButton } from "@/components/ui/AskAIButton";
-import { faqSchema } from "@/lib/schemas";
+import { faqSchema, webPageSchema } from "@/lib/schemas";
+
+// Update this date whenever meaningful content changes are made to this page
+const PAGE_LAST_MODIFIED = "2026-03-19";
 
 export const metadata: Metadata = {
   title: "How I Work — Aryan Rawther's Consulting Process",
@@ -62,6 +65,21 @@ const differentiators = [
 export default function ProcessPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            webPageSchema({
+              title: "How I Work — Aryan Rawther's Consulting Process",
+              description:
+                "Exactly what it's like to work with Aryan Rawther — from first message to final handoff. Milestone-based delivery, async communication, and full documentation every time.",
+              url: "/process",
+              datePublished: "2026-01-01",
+              dateModified: PAGE_LAST_MODIFIED,
+            })
+          ),
+        }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema(faqs)) }}

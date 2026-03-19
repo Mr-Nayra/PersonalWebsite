@@ -3,7 +3,10 @@ import Link from "next/link";
 import { AskAIButton } from "@/components/ui/AskAIButton";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
-import { itemListSchema } from "@/lib/schemas";
+import { itemListSchema, webPageSchema } from "@/lib/schemas";
+
+// Update this date whenever meaningful content changes are made to this page
+const PAGE_LAST_MODIFIED = "2026-03-19";
 
 export const metadata: Metadata = {
   title: "Resources — AI, SEO & Web Development Guides",
@@ -71,6 +74,21 @@ export default function ResourcesPage() {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            webPageSchema({
+              title: "Resources — AI, SEO & Web Development Guides",
+              description:
+                "In-depth guides and resources on AI automation, technical SEO, GEO, voice agents, and modern web development. Free, practical, and written for decision-makers.",
+              url: "/resources",
+              datePublished: "2026-01-01",
+              dateModified: PAGE_LAST_MODIFIED,
+            })
+          ),
+        }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{

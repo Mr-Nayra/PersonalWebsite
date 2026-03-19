@@ -2,7 +2,10 @@ import { Metadata } from "next";
 import { Button } from "@/components/ui/Button";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { Breadcrumb } from "@/components/ui/Breadcrumb";
-import { faqSchema } from "@/lib/schemas";
+import { faqSchema, webPageSchema } from "@/lib/schemas";
+
+// Update this date whenever meaningful content changes are made to this page
+const PAGE_LAST_MODIFIED = "2026-03-19";
 
 export const metadata: Metadata = {
   title: "FAQ — AI Automation, SEO & SaaS Development Questions",
@@ -157,6 +160,21 @@ const allFaqs = faqCategories.flatMap((c) => c.questions);
 export default function FAQPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            webPageSchema({
+              title: "FAQ — AI Automation, SEO & SaaS Development Questions",
+              description:
+                "Answers to common questions about working with Aryan Rawther (Apex Mind LLP) — AI automation consulting fees, SEO timelines, SaaS development process, AI voice agents, and how consulting engagements are structured.",
+              url: "/faq",
+              datePublished: "2026-01-01",
+              dateModified: PAGE_LAST_MODIFIED,
+            })
+          ),
+        }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema(allFaqs)) }}

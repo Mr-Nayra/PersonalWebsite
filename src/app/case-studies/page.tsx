@@ -5,7 +5,10 @@ import { caseStudiesPreview } from "@/data/site-data";
 import { CaseStudiesGrid } from "@/components/sections/case-studies/CaseStudiesGrid";
 import { TechBackground } from "@/components/ui/TechBackground";
 import { AtomBackground } from "@/components/ui/AtomBackground";
-import { itemListSchema } from "@/lib/schemas";
+import { itemListSchema, webPageSchema } from "@/lib/schemas";
+
+// Update this date whenever meaningful content changes are made to this page
+const PAGE_LAST_MODIFIED = "2026-03-19";
 
 export const metadata: Metadata = {
   title: "Case Studies — AI Automation, SEO & SaaS Results | Apex Mind LLP",
@@ -26,6 +29,21 @@ export const metadata: Metadata = {
 export default function CaseStudiesPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            webPageSchema({
+              title: "Case Studies — AI Automation, SEO & SaaS Results | Apex Mind LLP",
+              description:
+                "Client case studies from Aryan Rawther (Apex Mind LLP) — AI IVR systems, SaaS MVPs, and organic SEO growth. Real results with specific metrics: 70% call handling reduction, 8-week MVP delivery.",
+              url: "/case-studies",
+              datePublished: "2026-01-01",
+              dateModified: PAGE_LAST_MODIFIED,
+            })
+          ),
+        }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{

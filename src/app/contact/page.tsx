@@ -2,8 +2,11 @@ import { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumb } from "@/components/ui/Breadcrumb";
 import { siteData } from "@/data/site-data";
-import { contactPageSchema } from "@/lib/schemas";
+import { contactPageSchema, webPageSchema } from "@/lib/schemas";
 import { ContactForm } from "@/components/sections/contact/ContactForm";
+
+// Update this date whenever meaningful content changes are made to this page
+const PAGE_LAST_MODIFIED = "2026-03-19";
 
 export const metadata: Metadata = {
   title: "Hire Aryan Rawther — AI Automation, SEO & Web Development | Contact Apex Mind LLP",
@@ -29,6 +32,21 @@ export default function ContactPage() {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            webPageSchema({
+              title: "Hire Aryan Rawther — AI Automation, SEO & Web Development | Contact Apex Mind LLP",
+              description:
+                "Hire an AI automation consultant or technical SEO specialist in India. Contact Aryan Rawther (Apex Mind LLP) to discuss your AI, SEO, or SaaS development project. Based in Bengaluru, responding within 24 hours.",
+              url: "/contact",
+              datePublished: "2026-01-01",
+              dateModified: PAGE_LAST_MODIFIED,
+            })
+          ),
+        }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(contactPageSchema()) }}

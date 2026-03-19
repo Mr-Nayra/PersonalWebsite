@@ -32,13 +32,13 @@ export function HeroSection() {
             </div>
 
             {/* Headline */}
-            <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl xl:text-6.5xl font-bold text-text-primary leading-[1.1] mb-6">
-              I help businesses grow using{" "}
+            <h1 id="hero-title" className="font-display text-3xl sm:text-4xl lg:text-5xl xl:text-6.5xl font-bold text-text-primary leading-[1.1] mb-6">
+              Aryan Rawther — I help businesses grow using{" "}
               <span className="gradient-text">AI, SEO, and modern web technology.</span>
             </h1>
 
             {/* Subheadline */}
-            <p className="text-text-secondary text-lg sm:text-xl lg:text-2xl leading-relaxed mb-10 max-w-2xl">
+            <p id="hero-description" className="text-text-secondary text-lg sm:text-xl lg:text-2xl leading-relaxed mb-10 max-w-2xl">
               Aryan Rawther — AI automation consultant, technical SEO specialist, and full-stack developer. Based in Bengaluru, working with clients across India and globally.
             </p>
 

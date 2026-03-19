@@ -3,6 +3,10 @@ import { Button } from "@/components/ui/Button";
 import { Breadcrumb } from "@/components/ui/Breadcrumb";
 import { AskAIButton } from "@/components/ui/AskAIButton";
 import Image from "next/image";
+import { webPageSchema } from "@/lib/schemas";
+
+// Update this date whenever meaningful content changes are made to this page
+const PAGE_LAST_MODIFIED = "2026-03-19";
 
 export const metadata: Metadata = {
   title: "Beyond the Work",
@@ -42,6 +46,21 @@ const books = [
 export default function BeyondWorkPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            webPageSchema({
+              title: "Beyond the Work — Aryan Rawther",
+              description:
+                "The books, gym, and travel that shape how Aryan Rawther thinks, builds, and shows up. The person behind the consultant.",
+              url: "/about/beyond-work",
+              datePublished: "2026-01-01",
+              dateModified: PAGE_LAST_MODIFIED,
+            })
+          ),
+        }}
+      />
       {/* Hero */}
       <section className="aurora-bg pt-32 pb-16">
         <div className="container relative z-10">

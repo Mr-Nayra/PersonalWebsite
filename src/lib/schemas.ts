@@ -12,11 +12,49 @@ export function websiteSchema() {
     url: SITE_URL,
     description:
       "AI Automation Consulting, SEO Services, and Web Development by Aryan Rawther, founder of Apex Mind LLP.",
-    potentialAction: {
-      "@type": "SearchAction",
-      target: `${SITE_URL}/search?q={search_term_string}`,
-      "query-input": "required name=search_term_string",
+  };
+}
+
+export function webPageSchema({
+  title,
+  description,
+  url,
+  datePublished,
+  dateModified,
+  speakableSelectors,
+}: {
+  title: string;
+  description: string;
+  url: string;
+  datePublished: string;
+  dateModified: string;
+  speakableSelectors?: string[];
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: title,
+    description,
+    url: `${SITE_URL}${url}`,
+    datePublished,
+    dateModified,
+    author: {
+      "@type": "Person",
+      name: PERSON_NAME,
+      url: SITE_URL,
     },
+    publisher: {
+      "@type": "Organization",
+      name: COMPANY_NAME,
+      url: SITE_URL,
+    },
+    inLanguage: "en",
+    ...(speakableSelectors && speakableSelectors.length > 0 && {
+      speakable: {
+        "@type": "SpeakableSpecification",
+        cssSelector: speakableSelectors,
+      },
+    }),
   };
 }
 
@@ -25,8 +63,13 @@ export function organizationSchema() {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: COMPANY_NAME,
+    description:
+      "Apex Mind LLP is an AI automation and web consulting firm founded by Aryan Rawther in Bengaluru, India. We design and deliver AI agent workflows, LLM integrations, technical SEO, GEO optimisation, and SaaS products for businesses across India and globally.",
     url: SITE_URL,
     logo: `${SITE_URL}/images/og/logo.png`,
+    foundingDate: "2026",
+    email: "contact.aryanrawther@gmail.com",
+    areaServed: ["India", "United Kingdom", "United States", "Global"],
     sameAs: [
       "https://www.linkedin.com/in/aryanrawther",
       "https://github.com/Mr-Nayra",
@@ -40,6 +83,12 @@ export function organizationSchema() {
       addressLocality: "Bengaluru",
       addressCountry: "IN",
     },
+    contactPoint: {
+      "@type": "ContactPoint",
+      contactType: "customer support",
+      email: "contact.aryanrawther@gmail.com",
+      availableLanguage: ["English", "Hindi"],
+    },
   };
 }
 
@@ -49,6 +98,7 @@ export function personSchema() {
     "@type": "Person",
     name: PERSON_NAME,
     jobTitle: "Founder & Principal Consultant",
+    image: `${SITE_URL}/images/aryan/aryan-rawther-headshot.webp`,
     worksFor: {
       "@type": "Organization",
       name: COMPANY_NAME,

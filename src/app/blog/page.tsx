@@ -1,7 +1,10 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumb } from "@/components/ui/Breadcrumb";
-import { itemListSchema } from "@/lib/schemas";
+import { itemListSchema, webPageSchema } from "@/lib/schemas";
+
+// Update this date whenever meaningful content changes are made to this page
+const PAGE_LAST_MODIFIED = "2026-03-19";
 
 export const metadata: Metadata = {
   title: "Blog — AI Automation, Technical SEO, GEO & SaaS Development",
@@ -73,6 +76,21 @@ export default function BlogPage() {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            webPageSchema({
+              title: "Blog — AI Automation, Technical SEO, GEO & SaaS Development",
+              description:
+                "Practical, in-depth articles on AI automation, LLM integration, technical SEO, GEO (Generative Engine Optimisation), and SaaS development from Aryan Rawther. Written from real client project experience.",
+              url: "/blog",
+              datePublished: "2026-01-01",
+              dateModified: PAGE_LAST_MODIFIED,
+            })
+          ),
+        }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{

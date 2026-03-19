@@ -37,12 +37,12 @@ export function SocialProofSection() {
           
           {/* Left Column: Context & CTA */}
           <div className="space-y-6">
-            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-text-primary leading-tight">
+            <h2 id="social-proof-heading" className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-text-primary leading-tight">
               Proven results,{" "}
               <br className="hidden lg:block" />
               <span className="gradient-text">predictable delivery.</span>
             </h2>
-            <p className="text-text-secondary text-lg leading-relaxed max-w-lg">
+            <p id="social-proof-description" className="text-text-secondary text-lg leading-relaxed max-w-lg">
               I partner with businesses to deliver scalable, high-performance technical solutions. 
               No guesswork—just a clear, milestone-driven approach that ensures quality at every step.
             </p>

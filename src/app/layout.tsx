@@ -122,6 +122,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <link type="text/plain" rel="llms.txt" href="/llms.txt" />
+      </head>
       <body
         className={`${inter.variable} ${jetbrainsMono.variable} ${caveat.variable} font-sans bg-bg-base text-text-primary`}
       >

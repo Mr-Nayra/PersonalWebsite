@@ -1,6 +1,10 @@
 import { Metadata } from "next";
 import { ServicePageTemplate, ServicePageData } from "@/components/sections/ServicePageTemplate";
 import { caseStudiesPreview } from "@/data/site-data";
+import { webPageSchema } from "@/lib/schemas";
+
+// Update this date whenever meaningful content changes are made to this page
+const PAGE_LAST_MODIFIED = "2026-03-19";
 
 export const metadata: Metadata = {
   title: "AI Integration & Agentic Workflows India — Voice Agents, Prompt Engineering & SaaS AI-ification",
@@ -136,5 +140,24 @@ const data: ServicePageData = {
 };
 
 export default function AIIntegrationPage() {
-  return <ServicePageTemplate data={data} />;
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            webPageSchema({
+              title: "AI Integration & Agentic Workflows India — Voice Agents, Prompt Engineering & SaaS AI-ification",
+              description:
+                "Aryan Rawther (Apex Mind LLP) helps businesses integrate AI beyond chatbots — building real-time AI voice agents, designing LLM application architecture, and adding AI features to existing SaaS products.",
+              url: "/services/ai-integration",
+              datePublished: "2026-01-01",
+              dateModified: PAGE_LAST_MODIFIED,
+            })
+          ),
+        }}
+      />
+      <ServicePageTemplate data={data} />
+    </>
+  );
 }

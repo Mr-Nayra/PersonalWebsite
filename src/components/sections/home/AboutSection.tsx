@@ -32,13 +32,13 @@ export function AboutSection() {
                 About me
               </span>
             </div>
-            <h2 className="text-3xl lg:text-4xl font-bold text-text-primary mb-6">
+            <h2 id="about-heading" className="text-3xl lg:text-4xl font-bold text-text-primary mb-6">
               Builder, consultant, and perpetual learner.
             </h2>
-            <p className="text-text-secondary leading-relaxed mb-4">
+            <p id="about-description-1" className="text-text-secondary leading-relaxed mb-4">
               I&apos;m Aryan Rawther, founder of Apex Mind LLP. I work at the intersection of AI automation, technical SEO, and software engineering — helping businesses build systems that actually scale.
             </p>
-            <p className="text-text-secondary leading-relaxed mb-6">
+            <p id="about-description-2" className="text-text-secondary leading-relaxed mb-6">
               With 20+ client projects delivered across India and globally, I specialise in taking complex technical challenges and turning them into measurable business outcomes. Not just consultant — I build things too.
             </p>
 

@@ -1,6 +1,10 @@
 import { Metadata } from "next";
 import { ServicePageTemplate, ServicePageData } from "@/components/sections/ServicePageTemplate";
 import { caseStudiesPreview } from "@/data/site-data";
+import { webPageSchema } from "@/lib/schemas";
+
+// Update this date whenever meaningful content changes are made to this page
+const PAGE_LAST_MODIFIED = "2026-03-19";
 
 export const metadata: Metadata = {
   title: "SaaS Development India — MVP Architect, B2B SaaS & Technical Co-Founder Consultant",
@@ -125,5 +129,24 @@ const data: ServicePageData = {
 };
 
 export default function SaaSDevelopmentPage() {
-  return <ServicePageTemplate data={data} />;
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            webPageSchema({
+              title: "SaaS Development India — MVP Architect, B2B SaaS & Technical Co-Founder Consultant",
+              description:
+                "Hire a SaaS developer in India. Aryan Rawther (Apex Mind LLP) builds B2B SaaS MVPs, multi-tenant architectures, and full-stack products from idea to launch. Technical co-founder alternative for founders without a CTO.",
+              url: "/services/saas-development",
+              datePublished: "2026-01-01",
+              dateModified: PAGE_LAST_MODIFIED,
+            })
+          ),
+        }}
+      />
+      <ServicePageTemplate data={data} />
+    </>
+  );
 }

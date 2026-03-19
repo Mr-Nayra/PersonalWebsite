@@ -4,8 +4,11 @@ import { Button } from "@/components/ui/Button";
 import { StatCounter } from "@/components/ui/StatCounter";
 import { Breadcrumb } from "@/components/ui/Breadcrumb";
 import { siteData } from "@/data/site-data";
-import { personSchema } from "@/lib/schemas";
+import { personSchema, webPageSchema } from "@/lib/schemas";
 import Image from "next/image";
+
+// Update this date whenever meaningful content changes are made to this page
+const PAGE_LAST_MODIFIED = "2026-03-19";
 
 export const metadata: Metadata = {
   title: "About Aryan Rawther — AI Consultant & Founder of Apex Mind LLP, Bengaluru",
@@ -54,6 +57,21 @@ const servicesShowcase = [
 export default function AboutPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            webPageSchema({
+              title: "About Aryan Rawther — AI Consultant & Founder of Apex Mind LLP, Bengaluru",
+              description:
+                "Aryan Rawther is an AI automation consultant, technical SEO specialist, and full-stack SaaS developer based in Bengaluru, India. Founder of Apex Mind LLP. Working with startups, SaaS companies, and enterprises across India and globally.",
+              url: "/about",
+              datePublished: "2026-01-01",
+              dateModified: PAGE_LAST_MODIFIED,
+            })
+          ),
+        }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema()) }}

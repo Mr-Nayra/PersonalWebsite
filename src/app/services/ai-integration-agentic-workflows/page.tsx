@@ -2,6 +2,10 @@ import { Metadata } from "next";
 import { ServicePageTemplate, ServicePageData } from "@/components/sections/ServicePageTemplate";
 import { caseStudiesPreview } from "@/data/site-data";
 import { Button } from "@/components/ui/Button";
+import { webPageSchema } from "@/lib/schemas";
+
+// Update this date whenever meaningful content changes are made to this page
+const PAGE_LAST_MODIFIED = "2026-03-19";
 
 export const metadata: Metadata = {
   title: "AI Integration & Agentic Workflows India — RAG Systems & Autonmous Agents",
@@ -132,6 +136,21 @@ const data: ServicePageData = {
 export default function AIIntegrationPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            webPageSchema({
+              title: "AI Integration & Agentic Workflows India — RAG Systems & Autonomous Agents",
+              description:
+                "Hire an AI integration consultant in India. Aryan Rawther (Apex Mind LLP) designs and builds RAG systems, multi-modal pipelines, and agentic workflows. Specialising in SaaS AI-ification, AI voice agents and more.",
+              url: "/services/ai-integration-agentic-workflows",
+              datePublished: "2026-01-01",
+              dateModified: PAGE_LAST_MODIFIED,
+            })
+          ),
+        }}
+      />
       <ServicePageTemplate data={data} />
       
       {/* Capability Deep Dives */}

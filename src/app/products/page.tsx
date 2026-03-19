@@ -3,7 +3,10 @@ import { Button } from "@/components/ui/Button";
 import { ProductCard } from "@/components/ui/ProductCard";
 import { Breadcrumb } from "@/components/ui/Breadcrumb";
 import { productsPreview } from "@/data/site-data";
-import { itemListSchema } from "@/lib/schemas";
+import { itemListSchema, webPageSchema } from "@/lib/schemas";
+
+// Update this date whenever meaningful content changes are made to this page
+const PAGE_LAST_MODIFIED = "2026-03-19";
 
 export const metadata: Metadata = {
   title: "Products — SaaS Tools & Open Source Projects | Apex Mind LLP",
@@ -26,6 +29,21 @@ export const metadata: Metadata = {
 export default function ProductsPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            webPageSchema({
+              title: "Products — SaaS Tools & Open Source Projects | Apex Mind LLP",
+              description:
+                "SaaS products, open-source tools, and AI applications built by Aryan Rawther (Apex Mind LLP). Includes SpecLens AI (procurement SaaS), MediaMitra (AI media monitoring), and GEO Checker (AI search visibility audit tool).",
+              url: "/products",
+              datePublished: "2026-01-01",
+              dateModified: PAGE_LAST_MODIFIED,
+            })
+          ),
+        }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{

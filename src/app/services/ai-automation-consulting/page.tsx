@@ -1,6 +1,10 @@
 import { Metadata } from "next";
 import { ServicePageTemplate, ServicePageData } from "@/components/sections/ServicePageTemplate";
 import { caseStudiesPreview } from "@/data/site-data";
+import { webPageSchema } from "@/lib/schemas";
+
+// Update this date whenever meaningful content changes are made to this page
+const PAGE_LAST_MODIFIED = "2026-03-19";
 
 export const metadata: Metadata = {
   title: "AI Automation Consulting India — LLM Integration, AI Agents & ChatGPT Developer",
@@ -115,5 +119,24 @@ const data: ServicePageData = {
 };
 
 export default function AIAutomationConsultingPage() {
-  return <ServicePageTemplate data={data} />;
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            webPageSchema({
+              title: "AI Automation Consulting India — LLM Integration, AI Agents & ChatGPT Developer",
+              description:
+                "Hire an AI automation consultant in India. Aryan Rawther (Apex Mind LLP) builds LLM integrations, AI agent workflows, and business process automation using OpenAI, LangChain, and CrewAI. Serving SaaS companies and startups globally.",
+              url: "/services/ai-automation-consulting",
+              datePublished: "2026-01-01",
+              dateModified: PAGE_LAST_MODIFIED,
+            })
+          ),
+        }}
+      />
+      <ServicePageTemplate data={data} />
+    </>
+  );
 }

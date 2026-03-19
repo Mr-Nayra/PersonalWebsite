@@ -3,7 +3,10 @@ import { Button } from "@/components/ui/Button";
 import { TestimonialCard } from "@/components/ui/TestimonialCard";
 import { Breadcrumb } from "@/components/ui/Breadcrumb";
 import { siteData } from "@/data/site-data";
-import { reviewSchema } from "@/lib/schemas";
+import { reviewSchema, webPageSchema } from "@/lib/schemas";
+
+// Update this date whenever meaningful content changes are made to this page
+const PAGE_LAST_MODIFIED = "2026-03-19";
 
 export const metadata: Metadata = {
   title: "Client Testimonials",
@@ -44,6 +47,21 @@ const allTestimonials = [
 export default function TestimonialsPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            webPageSchema({
+              title: "Client Testimonials — Aryan Rawther | Apex Mind LLP",
+              description:
+                "Client testimonials for Aryan Rawther (Apex Mind LLP) — AI automation, SEO, and web development projects. Read what clients say about working with Aryan.",
+              url: "/testimonials",
+              datePublished: "2026-01-01",
+              dateModified: PAGE_LAST_MODIFIED,
+            })
+          ),
+        }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{

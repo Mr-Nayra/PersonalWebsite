@@ -1,6 +1,10 @@
 import { Metadata } from "next";
 import { ServicePageTemplate, ServicePageData } from "@/components/sections/ServicePageTemplate";
 import { caseStudiesPreview } from "@/data/site-data";
+import { webPageSchema } from "@/lib/schemas";
+
+// Update this date whenever meaningful content changes are made to this page
+const PAGE_LAST_MODIFIED = "2026-03-19";
 
 export const metadata: Metadata = {
   title: "Technical SEO & GEO Consultant India — Programmatic SEO, Core Web Vitals & AI Search",
@@ -123,5 +127,24 @@ const data: ServicePageData = {
 };
 
 export default function SEOServicesPage() {
-  return <ServicePageTemplate data={data} />;
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            webPageSchema({
+              title: "Technical SEO & GEO Consultant India — Programmatic SEO, Core Web Vitals & AI Search",
+              description:
+                "Hire a technical SEO consultant in India. Aryan Rawther (Apex Mind LLP) offers technical SEO audits, programmatic SEO, Core Web Vitals optimisation, schema markup, and GEO (Generative Engine Optimisation) for AI search visibility.",
+              url: "/services/seo-services",
+              datePublished: "2026-01-01",
+              dateModified: PAGE_LAST_MODIFIED,
+            })
+          ),
+        }}
+      />
+      <ServicePageTemplate data={data} />
+    </>
+  );
 }

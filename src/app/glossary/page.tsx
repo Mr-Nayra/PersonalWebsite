@@ -1,7 +1,10 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import { AskAIButton } from "@/components/ui/AskAIButton";
-import { itemListSchema } from "@/lib/schemas";
+import { itemListSchema, webPageSchema } from "@/lib/schemas";
+
+// Update this date whenever meaningful content changes are made to this page
+const PAGE_LAST_MODIFIED = "2026-03-19";
 
 export const metadata: Metadata = {
   title: "AI & SEO Glossary — Key Terms Explained",
@@ -349,6 +352,21 @@ const groupedByCategory = glossaryTerms.reduce<Record<string, typeof glossaryTer
 export default function GlossaryPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            webPageSchema({
+              title: "AI & SEO Glossary — Key Terms Explained",
+              description:
+                "Plain-English definitions of AI, machine learning, SEO, and GEO terms. Written for business owners and non-technical decision-makers.",
+              url: "/glossary",
+              datePublished: "2026-01-01",
+              dateModified: PAGE_LAST_MODIFIED,
+            })
+          ),
+        }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{

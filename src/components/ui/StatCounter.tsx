@@ -21,10 +21,14 @@ export function StatCounter({
 }: StatCounterProps) {
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true });
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(value);
+  const [hasAnimated, setHasAnimated] = useState(false);
 
   useEffect(() => {
-    if (!isInView) return;
+    if (!isInView || hasAnimated) return;
+
+    setHasAnimated(true);
+    setCount(0);
 
     const duration = 1500;
     const steps = 60;
@@ -41,7 +45,7 @@ export function StatCounter({
     }, duration / steps);
 
     return () => clearInterval(timer);
-  }, [isInView, value]);
+  }, [isInView, value, hasAnimated]);
 
   return (
     <div ref={ref} className={cn("text-center", className)}>
