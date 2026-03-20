@@ -81,21 +81,12 @@ export const metadata: Metadata = {
     title: "Aryan Rawther — AI Automation, SEO & Web Development Consultant",
     description:
       "AI Automation Consulting, SEO Services, and Web Development by Aryan Rawther, founder of Apex Mind LLP. Based in Bengaluru, working globally.",
-    images: [
-      {
-        url: "/images/og/default.png",
-        width: 1200,
-        height: 630,
-        alt: "Aryan Rawther — Apex Mind LLP",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Aryan Rawther — AI Automation, SEO & Web Development Consultant",
     description:
       "AI Automation Consulting, SEO Services, and Web Development by Aryan Rawther, founder of Apex Mind LLP.",
-    images: ["/images/og/default.png"],
     creator: "@aryanrawther",
   },
   robots: {
