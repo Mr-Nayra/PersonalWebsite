@@ -19,6 +19,7 @@ export default function robots(): MetadataRoute.Robots {
       { userAgent: "anthropic-ai", allow: "/" },
       { userAgent: "Bingbot", allow: "/" },
       { userAgent: "msnbot", allow: "/" },
+      { userAgent: "Google-Extended", allow: "/" },
     ],
     sitemap: `${siteUrl}/sitemap.xml`,
     host: siteUrl,

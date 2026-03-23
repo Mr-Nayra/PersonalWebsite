@@ -10,6 +10,7 @@ import { formatDate } from "@/lib/utils";
 type Params = { slug: string };
 
 import { blogPosts } from "@/data/blog";
+import { blogContent } from "@/data/blog-content";
 
 export async function generateStaticParams() {
   return Object.keys(blogPosts).map((slug) => ({ slug }));
@@ -39,6 +40,8 @@ export default async function BlogPostPage({ params }: { params: Promise<Params>
   const post = blogPosts[slug];
   if (!post) notFound();
 
+  const ContentComponent = blogContent[slug];
+
   return (
     <>
       <script
@@ -51,6 +54,7 @@ export default async function BlogPostPage({ params }: { params: Promise<Params>
               url: `/blog/${slug}`,
               datePublished: post.date,
               dateModified: post.updatedAt,
+              keywords: post.keywords,
             })
           ),
         }}
@@ -133,10 +137,7 @@ export default async function BlogPostPage({ params }: { params: Promise<Params>
 
               {/* Prose content */}
               <div className="prose">
-                <p>{post.content}</p>
-                <p className="text-text-muted text-sm mt-8 p-4 border border-dashed border-border rounded-btn">
-                  [TODO: Full article content goes here. Write at minimum 1,500 words. Structure: Introduction → H2 sections → FAQ → CTA. Include internal links to relevant service pages and case studies.]
-                </p>
+                {ContentComponent ? <ContentComponent /> : null}
               </div>
 
               {/* Bottom AskAI */}

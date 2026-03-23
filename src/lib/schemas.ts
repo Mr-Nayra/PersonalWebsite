@@ -153,6 +153,7 @@ export function articleSchema({
   datePublished,
   dateModified,
   image,
+  keywords,
 }: {
   title: string;
   description: string;
@@ -160,13 +161,19 @@ export function articleSchema({
   datePublished: string;
   dateModified?: string;
   image?: string;
+  keywords?: string[];
 }) {
+  const canonicalUrl = `${SITE_URL}${url}`;
   return {
     "@context": "https://schema.org",
     "@type": "Article",
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": canonicalUrl,
+    },
     headline: title,
     description,
-    url: `${SITE_URL}${url}`,
+    url: canonicalUrl,
     datePublished,
     dateModified: dateModified || datePublished,
     author: {
@@ -180,6 +187,7 @@ export function articleSchema({
       url: SITE_URL,
     },
     image: image ? `${SITE_URL}${image}` : `${SITE_URL}/images/og/default.png`,
+    ...(keywords && keywords.length > 0 && { keywords: keywords.join(", ") }),
   };
 }
 
