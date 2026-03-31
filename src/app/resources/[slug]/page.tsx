@@ -4,6 +4,7 @@ import { AskAIButton } from "@/components/ui/AskAIButton";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { Breadcrumb } from "@/components/ui/Breadcrumb";
+import Link from "next/link";
 import { articleSchema } from "@/lib/schemas";
 
 type Params = { slug: string };
@@ -19,6 +20,8 @@ const resourceData: Record<string, {
   tags: string[];
   content: string[];
   relatedService: { name: string; href: string };
+  relatedResources?: { title: string; slug: string }[];
+  relatedGlossaryTerms?: { name: string; slug: string }[];
 }> = {
   "ai-automation-guide-for-business": {
     title: "The Business Leader's Guide to AI Automation",
@@ -31,6 +34,16 @@ const resourceData: Record<string, {
     updatedAt: "2024-12-01",
     tags: ["AI Agents", "LLMs", "Process Automation", "ROI"],
     relatedService: { name: "AI Automation Consulting", href: "/services/ai-automation-consulting" },
+    relatedResources: [
+      { title: "AI Voice Agents: What They Are and When to Use Them", slug: "ai-voice-agents-explainer" },
+    ],
+    relatedGlossaryTerms: [
+      { name: "AI Agent", slug: "ai-agent" },
+      { name: "Large Language Model", slug: "large-language-model" },
+      { name: "Agentic AI", slug: "agentic-ai" },
+      { name: "AI Orchestration", slug: "ai-orchestration" },
+      { name: "RAG", slug: "rag" },
+    ],
     content: [
       "[TODO: Introduction — What is AI automation, really? Cut through the hype and define it clearly for a business audience.]",
       "[TODO: Section 1 — The three levels of AI automation: simple task automation (RPA-style), AI-assisted workflows, and fully autonomous agents.]",
@@ -51,6 +64,17 @@ const resourceData: Record<string, {
     updatedAt: "2024-12-01",
     tags: ["GEO", "AI Search", "ChatGPT", "Perplexity", "Content Strategy"],
     relatedService: { name: "SEO Services", href: "/services/seo-services" },
+    relatedResources: [
+      { title: "Technical SEO Audit Checklist (2024)", slug: "technical-seo-audit-checklist" },
+    ],
+    relatedGlossaryTerms: [
+      { name: "GEO", slug: "geo" },
+      { name: "AI Overviews", slug: "ai-overviews" },
+      { name: "Structured Data", slug: "structured-data" },
+      { name: "llms.txt", slug: "llms-txt" },
+      { name: "E-E-A-T", slug: "e-e-a-t" },
+      { name: "Entity SEO", slug: "entity-seo" },
+    ],
     content: [
       "[TODO: Introduction — What is GEO? How is it different from traditional SEO? Why does it matter now?]",
       "[TODO: Section 1 — How AI search engines (ChatGPT, Perplexity, Google AI Overviews) choose what to cite.]",
@@ -72,6 +96,18 @@ const resourceData: Record<string, {
     updatedAt: "2024-12-01",
     tags: ["Technical SEO", "Site Audit", "Core Web Vitals", "Schema"],
     relatedService: { name: "SEO Services", href: "/services/seo-services" },
+    relatedResources: [
+      { title: "GEO Optimisation: How to Appear in AI-Generated Answers", slug: "geo-optimisation-guide" },
+    ],
+    relatedGlossaryTerms: [
+      { name: "Technical SEO", slug: "technical-seo" },
+      { name: "Core Web Vitals", slug: "core-web-vitals" },
+      { name: "Crawl Budget", slug: "crawl-budget" },
+      { name: "Canonical Tag", slug: "canonical-tag" },
+      { name: "Structured Data", slug: "structured-data" },
+      { name: "Internal Linking", slug: "internal-linking" },
+      { name: "robots.txt", slug: "robots-txt" },
+    ],
     content: [
       "[TODO: Introduction — Why technical SEO is the foundation of any organic growth strategy.]",
       "[TODO: Section 1 — Crawlability checklist: robots.txt, XML sitemap, crawl budget, internal linking.]",
@@ -92,7 +128,17 @@ const resourceData: Record<string, {
     publishedAt: "2024-10-15",
     updatedAt: "2024-12-01",
     tags: ["AI Voice", "IVR", "Twilio", "Conversational AI"],
-    relatedService: { name: "AI Integration & Agentic Workflows", href: "/services/ai-integration-agentic-workflows" },
+    relatedService: { name: "AI Integration & Agentic Workflows", href: "/services/ai-integration" },
+    relatedResources: [
+      { title: "The Business Leader's Guide to AI Automation", slug: "ai-automation-guide-for-business" },
+    ],
+    relatedGlossaryTerms: [
+      { name: "IVR", slug: "ivr" },
+      { name: "Speech-to-Text", slug: "speech-to-text" },
+      { name: "Text-to-Speech", slug: "text-to-speech" },
+      { name: "Latency", slug: "latency" },
+      { name: "Voice Cloning", slug: "voice-cloning" },
+    ],
     content: [
       "[TODO: Introduction — The difference between traditional phone trees and modern AI voice agents.]",
       "[TODO: Section 1 — How AI voice agents work: STT (Deepgram), LLM reasoning, TTS (ElevenLabs), telephony (Twilio).]",
@@ -113,6 +159,16 @@ const resourceData: Record<string, {
     updatedAt: "2024-12-01",
     tags: ["Next.js", "SaaS", "Architecture", "TypeScript"],
     relatedService: { name: "SaaS Development", href: "/services/saas-development" },
+    relatedResources: [
+      { title: "The Business Leader's Guide to AI Automation", slug: "ai-automation-guide-for-business" },
+    ],
+    relatedGlossaryTerms: [
+      { name: "Multi-Tenant SaaS", slug: "multi-tenant-saas" },
+      { name: "MVP", slug: "mvp" },
+      { name: "API", slug: "api" },
+      { name: "Server-Side Rendering", slug: "server-side-rendering" },
+      { name: "CI/CD", slug: "ci-cd" },
+    ],
     content: [
       "[TODO: Introduction — Why Next.js is a strong choice for SaaS MVPs in 2024.]",
       "[TODO: Section 1 — Project structure: the folder conventions I use and why.]",
@@ -246,6 +302,49 @@ export default async function ResourcePage({ params }: { params: Promise<Params>
               </Button>
             </div>
           </div>
+
+          {/* Related Glossary Terms */}
+          {resource.relatedGlossaryTerms && resource.relatedGlossaryTerms.length > 0 && (
+            <div className="mt-10">
+              <div className="flex items-center justify-between mb-4">
+                <h3 className="text-lg font-bold text-text-primary">Key concepts</h3>
+                <Link href="/glossary" className="text-accent-primary text-sm hover:underline">
+                  Full glossary →
+                </Link>
+              </div>
+              <div className="flex flex-wrap gap-2">
+                {resource.relatedGlossaryTerms.map((term) => (
+                  <Link
+                    key={term.slug}
+                    href={`/glossary/${term.slug}`}
+                    className="px-3 py-1.5 rounded-btn border border-border bg-bg-base text-text-secondary text-sm hover:border-accent-primary hover:text-accent-primary hover:bg-accent-primary/5 transition-all duration-150"
+                  >
+                    {term.name}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* Related Resources */}
+          {resource.relatedResources && resource.relatedResources.length > 0 && (
+            <div className="mt-10">
+              <h3 className="text-lg font-bold text-text-primary mb-4">Related resources</h3>
+              <div className="space-y-2">
+                {resource.relatedResources.map((res) => (
+                  <Link
+                    key={res.slug}
+                    href={`/resources/${res.slug}`}
+                    className="block rounded-card border border-border bg-bg-surface p-4 hover:border-accent-primary/40 transition-colors"
+                  >
+                    <span className="text-text-primary font-medium text-sm hover:text-accent-primary transition-colors">
+                      {res.title} →
+                    </span>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          )}
 
           {/* Bottom AskAI */}
           <div className="mt-8">

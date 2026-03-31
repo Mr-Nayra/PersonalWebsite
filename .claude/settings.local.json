@@ -8,7 +8,8 @@
       "Read(//c/Users/rawth/OneDrive/Desktop/TheFounder/PersonalWebsite/**)",
       "Bash(npm run:*)",
       "Bash(curl -sL \"https://www.aryanrawther.com\")",
-      "WebFetch(domain:aryanrawther.com)"
+      "WebFetch(domain:aryanrawther.com)",
+      "WebSearch"
     ]
   }
 }

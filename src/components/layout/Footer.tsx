@@ -3,7 +3,7 @@ import Link from "next/link";
 const footerLinks = {
   services: [
     { name: "AI Automation Consulting", href: "/services/ai-automation-consulting" },
-    { name: "AI Integration & Agentic Workflows", href: "/services/ai-integration-agentic-workflows" },
+    { name: "AI Integration & Agentic Workflows", href: "/services/ai-integration" },
     { name: "SEO Services", href: "/services/seo-services" },
     { name: "Web Development", href: "/services/web-development" },
     { name: "SaaS Product Development", href: "/services/saas-development" },
@@ -20,6 +20,11 @@ const footerLinks = {
     { name: "Blog", href: "/blog" },
     { name: "Resources", href: "/resources" },
     { name: "Glossary", href: "/glossary" },
+  ],
+  locations: [
+    { name: "Bangalore", href: "/location/bangalore" },
+    { name: "India", href: "/location/india" },
+    { name: "Remote", href: "/location/remote" },
   ],
 };
 
@@ -62,7 +67,7 @@ export default function Footer() {
   return (
     <footer className="border-t border-border bg-bg-surface mt-auto">
       <div className="container section-padding">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
           {/* Col 1: Brand */}
           <div className="flex flex-col gap-4">
             <div>
@@ -70,7 +75,8 @@ export default function Footer() {
                 <span className="text-2xl font-signature font-bold text-text-primary">Aryan Rawther</span>
               </div>
               <p className="text-text-muted text-sm leading-relaxed">
-                Helping businesses grow with AI automation, technical SEO, and modern web development. Founder of Apex Mind LLP.
+                Helping businesses grow with AI automation, technical SEO, and modern web development. Founder of Apex Mind LLP. Based out of{" "}
+                <Link href="/location/bangalore" className="hover:text-text-primary transition-colors">Bangalore</Link>.
               </p>
             </div>
             <div className="flex gap-2">
@@ -116,6 +122,18 @@ export default function Footer() {
             <h3 className="text-text-primary font-semibold text-sm mb-4">Company</h3>
             <div className="flex flex-col gap-2">
               {footerLinks.company.map((link) => (
+                <FooterLink key={link.href} href={link.href}>
+                  {link.name}
+                </FooterLink>
+              ))}
+            </div>
+          </div>
+
+          {/* Col 5: Locations */}
+          <div>
+            <h3 className="text-text-primary font-semibold text-sm mb-4">Locations</h3>
+            <div className="flex flex-col gap-2">
+              {footerLinks.locations.map((link) => (
                 <FooterLink key={link.href} href={link.href}>
                   {link.name}
                 </FooterLink>

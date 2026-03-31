@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Terms of Service",
@@ -108,12 +109,22 @@ export default function TermsOfServicePage() {
             <div>
               <h2 className="text-2xl font-bold text-text-primary mb-4">Contact</h2>
               <p className="text-text-secondary leading-relaxed">
-                For questions about these terms, contact us at hello@aetherminds.in.
+                For questions about these terms, contact us at contact.aryanrawther@gmail.com.
               </p>
             </div>
           </div>
         </div>
       </section>
+
+      <div className="container max-w-3xl pb-16 text-center">
+        <Link href="/privacy-policy" className="text-accent-primary text-sm hover:underline">
+          Privacy Policy →
+        </Link>
+        <span className="text-text-muted mx-3">·</span>
+        <Link href="/" className="text-accent-primary text-sm hover:underline">
+          Back to Home →
+        </Link>
+      </div>
     </>
   );
 }

@@ -25,7 +25,7 @@ const sitemapSections = [
     links: [
       { label: "Services Overview", href: "/services" },
       { label: "AI Automation Consulting", href: "/services/ai-automation-consulting" },
-      { label: "AI Integration & Agentic Workflows", href: "/services/ai-integration-agentic-workflows" },
+      { label: "AI Integration & Agentic Workflows", href: "/services/ai-integration" },
       { label: "SEO Services", href: "/services/seo-services" },
       { label: "Web Development", href: "/services/web-development" },
       { label: "SaaS Development", href: "/services/saas-development" },

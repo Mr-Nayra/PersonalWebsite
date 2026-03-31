@@ -386,30 +386,10 @@ Fully async or hybrid work with global clients. Experience working with clients 
 
 ## Blog Posts
 
-### How to Build AI Agents with LangChain: A Practical Guide
-- **Category:** AI Automation | **Read time:** 12 min
-- **URL:** https://aryanrawther.com/blog/how-to-build-ai-agents-with-langchain
-- A step-by-step walkthrough of building production-ready AI agents using LangChain, FastAPI, and OpenAI. Covers agent design, tool integration, and deployment.
-
-### Technical SEO for SaaS Startups: The Complete Checklist
-- **Category:** SEO | **Read time:** 15 min
-- **URL:** https://aryanrawther.com/blog/technical-seo-for-saas-startups
-- Everything you need to know about technical SEO for SaaS — Core Web Vitals, crawlability, programmatic pages, and product-led SEO strategies.
-
-### Building an AI IVR System with Twilio and Deepgram
-- **Category:** AI Voice Agents | **Read time:** 18 min
-- **URL:** https://aryanrawther.com/blog/building-ai-ivr-twilio-deepgram
-- How Aryan built a production AI voice agent system for an insurance company — architecture decisions, challenges, and lessons learned.
-
-### What is GEO? Generative Engine Optimisation Explained
-- **Category:** SEO | **Read time:** 10 min
-- **URL:** https://aryanrawther.com/blog/what-is-geo-generative-engine-optimisation
-- Explains GEO as the practice of structuring content so AI systems — ChatGPT, Perplexity, Google AI Overviews, Claude — can extract, understand, and cite it accurately.
-
-### Next.js 15 App Router: Performance Patterns for Production
-- **Category:** Web Development | **Read time:** 14 min
-- **URL:** https://aryanrawther.com/blog/nextjs-15-app-router-performance
-- Practical Next.js 15 performance patterns for production applications, including server components, streaming, and caching strategies.
+### How to Rank on Google and Get Cited by AI Search Engines
+- **Category:** SEO | **Read time:** 18 min
+- **URL:** https://aryanrawther.com/blog/rank-on-google-get-cited-by-ai-search-engines
+- A technical guide covering how to get cited by AI search engines (robots.txt, llms.txt, Google AI Overviews), a complete technical SEO checklist (sitemaps, meta tags, schema markup, page speed, internal linking, backlinks), common SEO mistakes, and real results showing AI referral traffic from ChatGPT, Perplexity, and Claude within 7 days of optimisation.
 
 ---
 

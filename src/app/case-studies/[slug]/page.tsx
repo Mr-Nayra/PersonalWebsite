@@ -6,8 +6,42 @@ import { Badge } from "@/components/ui/Badge";
 import { AskAIButton } from "@/components/ui/AskAIButton";
 import { Breadcrumb } from "@/components/ui/Breadcrumb";
 import { CaseStudyCard } from "@/components/ui/CaseStudyCard";
+import Link from "next/link";
 import { caseStudiesPreview } from "@/data/site-data";
 import { articleSchema } from "@/lib/schemas";
+
+const serviceLinks: Record<string, string> = {
+  "AI Automation Consulting": "/services/ai-automation-consulting",
+  "AI Integration & Agentic Workflows": "/services/ai-integration",
+  "SEO Services": "/services/seo-services",
+  "Web Development": "/services/web-development",
+  "SaaS Development": "/services/saas-development",
+  "SaaS Product Development": "/services/saas-development",
+  "AI Voice Agents": "/services/ai-integration",
+};
+
+const industryLinks: Record<string, string> = {
+  "HealthTech": "/industries/healthcare",
+  "Healthcare / RCM": "/industries/healthcare",
+  "HealthTech / SaaS": "/industries/healthcare",
+  "Insurance": "/industries/healthcare",
+  "B2B / Procurement": "/industries/saas",
+  "Consumer / AI SaaS": "/industries/saas",
+  "Internal Tool / SEO": "/industries/saas",
+};
+
+const productLinks: Record<string, { name: string; href: string; cta: string }> = {
+  "speclens-ai-procurement-saas": {
+    name: "SpecLens AI",
+    href: "/products/speclens-ai",
+    cta: "Try SpecLens AI →",
+  },
+  "photoshoprequest-ai-editor": {
+    name: "PhotoshopRequest",
+    href: "/products/photoshoprequest",
+    cta: "Try PhotoshopRequest →",
+  },
+};
 
 // Static case study content — replace with real content
 const caseStudyContent: Record<
@@ -419,10 +453,22 @@ export default async function CaseStudyPage({ params }: { params: Promise<Params
           />
           <div className="mt-8">
             <div className="flex flex-wrap gap-2 mb-4">
-              <Badge variant="industry">{cs.industry}</Badge>
-              {cs.service.map((s, i) => (
-                <Badge key={i} variant="service">{s}</Badge>
-              ))}
+              {industryLinks[cs.industry] ? (
+                <Link href={industryLinks[cs.industry]}>
+                  <Badge variant="industry">{cs.industry}</Badge>
+                </Link>
+              ) : (
+                <Badge variant="industry">{cs.industry}</Badge>
+              )}
+              {cs.service.map((s, i) =>
+                serviceLinks[s] ? (
+                  <Link key={i} href={serviceLinks[s]}>
+                    <Badge variant="service">{s}</Badge>
+                  </Link>
+                ) : (
+                  <Badge key={i} variant="service">{s}</Badge>
+                )
+              )}
             </div>
             <h1 className="font-display text-4xl lg:text-5xl font-bold text-text-primary mb-4">
               {cs.title}
@@ -550,6 +596,21 @@ export default async function CaseStudyPage({ params }: { params: Promise<Params
               ))}
             </div>
           </div>
+
+          {/* Product CTA (only for case studies with a matching product) */}
+          {productLinks[slug] && (
+            <div className="mb-12 rounded-card border border-accent-secondary/20 bg-accent-secondary/5 p-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+              <div>
+                <p className="text-text-muted text-xs uppercase tracking-wider font-mono mb-1">Built as a product</p>
+                <p className="text-text-primary font-semibold">
+                  {productLinks[slug].name} is live — see how it works.
+                </p>
+              </div>
+              <Button href={productLinks[slug].href} variant="secondary" size="md">
+                {productLinks[slug].cta}
+              </Button>
+            </div>
+          )}
 
           {/* Key Takeaways */}
           <div className="mb-12">

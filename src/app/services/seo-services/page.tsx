@@ -37,6 +37,7 @@ const data: ServicePageData = {
   slug: "seo-services",
   href: "/services/seo-services",
   h1: "SEO Services",
+  ctaText: "Get a free SEO audit →",
   tagline: "Technical SEO · Content strategy · GEO optimisation",
   description:
     "I help businesses grow organic traffic through technical SEO, strategic content architecture, and GEO (Generative Engine Optimisation) — the practice of making your content citable by AI systems like ChatGPT, Perplexity, and Google AI Overviews. Not just rankings — genuine organic authority.",
@@ -124,6 +125,35 @@ const data: ServicePageData = {
     },
   ],
   relatedCaseStudies: caseStudiesPreview.filter(cs => cs.service.includes("SEO Services")),
+  relatedServices: [
+    { name: "Web Development", href: "/services/web-development", description: "Modern frontend and backend development — performance-first architecture." },
+    { name: "AI Automation Consulting", href: "/services/ai-automation-consulting", description: "Design and deploy AI agent workflows and process automation." },
+  ],
+  relatedResources: [
+    { title: "Technical SEO Audit Checklist", href: "/resources/technical-seo-audit-checklist", type: "guide" },
+    { title: "GEO Optimisation Guide", href: "/resources/geo-optimisation-guide", type: "guide" },
+    { title: "How to Rank on Google and Get Cited by AI Search Engines", href: "/blog/rank-on-google-get-cited-by-ai-search-engines", type: "blog" },
+  ],
+  relatedGlossaryTerms: [
+    { name: "Technical SEO", slug: "technical-seo" },
+    { name: "Core Web Vitals", slug: "core-web-vitals" },
+    { name: "Structured Data", slug: "structured-data" },
+    { name: "GEO", slug: "geo" },
+    { name: "E-E-A-T", slug: "e-e-a-t" },
+    { name: "Internal Linking", slug: "internal-linking" },
+    { name: "Backlink", slug: "backlink" },
+    { name: "Canonical Tag", slug: "canonical-tag" },
+    { name: "Crawl Budget", slug: "crawl-budget" },
+    { name: "Domain Authority", slug: "domain-authority" },
+    { name: "Programmatic SEO", slug: "programmatic-seo" },
+    { name: "Semantic SEO", slug: "semantic-seo" },
+    { name: "Search Intent", slug: "search-intent" },
+    { name: "Entity SEO", slug: "entity-seo" },
+    { name: "AI Overviews", slug: "ai-overviews" },
+    { name: "llms.txt", slug: "llms-txt" },
+    { name: "Knowledge Graph", slug: "knowledge-graph" },
+    { name: "robots.txt", slug: "robots-txt" },
+  ],
 };
 
 export default function SEOServicesPage() {

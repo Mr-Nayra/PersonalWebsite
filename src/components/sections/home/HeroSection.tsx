@@ -48,7 +48,7 @@ export function HeroSection() {
                 Work with me →
               </Button>
               <Button href="/case-studies" variant="secondary" size="lg">
-                See my work →
+                View AI & SEO case studies →
               </Button>
             </div>
 

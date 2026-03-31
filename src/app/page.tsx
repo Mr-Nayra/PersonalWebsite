@@ -130,19 +130,9 @@ export default function HomePage() {
           __html: JSON.stringify(
             itemListSchema([
               {
-                name: "How to Build AI Agents with LangChain: A Practical Guide",
-                description: "A step-by-step walkthrough of building production-ready AI agents using LangChain, FastAPI, and OpenAI. Covers agent design, tool integration, and deployment.",
-                url: "/blog/how-to-build-ai-agents-with-langchain",
-              },
-              {
-                name: "Technical SEO for SaaS Startups: The Complete Checklist",
-                description: "Everything you need to know about technical SEO for SaaS — Core Web Vitals, crawlability, programmatic pages, and product-led SEO strategies.",
-                url: "/blog/technical-seo-for-saas-startups",
-              },
-              {
-                name: "Building an AI IVR System with Twilio and Deepgram",
-                description: "How I built a production AI voice agent system for an insurance company — architecture decisions, challenges, and lessons learned.",
-                url: "/blog/building-ai-ivr-twilio-deepgram",
+                name: "How to Rank on Google and Get Cited by AI Search Engines",
+                description: "AI SEO is just technical SEO — plus two extra steps most people miss. The exact mistakes to avoid and the checklist I run on every site I work on.",
+                url: "/blog/rank-on-google-get-cited-by-ai-search-engines",
               },
             ])
           ),

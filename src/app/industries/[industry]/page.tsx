@@ -160,7 +160,7 @@ const industryData: Record<string, {
     howIHelp: [
       {
         service: "AI Integration & Agentic Workflows",
-        href: "/services/ai-integration-agentic-workflows",
+        href: "/services/ai-integration",
         icon: "🎙️",
         description:
           "Appointment scheduling, patient reminders, and inbound call handling — reducing administrative load without reducing care quality.",

@@ -1,10 +1,12 @@
 import { Metadata } from "next";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 import { AskAIButton } from "@/components/ui/AskAIButton";
 import { Breadcrumb } from "@/components/ui/Breadcrumb";
-import { articleSchema } from "@/lib/schemas";
+import { TableOfContents } from "@/components/ui/TableOfContents";
+import { articleSchema, faqSchema } from "@/lib/schemas";
 import { formatDate } from "@/lib/utils";
 
 type Params = { slug: string };
@@ -31,6 +33,9 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
       type: "article",
       publishedTime: post.date,
       modifiedTime: post.updatedAt,
+      ...(post.coverImage && {
+        images: [{ url: post.coverImage, width: 800, height: 600 }],
+      }),
     },
   };
 }
@@ -60,6 +65,15 @@ export default async function BlogPostPage({ params }: { params: Promise<Params>
         }}
       />
 
+      {post.faq && post.faq.length > 0 && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(faqSchema(post.faq)),
+          }}
+        />
+      )}
+
       {/* Hero */}
       <section className="aurora-bg pt-32 pb-12">
         <div className="container relative z-10 max-w-3xl">
@@ -82,9 +96,13 @@ export default async function BlogPostPage({ params }: { params: Promise<Params>
             <p className="text-text-secondary text-lg leading-relaxed mb-6">{post.excerpt}</p>
             <div className="flex items-center gap-4 text-text-muted text-sm">
               <div className="flex items-center gap-2">
-                <div className="w-7 h-7 rounded-full bg-accent-primary/10 border border-accent-primary/20 flex items-center justify-center text-accent-primary text-xs font-bold">
-                  A
-                </div>
+                <Image
+                  src="/images/aryan/profile.png"
+                  alt="Aryan Rawther"
+                  width={28}
+                  height={28}
+                  className="w-7 h-7 rounded-full object-cover"
+                />
                 <span>Aryan Rawther</span>
               </div>
               <span>·</span>
@@ -108,14 +126,7 @@ export default async function BlogPostPage({ params }: { params: Promise<Params>
                   pageType="blog"
                   category={post.category}
                 />
-                <div className="rounded-card border border-border bg-bg-surface p-4">
-                  <p className="text-text-muted text-xs font-semibold uppercase tracking-wider mb-3">
-                    Table of Contents
-                  </p>
-                  <div className="space-y-2">
-                    <p className="text-text-muted text-xs italic">[Auto-generated from H2/H3 headings]</p>
-                  </div>
-                </div>
+                <TableOfContents />
               </div>
             </aside>
 
@@ -131,9 +142,25 @@ export default async function BlogPostPage({ params }: { params: Promise<Params>
               </div>
 
               {/* Cover image */}
-              <div className="aspect-video rounded-card bg-gradient-to-br from-accent-primary/20 to-accent-secondary/20 flex items-center justify-center mb-8 border border-border">
-                <p className="text-text-muted text-sm">[Cover image — to be added]</p>
-              </div>
+              {post.coverImage ? (
+                <figure className="mb-8">
+                  <div className="rounded-card overflow-hidden border border-border">
+                    <Image
+                      src={post.coverImage}
+                      alt={post.coverCaption || post.title}
+                      width={800}
+                      height={450}
+                      className="w-full h-auto"
+                      priority
+                    />
+                  </div>
+                  {post.coverCaption && (
+                    <figcaption className="text-text-muted text-sm mt-2 text-center italic">
+                      {post.coverCaption}
+                    </figcaption>
+                  )}
+                </figure>
+              ) : null}
 
               {/* Prose content */}
               <div className="prose">
@@ -151,9 +178,13 @@ export default async function BlogPostPage({ params }: { params: Promise<Params>
 
               {/* Author box */}
               <div className="mt-8 rounded-card border border-border bg-bg-surface p-5 flex gap-4">
-                <div className="w-12 h-12 rounded-full bg-accent-primary/10 border border-accent-primary/20 flex items-center justify-center text-accent-primary font-bold text-lg flex-shrink-0">
-                  A
-                </div>
+                <Image
+                  src="/images/aryan/profile.png"
+                  alt="Aryan Rawther — AI automation consultant and SEO specialist"
+                  width={48}
+                  height={48}
+                  className="w-12 h-12 rounded-full object-cover flex-shrink-0"
+                />
                 <div>
                   <p className="font-semibold text-text-primary">Aryan Rawther</p>
                   <p className="text-text-muted text-sm mb-2">
@@ -199,10 +230,10 @@ export default async function BlogPostPage({ params }: { params: Promise<Params>
               {/* CTA */}
               <div className="mt-10 rounded-card border border-accent-primary/20 bg-accent-primary/5 p-6 text-center">
                 <h3 className="font-bold text-text-primary mb-2">
-                  Working on something similar?
+                  Need help with your website&apos;s SEO or AI search visibility?
                 </h3>
                 <p className="text-text-secondary text-sm mb-4">
-                  Let&apos;s talk about how I can help.
+                  Send me your URL and I&apos;ll tell you exactly what to fix.
                 </p>
                 <Button href="/contact" variant="primary">
                   Get in touch →

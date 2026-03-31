@@ -17,7 +17,7 @@ const corePages: Route[] = [
   { url: "/services",                                  lastModified: "2026-03-20", changeFrequency: "monthly", priority: 0.9 },
   { url: "/services/ai-automation-consulting",         lastModified: "2026-03-20", changeFrequency: "monthly", priority: 0.9 },
   { url: "/services/ai-integration",                   lastModified: "2026-03-20", changeFrequency: "monthly", priority: 0.9 },
-  { url: "/services/ai-integration-agentic-workflows", lastModified: "2026-03-20", changeFrequency: "monthly", priority: 0.9 },
+  /* /services/ai-integration-agentic-workflows removed — redirects to /services/ai-integration (listed above) */
   { url: "/services/seo-services",                     lastModified: "2026-03-20", changeFrequency: "monthly", priority: 0.9 },
   { url: "/services/web-development",                  lastModified: "2026-03-20", changeFrequency: "monthly", priority: 0.9 },
   { url: "/services/saas-development",                 lastModified: "2026-03-20", changeFrequency: "monthly", priority: 0.9 },

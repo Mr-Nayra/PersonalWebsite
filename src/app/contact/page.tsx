@@ -168,6 +168,18 @@ export default function ContactPage() {
                   </Link>
                 </div>
               </div>
+
+              {/* Location */}
+              <div className="rounded-card border border-border bg-bg-surface p-5">
+                <p className="text-text-muted text-xs font-mono uppercase tracking-wider mb-2">Based in</p>
+                <p className="text-text-secondary text-sm">
+                  <Link href="/location/bangalore" className="text-text-primary hover:text-accent-primary transition-colors">Bangalore</Link>
+                  {", "}
+                  <Link href="/location/india" className="text-text-primary hover:text-accent-primary transition-colors">India</Link>
+                  {" · Serving clients "}
+                  <Link href="/location/remote" className="text-text-primary hover:text-accent-primary transition-colors">remotely</Link>
+                </p>
+              </div>
             </div>
           </div>
         </div>

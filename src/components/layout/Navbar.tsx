@@ -10,7 +10,7 @@ import { Button } from "@/components/ui/Button";
 
 const services = [
   { name: "AI Automation Consulting", href: "/services/ai-automation-consulting" },
-  { name: "AI Integration & Agentic Workflows", href: "/services/ai-integration-agentic-workflows" },
+  { name: "AI Integration & Agentic Workflows", href: "/services/ai-integration" },
   { name: "SEO Services", href: "/services/seo-services" },
   { name: "Web Development", href: "/services/web-development" },
   { name: "SaaS Product Development", href: "/services/saas-development" },

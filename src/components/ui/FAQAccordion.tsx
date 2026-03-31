@@ -50,7 +50,10 @@ function FAQAccordionItem({ item }: { item: FAQItem; index?: number }) {
             transition={{ duration: 0.25, ease: "easeInOut" }}
           >
             <div className="px-5 pb-5">
-              <p className="text-text-secondary leading-relaxed">{item.answer}</p>
+              <p
+                className="text-text-secondary leading-relaxed [&_a]:text-accent-primary [&_a]:hover:underline"
+                dangerouslySetInnerHTML={{ __html: item.answer }}
+              />
             </div>
           </motion.div>
         )}

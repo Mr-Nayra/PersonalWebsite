@@ -29,7 +29,7 @@ const faqCategories = [
       {
         question: "What is AI automation consulting?",
         answer:
-          "AI automation consulting involves analysing your business processes and designing AI-powered systems that replace or augment manual work. This includes selecting the right AI models, designing agent workflows, integrating with your existing tools, and ensuring the system is maintainable. See the <a href='/services/ai-automation-consulting'>AI Automation Consulting</a> page for full details.",
+          "AI automation consulting involves analysing your business processes and designing AI-powered systems that replace or augment manual work. This includes selecting the right <a href='/glossary/large-language-model'>AI models</a>, designing <a href='/glossary/ai-agent'>agent workflows</a>, integrating with your existing tools, and ensuring the system is maintainable. See the <a href='/services/ai-automation-consulting'>AI Automation Consulting</a> page for full details.",
       },
       {
         question: "Which AI models do you work with?",
@@ -49,7 +49,7 @@ const faqCategories = [
       {
         question: "What is an AI voice agent?",
         answer:
-          "An AI voice agent handles phone calls autonomously using AI — understanding what callers say (speech-to-text), reasoning about the right response (LLM), and responding in natural speech (text-to-speech). Unlike traditional IVR with rigid menus, AI voice agents handle open-ended conversation.",
+          "An AI voice agent handles phone calls autonomously using AI — understanding what callers say (<a href='/glossary/speech-to-text'>speech-to-text</a>), reasoning about the right response (<a href='/glossary/large-language-model'>LLM</a>), and responding in natural speech (<a href='/glossary/text-to-speech'>text-to-speech</a>). Unlike traditional <a href='/glossary/ivr'>IVR</a> with rigid menus, AI voice agents handle open-ended conversation.",
       },
       {
         question: "What happens when the AI can't handle a call?",
@@ -64,7 +64,7 @@ const faqCategories = [
       {
         question: "What is GEO (Generative Engine Optimisation)?",
         answer:
-          "GEO is the practice of structuring your content so that AI systems — ChatGPT, Perplexity, Google AI Overviews, Claude — extract, understand, and cite it accurately. It involves answer-first writing, structured data, entity consistency, and an llms.txt file. It's the emerging counterpart to traditional SEO.",
+          "<a href='/glossary/geo'>GEO</a> is the practice of structuring your content so that AI systems — ChatGPT, Perplexity, <a href='/glossary/ai-overviews'>Google AI Overviews</a>, Claude — extract, understand, and cite it accurately. It involves answer-first writing, <a href='/glossary/structured-data'>structured data</a>, <a href='/glossary/entity-seo'>entity consistency</a>, and an <a href='/glossary/llms-txt'>llms.txt</a> file. It's the emerging counterpart to traditional <a href='/services/seo-services'>SEO</a>.",
       },
       {
         question: "How long does SEO take to show results?",
@@ -104,7 +104,7 @@ const faqCategories = [
       {
         question: "What is multi-tenant SaaS architecture?",
         answer:
-          "Multi-tenant SaaS means one software instance serves multiple customers with their data kept isolated. The architecture decisions — shared vs. separate databases, row-level security, tenant identification — are critical and made upfront.",
+          "<a href='/glossary/multi-tenant-saas'>Multi-tenant SaaS</a> means one software instance serves multiple customers with their data kept isolated. The architecture decisions — shared vs. separate databases, row-level security, tenant identification — are critical and made upfront. See the <a href='/services/saas-development'>SaaS Development</a> service for more.",
       },
       {
         question: "Can you act as a technical co-founder?",

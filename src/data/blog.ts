@@ -9,56 +9,65 @@ export const blogPosts: Record<
     readTime: number;
     category: string;
     keywords: string[];
+    coverImage?: string;
+    coverCaption?: string;
+    faq?: { question: string; answer: string }[];
   }
 > = {
-  "how-to-build-ai-agents-with-langchain": {
-    title: "How to Build AI Agents with LangChain: A Practical Guide",
-    slug: "how-to-build-ai-agents-with-langchain",
-    excerpt: "A step-by-step walkthrough of building production-ready AI agents using LangChain, FastAPI, and OpenAI.",
-    date: "2024-12-15",
-    updatedAt: "2026-03-20",
-    readTime: 12,
-    category: "AI Automation",
-    keywords: ["LangChain", "AI agents", "LLM", "FastAPI", "OpenAI", "AI automation", "Python", "agent executor"],
-  },
-  "technical-seo-for-saas-startups": {
-    title: "Technical SEO for SaaS Startups: The Complete Checklist",
-    slug: "technical-seo-for-saas-startups",
-    excerpt: "Everything you need to know about technical SEO for SaaS — Core Web Vitals, crawlability, and product-led SEO.",
-    date: "2024-12-08",
-    updatedAt: "2026-03-20",
-    readTime: 15,
-    category: "SEO",
-    keywords: ["technical SEO", "SaaS SEO", "Core Web Vitals", "crawlability", "schema markup", "sitemap", "robots.txt"],
-  },
-  "building-ai-ivr-twilio-deepgram": {
-    title: "Building an AI IVR System with Twilio and Deepgram",
-    slug: "building-ai-ivr-twilio-deepgram",
-    excerpt: "How I built a production AI voice agent system for an insurance company — architecture decisions and lessons learned.",
-    date: "2024-11-28",
-    updatedAt: "2026-03-20",
+  "rank-on-google-get-cited-by-ai-search-engines": {
+    title: "How to Rank on Google and Get Cited by AI Search Engines",
+    slug: "rank-on-google-get-cited-by-ai-search-engines",
+    excerpt:
+      "AI SEO is technical SEO — plus a few extra steps most people miss. The exact mistakes to avoid and the checklist I run on every site I work on.",
+    date: "2026-03-29",
+    updatedAt: "2026-03-29",
     readTime: 18,
-    category: "AI Voice Agents",
-    keywords: ["AI IVR", "Twilio", "Deepgram", "voice agent", "speech-to-text", "AI automation", "healthcare RCM", "GPT-4o"],
-  },
-  "what-is-geo-generative-engine-optimisation": {
-    title: "What is GEO? Generative Engine Optimisation Explained",
-    slug: "what-is-geo-generative-engine-optimisation",
-    excerpt: "GEO is the practice of making your content citable by AI systems. Here's everything you need to know.",
-    date: "2024-11-15",
-    updatedAt: "2026-03-20",
-    readTime: 10,
     category: "SEO",
-    keywords: ["GEO", "generative engine optimisation", "AI search", "ChatGPT SEO", "Perplexity SEO", "llms.txt", "schema markup", "AI citations"],
-  },
-  "nextjs-15-app-router-performance": {
-    title: "Next.js 15 App Router: Performance Patterns for Production",
-    slug: "nextjs-15-app-router-performance",
-    excerpt: "Practical Next.js 15 performance patterns — server components, streaming, and caching strategies.",
-    date: "2024-11-05",
-    updatedAt: "2026-03-20",
-    readTime: 14,
-    category: "Web Development",
-    keywords: ["Next.js 15", "App Router", "server components", "React streaming", "Next.js performance", "Core Web Vitals", "caching"],
+    coverImage: "/images/blog/ai-seo-referrers.webp",
+    coverCaption: "ChatGPT, Perplexity, and Claude started citing one of my websites within 7 days of optimising it — this is the referrer data.",
+    keywords: [
+      "technical SEO",
+      "AI SEO",
+      "SEO for founders",
+      "SEO for startups",
+      "robots.txt",
+      "llms.txt",
+      "schema markup",
+      "JSON-LD",
+      "structured data",
+      "AI search optimisation",
+      "ChatGPT SEO",
+      "Perplexity SEO",
+      "GEO",
+      "generative engine optimisation",
+      "Core Web Vitals",
+      "backlinks",
+      "sitemap optimisation",
+      "page speed",
+      "Open Graph tags",
+      "meta tags",
+      "internal linking",
+      "Bing Webmaster Tools",
+      "Google Search Console",
+      "Ahrefs",
+      "Semrush",
+    ],
+    faq: [
+      {
+        question: "I am not technical — can I still do this?",
+        answer:
+          "Most of this can be done without writing code. Robots.txt and llms.txt are plain text files. Submitting to search consoles is point-and-click. For schema markup and meta tags, you will need either a developer or a CMS plugin like Yoast for WordPress.",
+      },
+      {
+        question: "My site is brand new — should I focus on SEO or just content first?",
+        answer:
+          "Both, but technical SEO comes first. It takes 15 minutes to set up the foundation (robots.txt, sitemap, search console submissions), and then everything you publish after that gets indexed properly from day one.",
+      },
+      {
+        question: "How do I know if my SEO changes are actually working?",
+        answer:
+          "Three signals: check Google Search Console for increasing indexed pages count (weekly for 90 days), check your analytics for AI referrers like chatgpt.com and perplexity.ai, and search for yourself on AI platforms to see if you get cited.",
+      },
+    ],
   },
 };

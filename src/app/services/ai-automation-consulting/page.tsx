@@ -26,6 +26,7 @@ const data: ServicePageData = {
   slug: "ai-automation-consulting",
   href: "/services/ai-automation-consulting",
   h1: "AI Automation Consulting",
+  ctaText: "Get a free AI automation audit →",
   tagline: "LLM integrations · AI agents · Process automation",
   description:
     "You don't need to understand how AI works. You need to understand what it can do for your business. I audit your operations, identify where your team is spending time on work that shouldn't require a human, and build the automations that free them up. No jargon. Just results.",
@@ -116,6 +117,25 @@ const data: ServicePageData = {
     },
   ],
   relatedCaseStudies: caseStudiesPreview.filter(cs => cs.service.includes("AI Automation Consulting")),
+  relatedServices: [
+    { name: "AI Integration & Agentic Workflows", href: "/services/ai-integration", description: "Prompt engineering, SaaS AI-ification, and custom AI voice agents." },
+    { name: "SaaS Product Development", href: "/services/saas-development", description: "MVP architecture, multi-tenant SaaS, and B2B product design." },
+  ],
+  relatedResources: [
+    { title: "The Business Leader's Guide to AI Automation", href: "/resources/ai-automation-guide-for-business", type: "guide" },
+  ],
+  relatedGlossaryTerms: [
+    { name: "AI Agent", slug: "ai-agent" },
+    { name: "Agentic AI", slug: "agentic-ai" },
+    { name: "Large Language Model", slug: "large-language-model" },
+    { name: "AI Orchestration", slug: "ai-orchestration" },
+    { name: "Function Calling", slug: "function-calling" },
+    { name: "Prompt Engineering", slug: "prompt-engineering" },
+    { name: "Webhook", slug: "webhook" },
+    { name: "API", slug: "api" },
+    { name: "RAG", slug: "rag" },
+    { name: "Hallucination", slug: "hallucination" },
+  ],
 };
 
 export default function AIAutomationConsultingPage() {

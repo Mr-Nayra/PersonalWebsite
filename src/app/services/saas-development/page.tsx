@@ -36,6 +36,7 @@ const data: ServicePageData = {
   slug: "saas-development",
   href: "/services/saas-development",
   h1: "SaaS Product Development",
+  ctaText: "Discuss your SaaS idea →",
   tagline: "MVP architecture · Multi-tenant SaaS · B2B product design",
   description:
     "I help founders and businesses build SaaS products — from the first line of architecture to a working, deployable product. This is a fundamentally different engagement from standard web development. You need someone who thinks about your product as a business, not just a codebase.",
@@ -126,6 +127,25 @@ const data: ServicePageData = {
     },
   ],
   relatedCaseStudies: caseStudiesPreview.filter(cs => cs.service.includes("SaaS Product Development")),
+  relatedServices: [
+    { name: "AI Integration & Agentic Workflows", href: "/services/ai-integration", description: "Prompt engineering, SaaS AI-ification, and custom AI voice agents." },
+    { name: "Web Development", href: "/services/web-development", description: "Modern frontend and backend development — Next.js, React, FastAPI, and full-stack." },
+  ],
+  relatedResources: [
+    { title: "Next.js SaaS Architecture", href: "/resources/nextjs-saas-architecture", type: "guide" },
+    { title: "The Business Leader's Guide to AI Automation", href: "/resources/ai-automation-guide-for-business", type: "guide" },
+  ],
+  relatedGlossaryTerms: [
+    { name: "Multi-Tenant SaaS", slug: "multi-tenant-saas" },
+    { name: "MVP", slug: "mvp" },
+    { name: "SaaS Metrics", slug: "saas-metrics" },
+    { name: "Technical Co-Founder", slug: "technical-co-founder" },
+    { name: "API", slug: "api" },
+    { name: "Webhook", slug: "webhook" },
+    { name: "Microservices", slug: "microservices" },
+    { name: "CI/CD", slug: "ci-cd" },
+    { name: "Headless Architecture", slug: "headless-architecture" },
+  ],
 };
 
 export default function SaaSDevelopmentPage() {

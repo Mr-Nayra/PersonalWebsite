@@ -14,7 +14,7 @@ export function CtaSection() {
 
         <div className="flex flex-wrap justify-center gap-4">
           <Button href="/contact" variant="primary" size="lg">
-            Get in touch →
+            Start a project →
           </Button>
           <a
             href={`https://wa.me/${siteData.person.whatsapp}?text=${encodeURIComponent("Hi Aryan, I found your website and would like to discuss a project.")}`}

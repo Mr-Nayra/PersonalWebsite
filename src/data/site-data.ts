@@ -31,7 +31,7 @@ export const siteData = {
     },
     {
       name: "AI Integration & Agentic Workflows",
-      href: "/services/ai-integration-agentic-workflows",
+      href: "/services/ai-integration",
       description: "Prompt Engineering & Architecture, SaaS 'AI-ification' for existing products, and Custom AI Voice Agents.",
       icon: "🧠",
     },

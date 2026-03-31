@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
@@ -31,7 +32,7 @@ export default function PrivacyPolicyPage() {
               <p className="text-text-secondary leading-relaxed">
                 This website is operated by Apex Mind LLP (&quot;we&quot;, &quot;us&quot;, &quot;our&quot;), a limited
                 liability partnership registered in India. Our principal place of business is
-                Bengaluru, India. You can contact us at hello@aetherminds.in.
+                Bengaluru, India. You can contact us at contact.aryanrawther@gmail.com.
               </p>
             </div>
 
@@ -82,7 +83,7 @@ export default function PrivacyPolicyPage() {
               <p className="text-text-secondary leading-relaxed">
                 Contact form submissions are retained for as long as necessary to respond to your
                 enquiry, and no longer than 24 months. You may request deletion at any time by
-                contacting hello@aetherminds.in.
+                contacting contact.aryanrawther@gmail.com.
               </p>
             </div>
 
@@ -108,7 +109,7 @@ export default function PrivacyPolicyPage() {
               <p className="text-text-secondary leading-relaxed">
                 You have the right to request access to, correction of, or deletion of your
                 personal data. To exercise any of these rights, contact us at
-                hello@aetherminds.in.
+                contact.aryanrawther@gmail.com.
               </p>
             </div>
 
@@ -124,12 +125,22 @@ export default function PrivacyPolicyPage() {
             <div>
               <h2 className="text-2xl font-bold text-text-primary mb-4">Contact</h2>
               <p className="text-text-secondary leading-relaxed">
-                For any privacy-related questions, contact us at hello@aetherminds.in.
+                For any privacy-related questions, contact us at contact.aryanrawther@gmail.com.
               </p>
             </div>
           </div>
         </div>
       </section>
+
+      <div className="container max-w-3xl pb-16 text-center">
+        <Link href="/terms-of-service" className="text-accent-primary text-sm hover:underline">
+          Terms of Service →
+        </Link>
+        <span className="text-text-muted mx-3">·</span>
+        <Link href="/" className="text-accent-primary text-sm hover:underline">
+          Back to Home →
+        </Link>
+      </div>
     </>
   );
 }

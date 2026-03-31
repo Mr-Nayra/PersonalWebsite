@@ -1,78 +1,32 @@
 import { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { Breadcrumb } from "@/components/ui/Breadcrumb";
 import { itemListSchema, webPageSchema } from "@/lib/schemas";
+import { blogPosts } from "@/data/blog";
 
-// Update this date whenever meaningful content changes are made to this page
-const PAGE_LAST_MODIFIED = "2026-03-19";
+const PAGE_LAST_MODIFIED = "2026-03-29";
 
 export const metadata: Metadata = {
-  title: "Blog — AI Automation, Technical SEO, GEO & SaaS Development",
+  title: "Blog — Technical SEO, AI SEO, GEO & Startup Development",
   description:
-    "Practical, in-depth articles on AI automation, LLM integration, technical SEO, GEO (Generative Engine Optimisation), and SaaS development from Aryan Rawther. Written from real client project experience.",
+    "Practical, in-depth articles on technical SEO, AI search optimisation, GEO (Generative Engine Optimisation), and startup development from Aryan Rawther. Written from real project experience.",
   alternates: { canonical: "/blog" },
   keywords: [
-    "AI automation blog India",
     "technical SEO blog",
+    "AI SEO guide",
     "GEO optimisation guide",
-    "LLM integration tutorial",
-    "SaaS development articles",
-    "AI agent development guide",
+    "SEO for founders",
+    "SEO for startups",
     "generative engine optimisation blog",
     "Aryan Rawther blog",
   ],
 };
 
-const placeholderPosts = [
-  {
-    slug: "how-to-build-ai-agents-with-langchain",
-    title: "How to Build AI Agents with LangChain: A Practical Guide",
-    excerpt: "A step-by-step walkthrough of building production-ready AI agents using LangChain, FastAPI, and OpenAI. Covers agent design, tool integration, and deployment.",
-    date: "2024-12-15",
-    readTime: 12,
-    category: "AI Automation",
-    featured: true,
-  },
-  {
-    slug: "technical-seo-for-saas-startups",
-    title: "Technical SEO for SaaS Startups: The Complete Checklist",
-    excerpt: "Everything you need to know about technical SEO for SaaS — Core Web Vitals, crawlability, programmatic pages, and product-led SEO strategies.",
-    date: "2024-12-08",
-    readTime: 15,
-    category: "SEO",
-    featured: false,
-  },
-  {
-    slug: "building-ai-ivr-twilio-deepgram",
-    title: "Building an AI IVR System with Twilio and Deepgram",
-    excerpt: "How I built a production AI voice agent system for an insurance company — architecture decisions, challenges, and lessons learned.",
-    date: "2024-11-28",
-    readTime: 18,
-    category: "AI Voice Agents",
-    featured: false,
-  },
-  {
-    slug: "what-is-geo-generative-engine-optimisation",
-    title: "What is GEO? Generative Engine Optimisation Explained",
-    excerpt: "GEO is the practice of making your content citable by AI systems like ChatGPT, Perplexity, and Google AI Overviews. Here's everything you need to know.",
-    date: "2024-11-15",
-    readTime: 10,
-    category: "SEO",
-    featured: false,
-  },
-  {
-    slug: "nextjs-15-app-router-performance",
-    title: "Next.js 15 App Router: Performance Patterns for Production",
-    excerpt: "Practical Next.js 15 performance patterns — server components, streaming, caching strategies, and measuring what actually matters.",
-    date: "2024-11-05",
-    readTime: 14,
-    category: "Web Development",
-    featured: false,
-  },
-];
+const posts = Object.values(blogPosts);
 
 export default function BlogPage() {
-  const [featured, ...rest] = placeholderPosts;
+  const featured = posts[0];
 
   return (
     <>
@@ -81,9 +35,9 @@ export default function BlogPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(
             webPageSchema({
-              title: "Blog — AI Automation, Technical SEO, GEO & SaaS Development",
+              title: "Blog — Technical SEO, AI SEO, GEO & Startup Development",
               description:
-                "Practical, in-depth articles on AI automation, LLM integration, technical SEO, GEO (Generative Engine Optimisation), and SaaS development from Aryan Rawther. Written from real client project experience.",
+                "Practical, in-depth articles on technical SEO, AI search optimisation, GEO (Generative Engine Optimisation), and startup development from Aryan Rawther. Written from real project experience.",
               url: "/blog",
               datePublished: "2026-01-01",
               dateModified: PAGE_LAST_MODIFIED,
@@ -96,7 +50,7 @@ export default function BlogPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(
             itemListSchema(
-              placeholderPosts.map((p) => ({
+              posts.map((p) => ({
                 name: p.title,
                 description: p.excerpt,
                 url: `/blog/${p.slug}`,
@@ -114,7 +68,7 @@ export default function BlogPage() {
               Blog
             </h1>
             <p className="text-text-secondary text-xl leading-relaxed">
-              Practical guides on AI automation, SEO, and web development — written from real project experience.
+              Practical guides on technical SEO, AI search optimisation, and web development — written from real project experience.
             </p>
           </div>
         </div>
@@ -128,8 +82,19 @@ export default function BlogPage() {
             href={`/blog/${featured.slug}`}
             className="group block md:flex rounded-card border border-border bg-bg-surface overflow-hidden card-hover"
           >
-            <div className="md:w-2/5 h-48 md:h-auto bg-gradient-to-br from-accent-primary/20 to-accent-secondary/20 flex items-center justify-center">
-              <div className="text-6xl opacity-30">✦</div>
+            <div className="md:w-2/5 h-48 md:h-auto relative bg-bg-elevated overflow-hidden">
+              {featured.coverImage ? (
+                <Image
+                  src={featured.coverImage}
+                  alt={featured.title}
+                  fill
+                  className="object-cover"
+                />
+              ) : (
+                <div className="w-full h-full bg-gradient-to-br from-accent-primary/20 to-accent-secondary/20 flex items-center justify-center">
+                  <div className="text-6xl opacity-30">✦</div>
+                </div>
+              )}
             </div>
             <div className="p-6 md:flex-1 flex flex-col gap-3">
               <div className="flex items-center gap-2">
@@ -148,32 +113,12 @@ export default function BlogPage() {
         </div>
       </section>
 
-      {/* All posts */}
+      {/* More posts coming soon */}
       <section className="section-padding bg-bg-surface border-y border-border">
-        <div className="container">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {rest.map((post) => (
-              <Link
-                key={post.slug}
-                href={`/blog/${post.slug}`}
-                className="group block rounded-card border border-border bg-bg-base p-5 card-hover flex flex-col gap-3"
-              >
-                <div className="h-32 bg-gradient-to-br from-accent-primary/10 to-accent-secondary/10 rounded-btn flex items-center justify-center">
-                  <div className="text-3xl opacity-20">✦</div>
-                </div>
-                <div className="flex items-center gap-2">
-                  <span className="text-xs bg-bg-elevated text-text-muted px-2 py-0.5 rounded-full border border-border">
-                    {post.category}
-                  </span>
-                  <span className="text-text-muted text-xs">{post.readTime} min read</span>
-                </div>
-                <h3 className="font-semibold text-text-primary group-hover:text-accent-primary transition-colors leading-snug">
-                  {post.title}
-                </h3>
-                <p className="text-text-muted text-sm leading-relaxed line-clamp-2">{post.excerpt}</p>
-              </Link>
-            ))}
-          </div>
+        <div className="container text-center py-8">
+          <p className="text-text-secondary text-lg">
+            More posts coming soon. Subscribe below to get notified.
+          </p>
         </div>
       </section>
 
@@ -184,7 +129,7 @@ export default function BlogPage() {
             Get new posts in your inbox
           </h2>
           <p className="text-text-secondary mb-6">
-            New posts every week on AI automation, SEO, and web development.
+            New posts on technical SEO, AI automation, and web development.
           </p>
           <div className="flex gap-2">
             <input

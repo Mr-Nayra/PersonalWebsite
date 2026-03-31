@@ -12,6 +12,7 @@ export interface ServicePageData {
   slug: string;
   href: string;
   h1: string;
+  ctaText?: string;
   tagline: string;
   description: string;
   deliverables: string[];
@@ -33,6 +34,20 @@ export interface ServicePageData {
     role: string;
     company?: string;
     service?: string;
+  }[];
+  relatedServices?: {
+    name: string;
+    href: string;
+    description: string;
+  }[];
+  relatedGlossaryTerms?: {
+    name: string;
+    slug: string;
+  }[];
+  relatedResources?: {
+    title: string;
+    href: string;
+    type: "guide" | "blog";
   }[];
 }
 
@@ -77,7 +92,7 @@ export function ServicePageTemplate({ data }: ServicePageTemplateProps) {
             </p>
             <div className="flex flex-wrap gap-4">
               <Button href="/contact" variant="primary" size="lg">
-                Get a free consultation →
+                {data.ctaText || "Get a free consultation →"}
               </Button>
               <Button href="/process" variant="secondary" size="lg">
                 See how I work →
@@ -201,6 +216,85 @@ export function ServicePageTemplate({ data }: ServicePageTemplateProps) {
         </section>
       )}
 
+      {/* Related Services */}
+      {data.relatedServices && data.relatedServices.length > 0 && (
+        <section className="section-padding">
+          <div className="container max-w-4xl">
+            <h2 className="text-2xl font-bold text-text-primary mb-6">Related services</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {data.relatedServices.map((rs) => (
+                <Link
+                  key={rs.href}
+                  href={rs.href}
+                  className="group rounded-card border border-border bg-bg-surface p-5 card-hover flex flex-col gap-2"
+                >
+                  <h3 className="font-semibold text-text-primary group-hover:text-accent-primary transition-colors">
+                    {rs.name}
+                  </h3>
+                  <p className="text-text-muted text-sm leading-relaxed">{rs.description}</p>
+                  <span className="mt-auto text-accent-primary text-sm font-medium">
+                    Learn more →
+                  </span>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Related Glossary Terms */}
+      {data.relatedGlossaryTerms && data.relatedGlossaryTerms.length > 0 && (
+        <section className="section-padding bg-bg-surface border-y border-border">
+          <div className="container max-w-4xl">
+            <div className="flex items-center justify-between mb-6">
+              <h2 className="text-2xl font-bold text-text-primary">Key concepts</h2>
+              <Link href="/glossary" className="text-accent-primary text-sm hover:underline">
+                Full glossary →
+              </Link>
+            </div>
+            <div className="flex flex-wrap gap-2">
+              {data.relatedGlossaryTerms.map((term) => (
+                <Link
+                  key={term.slug}
+                  href={`/glossary/${term.slug}`}
+                  className="px-3 py-1.5 rounded-btn border border-border bg-bg-base text-text-secondary text-sm hover:border-accent-primary hover:text-accent-primary hover:bg-accent-primary/5 transition-all duration-150"
+                >
+                  {term.name}
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Related Resources */}
+      {data.relatedResources && data.relatedResources.length > 0 && (
+        <section className="section-padding">
+          <div className="container max-w-4xl">
+            <h2 className="text-2xl font-bold text-text-primary mb-6">Resources & guides</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {data.relatedResources.map((res) => (
+                <Link
+                  key={res.href}
+                  href={res.href}
+                  className="group rounded-card border border-border bg-bg-surface p-5 card-hover flex flex-col gap-2"
+                >
+                  <span className="text-text-muted text-xs font-mono uppercase tracking-wider">
+                    {res.type === "blog" ? "Blog post" : "Guide"}
+                  </span>
+                  <h3 className="font-semibold text-text-primary text-sm group-hover:text-accent-primary transition-colors leading-snug">
+                    {res.title}
+                  </h3>
+                  <span className="mt-auto text-accent-primary text-sm font-medium">
+                    Read →
+                  </span>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* FAQ */}
       <section className="section-padding bg-bg-surface border-y border-border">
         <div className="container max-w-3xl">
@@ -222,7 +316,7 @@ export function ServicePageTemplate({ data }: ServicePageTemplateProps) {
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Button href="/contact" variant="primary" size="lg">
-              Get a free consultation →
+              {data.ctaText || "Get a free consultation →"}
             </Button>
             <Button href="/about" variant="secondary" size="lg">
               About Aryan →

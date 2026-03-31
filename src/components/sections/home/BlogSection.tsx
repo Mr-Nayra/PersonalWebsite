@@ -1,36 +1,40 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 
-// Placeholder blog posts for preview
 const blogPostsPreview = [
   {
-    slug: "how-to-build-ai-agents-with-langchain",
-    title: "How to Build AI Agents with LangChain: A Practical Guide",
+    slug: "rank-on-google-get-cited-by-ai-search-engines",
+    title: "How to Rank on Google and Get Cited by AI Search Engines",
     excerpt:
-      "A step-by-step walkthrough of building production-ready AI agents using LangChain, FastAPI, and OpenAI. Covers agent design, tool integration, and deployment.",
-    date: "2024-12-15",
-    readTime: 12,
-    category: "AI Automation",
-  },
-  {
-    slug: "technical-seo-for-saas-startups",
-    title: "Technical SEO for SaaS Startups: The Complete Checklist",
-    excerpt:
-      "Everything you need to know about technical SEO for SaaS — Core Web Vitals, crawlability, programmatic pages, and product-led SEO strategies.",
-    date: "2024-12-08",
-    readTime: 15,
-    category: "SEO",
-  },
-  {
-    slug: "building-ai-ivr-twilio-deepgram",
-    title: "Building an AI IVR System with Twilio and Deepgram",
-    excerpt:
-      "How I built a production AI voice agent system for an insurance company — architecture decisions, challenges, and lessons learned.",
-    date: "2024-11-28",
+      "AI SEO is technical SEO — plus a few extra steps most people miss. The exact mistakes to avoid and the checklist I run on every site I work on.",
+    date: "2026-03-29",
     readTime: 18,
-    category: "AI Voice Agents",
+    category: "SEO",
+    coverImage: "/images/blog/ai-seo-referrers.webp",
+    isComingSoon: false,
+  },
+  {
+    slug: "building-ai-agents-that-actually-work",
+    title: "Building AI Agents That Actually Work",
+    excerpt:
+      "Lessons from building production AI agents — what the tutorials skip, why most agents fail in production, and the architecture patterns that survive real traffic.",
+    date: "",
+    readTime: 15,
+    category: "AI Automation",
+    isComingSoon: true,
+  },
+  {
+    slug: "from-idea-to-production-founders-playbook",
+    title: "From Idea to Production: A Founder's Playbook",
+    excerpt:
+      "The decisions that matter in the first 90 days — choosing your stack, shipping fast, and building the foundation for scale without over-engineering.",
+    date: "",
+    readTime: 12,
+    category: "Startups",
+    isComingSoon: true,
   },
 ];
 
@@ -106,7 +110,7 @@ export function BlogSection() {
             href="/blog"
             className="text-accent-primary text-sm font-medium hover:underline whitespace-nowrap"
           >
-            Read the blog →
+            Read SEO & AI insights →
           </Link>
         </motion.div>
 
@@ -119,23 +123,54 @@ export function BlogSection() {
         >
           {blogPostsPreview.map((post) => (
             <motion.div key={post.slug} variants={itemVariants}>
-              <Link
-                href={`/blog/${post.slug}`}
-                className="group block rounded-card border border-border bg-bg-base p-5 card-hover h-full"
-              >
-                <div className="flex items-center gap-2 mb-3">
-                  <span className="text-xs bg-accent-primary/10 text-accent-primary px-2 py-0.5 rounded-full border border-accent-primary/20">
-                    {post.category}
-                  </span>
-                  <span className="text-text-muted text-xs">{post.readTime} min read</span>
+              {post.isComingSoon ? (
+                <div className="block rounded-card border border-border bg-bg-base p-5 h-full opacity-60">
+                  <div className="flex items-center gap-2 mb-3">
+                    <span className="text-xs bg-bg-elevated text-text-muted px-2 py-0.5 rounded-full border border-border">
+                      {post.category}
+                    </span>
+                    <span className="text-xs bg-text-muted/10 text-text-muted px-2 py-0.5 rounded-full border border-text-muted/20">
+                      Coming Soon
+                    </span>
+                  </div>
+                  <h3 className="font-semibold text-text-primary mb-2 leading-snug">
+                    {post.title}
+                  </h3>
+                  <p className="text-text-muted text-sm leading-relaxed line-clamp-2">
+                    {post.excerpt}
+                  </p>
                 </div>
-                <h3 className="font-semibold text-text-primary mb-2 group-hover:text-accent-primary transition-colors leading-snug">
-                  {post.title}
-                </h3>
-                <p className="text-text-muted text-sm leading-relaxed line-clamp-2">
-                  {post.excerpt}
-                </p>
-              </Link>
+              ) : (
+                <Link
+                  href={`/blog/${post.slug}`}
+                  className="group block rounded-card border border-border bg-bg-base overflow-hidden card-hover h-full"
+                >
+                  {post.coverImage && (
+                    <div className="relative w-full h-40 bg-bg-elevated">
+                      <Image
+                        src={post.coverImage}
+                        alt={post.title}
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                  )}
+                  <div className="p-5">
+                    <div className="flex items-center gap-2 mb-3">
+                      <span className="text-xs bg-accent-primary/10 text-accent-primary px-2 py-0.5 rounded-full border border-accent-primary/20">
+                        {post.category}
+                      </span>
+                      <span className="text-text-muted text-xs">{post.readTime} min read</span>
+                    </div>
+                    <h3 className="font-semibold text-text-primary mb-2 group-hover:text-accent-primary transition-colors leading-snug">
+                      {post.title}
+                    </h3>
+                    <p className="text-text-muted text-sm leading-relaxed line-clamp-2">
+                      {post.excerpt}
+                    </p>
+                  </div>
+                </Link>
+              )}
             </motion.div>
           ))}
         </motion.div>

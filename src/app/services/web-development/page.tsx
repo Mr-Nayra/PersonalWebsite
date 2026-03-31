@@ -35,6 +35,7 @@ const data: ServicePageData = {
   slug: "web-development",
   href: "/services/web-development",
   h1: "Web Development",
+  ctaText: "Discuss your web project →",
   tagline: "Next.js · FastAPI · Full-stack MERN",
   description:
     "I build modern, production-grade web applications — from performant frontends with Next.js and React to robust Python backends with FastAPI. Every project is built with SEO, performance, and maintainability as first-class requirements, not afterthoughts.",
@@ -132,6 +133,24 @@ const data: ServicePageData = {
     },
   ],
   relatedCaseStudies: caseStudiesPreview.filter(cs => cs.service.includes("Web Development")),
+  relatedServices: [
+    { name: "SaaS Product Development", href: "/services/saas-development", description: "MVP architecture, multi-tenant SaaS, and B2B product design." },
+    { name: "SEO Services", href: "/services/seo-services", description: "Technical SEO, content strategy, and GEO optimisation for organic growth." },
+  ],
+  relatedResources: [
+    { title: "Next.js SaaS Architecture", href: "/resources/nextjs-saas-architecture", type: "guide" },
+  ],
+  relatedGlossaryTerms: [
+    { name: "API", slug: "api" },
+    { name: "Server-Side Rendering", slug: "server-side-rendering" },
+    { name: "Headless Architecture", slug: "headless-architecture" },
+    { name: "WebSocket", slug: "websocket" },
+    { name: "Webhook", slug: "webhook" },
+    { name: "Microservices", slug: "microservices" },
+    { name: "CI/CD", slug: "ci-cd" },
+    { name: "Core Web Vitals", slug: "core-web-vitals" },
+    { name: "Technical SEO", slug: "technical-seo" },
+  ],
 };
 
 export default function WebDevelopmentPage() {

@@ -35,6 +35,7 @@ const data: ServicePageData = {
   slug: "ai-integration",
   href: "/services/ai-integration",
   h1: "AI Integration & Agentic Workflows",
+  ctaText: "Discuss your AI integration →",
   tagline: "Voice agents · Prompt architecture · SaaS AI-ification",
   description:
     "Most businesses don't need a chatbot — they need AI that actually does things. I help companies move beyond surface-level AI features to functional agentic systems: real-time voice agents that handle calls, LLM architectures that are reliable and cost-controlled, and AI capabilities embedded directly into your existing SaaS product.",
@@ -127,6 +128,32 @@ const data: ServicePageData = {
     },
   ],
   relatedCaseStudies: [caseStudiesPreview[0], caseStudiesPreview[3], caseStudiesPreview[1]],
+  relatedServices: [
+    { name: "AI Automation Consulting", href: "/services/ai-automation-consulting", description: "Design and deploy AI agent workflows and process automation for your business." },
+    { name: "Web Development", href: "/services/web-development", description: "Modern frontend and backend development — Next.js, React, FastAPI, and full-stack." },
+  ],
+  relatedResources: [
+    { title: "AI Voice Agents Explainer", href: "/resources/ai-voice-agents-explainer", type: "guide" },
+    { title: "The Business Leader's Guide to AI Automation", href: "/resources/ai-automation-guide-for-business", type: "guide" },
+  ],
+  relatedGlossaryTerms: [
+    { name: "Agentic AI", slug: "agentic-ai" },
+    { name: "AI Agent", slug: "ai-agent" },
+    { name: "Prompt Engineering", slug: "prompt-engineering" },
+    { name: "RAG", slug: "rag" },
+    { name: "Large Language Model", slug: "large-language-model" },
+    { name: "IVR", slug: "ivr" },
+    { name: "Speech-to-Text", slug: "speech-to-text" },
+    { name: "Text-to-Speech", slug: "text-to-speech" },
+    { name: "Latency", slug: "latency" },
+    { name: "Voice Cloning", slug: "voice-cloning" },
+    { name: "WebSocket", slug: "websocket" },
+    { name: "Function Calling", slug: "function-calling" },
+    { name: "Context Window", slug: "context-window" },
+    { name: "Hallucination", slug: "hallucination" },
+    { name: "Fine-Tuning", slug: "fine-tuning" },
+    { name: "Vector Database", slug: "vector-database" },
+  ],
   relatedTestimonials: [
     {
       quote:
