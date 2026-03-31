@@ -131,7 +131,7 @@ export default async function BlogPostPage({ params }: { params: Promise<Params>
             </aside>
 
             {/* Main content */}
-            <div className="flex-1 max-w-2xl">
+            <div className="flex-1 max-w-2xl min-w-0">
               {/* Mobile AskAI */}
               <div className="lg:hidden mb-6">
                 <AskAIButton

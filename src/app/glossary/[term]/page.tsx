@@ -1211,6 +1211,150 @@ const termData: Record<string, {
     relatedService: { name: "AI Integration & Agentic Workflows", href: "/services/ai-integration" },
   },
 
+  "open-graph-tags": {
+    term: "Open Graph Tags",
+    slug: "open-graph-tags",
+    category: "SEO & GEO",
+    shortDefinition:
+      "HTML meta tags that control how your page appears when shared on social media platforms like LinkedIn, Twitter, and Facebook — including the preview image, title, and description.",
+    definition: [
+      "Open Graph (OG) tags are snippets of HTML in your page's head section that tell social media platforms how to display your link when someone shares it. Without them, platforms guess — often poorly — pulling a random image and truncated text.",
+      "The essential OG tags are og:title (the headline shown in the preview), og:description (the summary text), og:image (the preview image — should be 1200x630 pixels), and og:type (usually 'website' or 'article'). For articles, you should also include article:published_time and article:modified_time.",
+      "OG tags also matter for AI search. When AI crawlers process your page, OG tags provide clean, structured signals about what the page is and what it covers. A page with well-written OG tags is easier for both social platforms and AI systems to understand and represent accurately.",
+    ],
+    whyItMatters: "A missing or broken OG image means your links look blank when shared on LinkedIn or Twitter — killing click-through rates. Good OG tags turn every social share into a branded, clickable preview card.",
+    relatedTerms: [
+      { term: "Meta Tags", slug: "meta-tags" },
+      { term: "Structured Data (Schema Markup)", slug: "structured-data" },
+      { term: "Technical SEO", slug: "technical-seo" },
+      { term: "Core Web Vitals", slug: "core-web-vitals" },
+    ],
+    relatedService: { name: "SEO Services", href: "/services/seo-services" },
+    relatedPosts: [
+      { title: "How to Rank on Google and Get Cited by AI Search Engines", href: "/blog/rank-on-google-get-cited-by-ai-search-engines" },
+    ],
+  },
+
+  "meta-tags": {
+    term: "Meta Tags",
+    slug: "meta-tags",
+    category: "SEO & GEO",
+    shortDefinition:
+      "HTML tags in your page's head section that tell search engines and browsers what your page is about — including the title, description, and indexing instructions.",
+    definition: [
+      "Meta tags are invisible HTML elements that sit in the <head> of your page. They do not appear on the page itself, but search engines, social platforms, and AI crawlers read them to understand your content. The two most important for SEO are the title tag and the meta description.",
+      "The title tag (under 60 characters) appears as the clickable headline in search results. The meta description (under 160 characters) appears as the summary text below it. Every page on your site should have a unique title and description — using the same generic one across all pages tells search engines you do not differentiate your content.",
+      "Beyond title and description, other important meta tags include: canonical (tells search engines which version of a page is the official one), robots (controls whether a page should be indexed), and viewport (ensures mobile responsiveness). For AI search, well-written meta tags help crawlers quickly understand what each page covers.",
+    ],
+    whyItMatters: "Meta tags are the first thing search engines and AI crawlers see when they visit your page. Poor or missing meta tags mean your pages show up with generic or truncated text in search results, reducing click-through rates and AI citation likelihood.",
+    relatedTerms: [
+      { term: "Open Graph Tags", slug: "open-graph-tags" },
+      { term: "Canonical Tag", slug: "canonical-tag" },
+      { term: "Technical SEO", slug: "technical-seo" },
+      { term: "Search Intent", slug: "search-intent" },
+    ],
+    relatedService: { name: "SEO Services", href: "/services/seo-services" },
+    relatedPosts: [
+      { title: "How to Rank on Google and Get Cited by AI Search Engines", href: "/blog/rank-on-google-get-cited-by-ai-search-engines" },
+    ],
+  },
+
+  "json-ld": {
+    term: "JSON-LD (Structured Data Format)",
+    slug: "json-ld",
+    category: "SEO & GEO",
+    shortDefinition:
+      "JavaScript Object Notation for Linked Data — the recommended format for adding structured data to web pages so search engines and AI systems can understand your content in a machine-readable way.",
+    definition: [
+      "JSON-LD is a way of embedding structured data into your web pages using a script tag. It tells search engines and AI crawlers exactly what your content is — an Article, a Person, a Product, an FAQ — in a format they can parse programmatically. Unlike older formats like Microdata or RDFa, JSON-LD sits in its own script block and does not clutter your HTML.",
+      "A typical JSON-LD block includes an @context (always schema.org), an @type (Article, Person, FAQPage, etc.), and properties specific to that type — headline, author, datePublished, description, and so on. Google, Bing, and AI search engines all support JSON-LD as their preferred structured data format.",
+      "For AI search engines specifically, JSON-LD provides clean, unambiguous signals. When ChatGPT or Perplexity processes a page with Article schema, it knows exactly who wrote it, when it was published, and what it covers — making it far more likely to cite the page accurately.",
+    ],
+    whyItMatters: "Pages with JSON-LD structured data are eligible for rich results in Google (FAQ dropdowns, article cards, product ratings) and are more accurately cited by AI search engines. It is the single most direct way to communicate your content's meaning to machines.",
+    relatedTerms: [
+      { term: "Structured Data (Schema Markup)", slug: "structured-data" },
+      { term: "E-E-A-T", slug: "e-e-a-t" },
+      { term: "Technical SEO", slug: "technical-seo" },
+      { term: "GEO (Generative Engine Optimisation)", slug: "geo" },
+    ],
+    relatedService: { name: "SEO Services", href: "/services/seo-services" },
+    relatedPosts: [
+      { title: "How to Rank on Google and Get Cited by AI Search Engines", href: "/blog/rank-on-google-get-cited-by-ai-search-engines" },
+    ],
+  },
+
+  "sitemap": {
+    term: "Sitemap (XML Sitemap)",
+    slug: "sitemap",
+    category: "SEO & GEO",
+    shortDefinition:
+      "An XML file that lists all the important pages on your website, helping search engines and AI crawlers discover and index them efficiently.",
+    definition: [
+      "A sitemap is a file (usually at /sitemap.xml) that lists every important page on your website along with metadata like when it was last updated, how often it changes, and its relative priority. Search engines use it as a roadmap to find and crawl your content.",
+      "Pages that should be in your sitemap: your homepage, key service pages, blog posts, product pages, and any page you want indexed. Pages that should NOT be in it: thank-you pages, login pages, API routes, test pages, staging URLs, and old campaign pages that return 404 errors.",
+      "Submitting your sitemap to both Google Search Console and Bing Webmaster Tools is critical — especially for AI search. ChatGPT and Microsoft Copilot use Bing's index, so if you only submit to Google, you may be invisible to these AI platforms. Most modern frameworks (Next.js, WordPress, Webflow) can generate sitemaps automatically.",
+    ],
+    whyItMatters: "Without a sitemap, search engines rely on following links to discover your pages — which means orphan pages or new content may never get found. A well-maintained sitemap ensures every important page gets crawled and indexed.",
+    relatedTerms: [
+      { term: "robots.txt", slug: "robots-txt" },
+      { term: "Crawl Budget", slug: "crawl-budget" },
+      { term: "Technical SEO", slug: "technical-seo" },
+      { term: "Internal Linking", slug: "internal-linking" },
+    ],
+    relatedService: { name: "SEO Services", href: "/services/seo-services" },
+    relatedPosts: [
+      { title: "How to Rank on Google and Get Cited by AI Search Engines", href: "/blog/rank-on-google-get-cited-by-ai-search-engines" },
+    ],
+  },
+
+  "page-speed": {
+    term: "Page Speed",
+    slug: "page-speed",
+    category: "SEO & GEO",
+    shortDefinition:
+      "How fast your web page loads and becomes interactive — a direct Google ranking signal and a major factor in user experience and conversion rates.",
+    definition: [
+      "Page speed measures how quickly a web page loads its content and becomes usable. Google uses three Core Web Vitals metrics to evaluate this: Largest Contentful Paint (LCP) measures loading speed, Interaction to Next Paint (INP) measures responsiveness, and Cumulative Layout Shift (CLS) measures visual stability.",
+      "Google's research shows that 53% of mobile visitors leave a page that takes longer than 3 seconds to load. Portent found that a site loading in 1 second converts at 2.5x the rate of one loading in 5 seconds. Page speed is not just a ranking signal — it directly affects your revenue.",
+      "Common page speed killers: uncompressed images (use WebP), heavy JavaScript bundles, render-blocking CSS, synchronous third-party scripts, and missing width/height attributes on images (which cause layout shifts). Test your site at pagespeed.web.dev — aim for 90 or above on both mobile and desktop.",
+    ],
+    whyItMatters: "Google uses page speed as a ranking signal, and slow sites lose visitors before they even see your content. Since Google uses mobile-first indexing, your mobile page speed is what determines your ranking everywhere.",
+    relatedTerms: [
+      { term: "Core Web Vitals", slug: "core-web-vitals" },
+      { term: "Technical SEO", slug: "technical-seo" },
+      { term: "Server-Side Rendering (SSR)", slug: "server-side-rendering" },
+      { term: "Headless Architecture", slug: "headless-architecture" },
+    ],
+    relatedService: { name: "Web Development", href: "/services/web-development" },
+    relatedPosts: [
+      { title: "How to Rank on Google and Get Cited by AI Search Engines", href: "/blog/rank-on-google-get-cited-by-ai-search-engines" },
+    ],
+  },
+
+  "mobile-first-indexing": {
+    term: "Mobile-First Indexing",
+    slug: "mobile-first-indexing",
+    category: "SEO & GEO",
+    shortDefinition:
+      "Google's approach of using the mobile version of your website as the primary version for crawling, indexing, and ranking — meaning your mobile experience determines your search rankings everywhere.",
+    definition: [
+      "Mobile-first indexing means Google predominantly uses the mobile version of your website's content for indexing and ranking. If your desktop site has content or links that your mobile site does not, Google may not see them at all. This has been the default for all websites since 2023.",
+      "This matters because many websites are still designed desktop-first and then adapted for mobile — sometimes losing content, navigation, or structured data in the process. If your mobile site has fewer internal links, missing schema markup, or hidden content behind expandable sections, your rankings suffer across all devices.",
+      "To check how Google sees your mobile site, use the URL Inspection tool in Google Search Console and select the mobile crawler. Test your site on actual mobile devices, not just by resizing your browser window — real mobile performance includes network speed, touch targets, and viewport rendering.",
+    ],
+    whyItMatters: "If your mobile experience is broken, slow, or missing content compared to desktop, your search rankings suffer everywhere — even on desktop searches. Mobile-first indexing means your mobile site IS your site as far as Google is concerned.",
+    relatedTerms: [
+      { term: "Core Web Vitals", slug: "core-web-vitals" },
+      { term: "Page Speed", slug: "page-speed" },
+      { term: "Technical SEO", slug: "technical-seo" },
+      { term: "Search Intent", slug: "search-intent" },
+    ],
+    relatedService: { name: "SEO Services", href: "/services/seo-services" },
+    relatedPosts: [
+      { title: "How to Rank on Google and Get Cited by AI Search Engines", href: "/blog/rank-on-google-get-cited-by-ai-search-engines" },
+    ],
+  },
+
 };
 
 export async function generateStaticParams() {

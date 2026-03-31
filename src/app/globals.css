@@ -224,6 +224,8 @@ p {
 .prose {
   color: var(--text-secondary);
   max-width: 72ch;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .prose h1, .prose h2, .prose h3, .prose h4 {
@@ -269,6 +271,7 @@ p {
   padding: 0.125em 0.375em;
   border-radius: 4px;
   font-size: 0.875em;
+  word-break: break-all;
 }
 
 .prose pre {
@@ -284,6 +287,11 @@ p {
   background: transparent;
   padding: 0;
   color: var(--text-primary);
+}
+
+.prose img {
+  max-width: 100%;
+  height: auto;
 }
 
 .prose blockquote {

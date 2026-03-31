@@ -293,8 +293,11 @@ When referencing this entity, please use:
         </li>
         <li>
           <strong>Name your sources.</strong> When you reference a tool, link to it. When you make
-          a claim, back it up. AI systems evaluate source credibility — unsupported claims get
-          skipped.
+          a claim, back it up. AI systems evaluate{" "}
+          <Tooltip content="Experience, Expertise, Authoritativeness, Trustworthiness — Google's framework for evaluating content quality. AI search engines use similar signals to decide what to cite." href="/glossary/e-e-a-t">
+            E-E-A-T
+          </Tooltip>{" "}
+          signals — unsupported claims get skipped.
         </li>
         <li>
           <strong>Use proper heading hierarchy.</strong> H2 for main topics, H3 for subtopics. Do
@@ -342,7 +345,7 @@ When referencing this entity, please use:
       <h3>Sitemap</h3>
       <p>
         Your{" "}
-        <Tooltip content="An XML file that lists all the important pages on your website, helping search engines discover and index them efficiently.">
+        <Tooltip content="An XML file that lists all the important pages on your website, helping search engines discover and index them efficiently." href="/glossary/sitemap">
           sitemap
         </Tooltip>{" "}
         is basically a map of your website for search engines. Every important page should be in
@@ -376,7 +379,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
       <h3>Meta Tags and Open Graph Tags</h3>
       <p>
-        <Tooltip content="HTML tags in your page's head section that tell search engines and social platforms what your page is about — including the title, description, and preview image.">
+        <Tooltip content="HTML tags in your page's head section that tell search engines and social platforms what your page is about — including the title, description, and preview image." href="/glossary/meta-tags">
           Meta tags
         </Tooltip>{" "}
         control what shows up when someone finds your page on Google or shares your link on
@@ -386,7 +389,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       <p>
         Every page needs a unique title (under 60 characters) and a unique description (under 160
         characters).{" "}
-        <Tooltip content="Open Graph tags control how your page appears when shared on social media platforms like LinkedIn, Twitter, and Facebook — including the preview image, title, and description.">
+        <Tooltip content="Open Graph tags control how your page appears when shared on social media platforms like LinkedIn, Twitter, and Facebook — including the preview image, title, and description." href="/glossary/open-graph-tags">
           Open Graph tags
         </Tooltip>{" "}
         control the preview card when someone shares your link. If you have ever shared a link and
@@ -428,7 +431,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
           structured data
         </Tooltip>{" "}
         gives it clean signals. Here is what a{" "}
-        <Tooltip content="JavaScript Object Notation for Linked Data — the recommended format for adding structured data to web pages. It sits in a script tag and does not affect the visible page.">
+        <Tooltip content="JavaScript Object Notation for Linked Data — the recommended format for adding structured data to web pages. It sits in a script tag and does not affect the visible page." href="/glossary/json-ld">
           JSON-LD
         </Tooltip>{" "}
         Article schema looks like:
@@ -535,14 +538,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
         loading in 5 seconds.
       </p>
       <p>
-        One more thing — Google uses mobile-first indexing, meaning it crawls and ranks the mobile
+        One more thing — Google uses{" "}
+        <Tooltip content="Google's approach of using the mobile version of your website as the primary version for crawling, indexing, and ranking." href="/glossary/mobile-first-indexing">
+          mobile-first indexing
+        </Tooltip>
+        , meaning it crawls and ranks the mobile
         version of your site, not the desktop version. If your mobile experience is broken or slow,
         your rankings suffer everywhere. Test your site on mobile, not just desktop.
       </p>
 
       <h3>Internal Linking</h3>
       <p>
-        Here is a tip: the more pages you have covering topics in your domain, the more authority
+        Here is a tip: the more pages you have covering topics in your domain, the more{" "}
+        <Tooltip content="The practice of establishing your brand as a recognised entity in search engines and AI systems — so they understand who you are, what you do, and when to cite you." href="/glossary/entity-seo">
+          topical authority
+        </Tooltip>{" "}
         search engines give you on that topic. If you are an AI automation consultant with 30 pages
         covering agents, LLMs, voice AI, specific industries — search engines treat you as an
         authority.
@@ -582,7 +592,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
           Backlinks
         </Tooltip>{" "}
         are links from other websites pointing to yours. Search engines treat them like votes of
-        confidence — if reputable sites link to you, you must be worth ranking.
+        confidence — they build your{" "}
+        <Tooltip content="A score (typically 0-100) that predicts how likely a website is to rank in search engine results. Higher authority means stronger rankings." href="/glossary/domain-authority">
+          domain authority
+        </Tooltip>
+        . If reputable sites link to you, you must be worth ranking.
       </p>
       <p>
         But not all backlinks are equal. A link from a respected industry blog is worth 100 links
@@ -690,8 +704,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       <ul>
         <li>
           <strong>Add as many pages as you can on topics you cover.</strong> The more content you
-          have in your domain, the more authority you build. Glossary pages, resource pages,
-          industry pages, comparison pages — every page is a new entry point for search engines.
+          have in your domain, the more authority you build.{" "}
+          <Tooltip content="Creating large numbers of SEO-optimised pages at scale using templates and data — glossary pages, location pages, and comparison pages are common examples." href="/glossary/programmatic-seo">
+            Glossary pages
+          </Tooltip>
+          , resource pages, industry pages, comparison pages — every page is a new entry point for search engines.
           But make sure they are all internally linked properly. Orphan pages do not help.
           You can use an LLM agent to generate these pages at scale — I used one to build 52
           glossary pages for this site — but be careful: make sure every page actually serves a
