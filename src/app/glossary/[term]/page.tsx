@@ -1355,6 +1355,258 @@ const termData: Record<string, {
     ],
   },
 
+  // ─── GEO DEEP-DIVE TERMS ──────────────────────────────────────────────────
+
+  "ai-citation": {
+    term: "AI Citation",
+    slug: "ai-citation",
+    category: "SEO & GEO",
+    shortDefinition:
+      "When an AI search engine references your website as a source in its generated answer — the GEO equivalent of ranking on page one in traditional search.",
+    definition: [
+      "An AI citation occurs when a generative search engine — ChatGPT, Perplexity, Google AI Overviews, or Microsoft Copilot — includes your website as a named source in its answer. Unlike a traditional search result where users see a list of links and choose one, an AI citation means the engine has selected your content as authoritative enough to quote or reference directly.",
+      "Citation mechanics vary by platform. Perplexity shows numbered footnotes linking to source URLs. Google AI Overviews display expandable source cards. ChatGPT with browsing shows inline links. In every case, the AI engine is making an editorial decision: which source best supports the claim it is making? Content that is specific, data-rich, clearly attributed, and easy to extract from earns citations more consistently.",
+      "Research from Princeton tested nine content optimisation strategies and found that including statistics increased AI citation rates by up to 37%, authoritative quotes by 30%, and a confident expert tone by 25%. Keyword stuffing — the opposite approach — reduced citation rates by 10%. The pattern is clear: AI engines cite content that reads like a credible expert wrote it, not content that reads like it was written for a search algorithm.",
+    ],
+    whyItMatters: "AI search is growing rapidly — Perplexity alone serves over 100 million queries per month. If your site is not being cited in AI-generated answers, you are invisible to a fast-growing segment of search traffic. AI citations are the new page-one rankings.",
+    relatedTerms: [
+      { term: "Generative Engine Optimisation (GEO)", slug: "geo" },
+      { term: "AI Search Engine", slug: "ai-search-engine" },
+      { term: "AI Overviews", slug: "ai-overviews" },
+      { term: "E-E-A-T", slug: "e-e-a-t" },
+      { term: "Topical Authority", slug: "topical-authority" },
+    ],
+    relatedService: { name: "SEO Services", href: "/services/seo-services" },
+    relatedPosts: [
+      { title: "How to Rank on Google and Get Cited by AI Search Engines", href: "/blog/rank-on-google-get-cited-by-ai-search-engines" },
+    ],
+  },
+
+  "ai-crawlers": {
+    term: "AI Crawlers",
+    slug: "ai-crawlers",
+    category: "SEO & GEO",
+    shortDefinition:
+      "Automated bots operated by AI companies — including GPTBot, PerplexityBot, and ClaudeBot — that scan websites to build the knowledge bases powering AI search engines.",
+    definition: [
+      "AI crawlers are web-scraping bots run by AI companies to index content for their search and training systems. The major ones are GPTBot and ChatGPT-User (OpenAI), PerplexityBot (Perplexity), ClaudeBot and anthropic-ai (Anthropic), Google-Extended (Google's AI training crawler), and Bingbot (Microsoft, which powers Copilot citations).",
+      "These crawlers behave similarly to Googlebot — they follow links, read HTML, parse structured data, and respect robots.txt directives. However, their purpose is different. While Googlebot builds a search index for ranking pages, AI crawlers build knowledge bases for generating answers. A page that is blocked from AI crawlers cannot be cited in AI search results, regardless of how well it ranks on Google.",
+      "Managing AI crawler access is a key GEO decision. Blocking all AI bots (via robots.txt) means your content will not appear in AI-generated answers. Allowing them means your content can be cited but also used for training. Most businesses focused on visibility should allow AI crawlers — the default User-Agent: * Allow: / covers most of them, but being explicit in your robots.txt signals intentional AI accessibility.",
+    ],
+    whyItMatters: "If you block AI crawlers in your robots.txt, your content cannot be cited in ChatGPT, Perplexity, or Copilot answers — period. Understanding which bots to allow is the first technical step in any GEO strategy.",
+    relatedTerms: [
+      { term: "robots.txt", slug: "robots-txt" },
+      { term: "Generative Engine Optimisation (GEO)", slug: "geo" },
+      { term: "Crawl Budget", slug: "crawl-budget" },
+      { term: "AI Search Engine", slug: "ai-search-engine" },
+      { term: "Technical SEO", slug: "technical-seo" },
+    ],
+    relatedService: { name: "SEO Services", href: "/services/seo-services" },
+    relatedPosts: [
+      { title: "How to Rank on Google and Get Cited by AI Search Engines", href: "/blog/rank-on-google-get-cited-by-ai-search-engines" },
+    ],
+  },
+
+  "faqpage-schema": {
+    term: "FAQPage Schema",
+    slug: "faqpage-schema",
+    category: "SEO & GEO",
+    shortDefinition:
+      "A structured data type (schema.org/FAQPage) that marks up question-and-answer content on a page, enabling rich results in Google and higher citation rates from AI search engines.",
+    definition: [
+      "FAQPage schema is a specific type of JSON-LD structured data that tells search engines your page contains a list of frequently asked questions with their answers. When implemented correctly, Google can display your questions and answers directly in search results as expandable dropdowns — known as FAQ rich results.",
+      "The markup structure is straightforward: a FAQPage type containing an array of Question entities, each with an acceptedAnswer containing the answer text. The questions must be visible on the page itself — hidden FAQs that only exist in the schema will be flagged by Google as a violation of their structured data guidelines.",
+      "For AI search engines, FAQPage schema is particularly valuable because the question-answer format maps directly to how AI engines process queries. When Perplexity or ChatGPT encounters a page with FAQ schema, the questions and answers are already in a format that is trivially easy to extract, attribute, and cite. Studies show pages with FAQ schema see significantly higher AI citation rates compared to unstructured content covering the same topics.",
+    ],
+    whyItMatters: "FAQ schema gives you two benefits: rich results in Google (more SERP real estate and higher click-through rates) and a format that AI engines naturally prefer to cite. It is one of the highest-ROI structured data investments for any content page.",
+    relatedTerms: [
+      { term: "Structured Data (Schema Markup)", slug: "structured-data" },
+      { term: "JSON-LD (Structured Data Format)", slug: "json-ld" },
+      { term: "Generative Engine Optimisation (GEO)", slug: "geo" },
+      { term: "AI Citation", slug: "ai-citation" },
+      { term: "Search Intent", slug: "search-intent" },
+    ],
+    relatedService: { name: "SEO Services", href: "/services/seo-services" },
+    relatedPosts: [
+      { title: "How to Rank on Google and Get Cited by AI Search Engines", href: "/blog/rank-on-google-get-cited-by-ai-search-engines" },
+    ],
+  },
+
+  "answer-first-content": {
+    term: "Answer-First Content",
+    slug: "answer-first-content",
+    category: "SEO & GEO",
+    shortDefinition:
+      "A content structure where the direct answer to a question appears in the first sentence of each section, followed by supporting evidence — optimised for AI extraction and featured snippets.",
+    definition: [
+      "Answer-first content is a writing structure where every section leads with the core answer or takeaway, then provides supporting evidence, data, and context. This inverts the traditional approach of building context for several paragraphs before reaching the conclusion. The format is sometimes called the inverted pyramid — a journalism technique adapted for search.",
+      "This structure matters for AI search because generative engines extract passages, not entire pages. When ChatGPT or Perplexity pulls a citation, it grabs a self-contained passage that directly answers the query. If your answer is buried in paragraph three after two paragraphs of setup, the AI may never reach it — or may cite a competitor whose answer appears immediately.",
+      "Practical implementation: start each section with a sentence that would make sense as a standalone answer. Then follow with specific numbers, sources, and examples. 'Reduces manual processing time by 60%' is citable. 'Improves efficiency' is not. 'According to McKinsey's 2024 AI survey, 65% of organisations' is citable. 'Most companies' is not. Specificity is the currency of AI citations.",
+    ],
+    whyItMatters: "AI engines extract passages, not pages. If your answer is buried after three paragraphs of setup, it will not be cited. Answer-first content ensures every section is self-contained and extractable — the format AI engines are most likely to quote.",
+    relatedTerms: [
+      { term: "Generative Engine Optimisation (GEO)", slug: "geo" },
+      { term: "AI Citation", slug: "ai-citation" },
+      { term: "Search Intent", slug: "search-intent" },
+      { term: "Semantic SEO", slug: "semantic-seo" },
+      { term: "E-E-A-T", slug: "e-e-a-t" },
+    ],
+    relatedService: { name: "SEO Services", href: "/services/seo-services" },
+    relatedPosts: [
+      { title: "How to Rank on Google and Get Cited by AI Search Engines", href: "/blog/rank-on-google-get-cited-by-ai-search-engines" },
+    ],
+  },
+
+  "sameas": {
+    term: "sameAs (Schema Property)",
+    slug: "sameas",
+    category: "SEO & GEO",
+    shortDefinition:
+      "A schema.org property that links an entity to its authoritative profiles on other platforms — confirming identity across LinkedIn, GitHub, Crunchbase, and Wikipedia for search engines and AI systems.",
+    definition: [
+      "sameAs is a property in schema.org structured data that tells search engines and AI systems: 'This entity is the same as the one at these other URLs.' For a Person or Organization schema, sameAs links typically point to LinkedIn, GitHub, Twitter/X, Crunchbase, Wikipedia, and other authoritative profiles where the entity has an established presence.",
+      "Search engines use sameAs to resolve entity ambiguity. If your website says you are 'Aryan Rawther' and your schema includes sameAs links to your LinkedIn, GitHub, and Crunchbase profiles, Google's Knowledge Graph can confirm you are a specific individual with a verifiable professional history — not one of potentially many people with a similar name. This entity confirmation is what powers Knowledge Panels and rich author cards.",
+      "For AI search engines, sameAs is equally important. When Perplexity or ChatGPT needs to decide whether to cite your content, it evaluates your credibility. A consultant with sameAs links to an active LinkedIn profile, published GitHub repositories, and mentions on industry sites has stronger entity signals than one with only a personal website and no cross-platform confirmation.",
+    ],
+    whyItMatters: "sameAs is the bridge between your website and your broader digital identity. Without it, search engines and AI systems cannot confidently connect your site to your professional profiles — weakening your entity signals and reducing your chances of earning Knowledge Panels and AI citations.",
+    relatedTerms: [
+      { term: "Entity SEO", slug: "entity-seo" },
+      { term: "Entity Disambiguation", slug: "entity-disambiguation" },
+      { term: "Structured Data (Schema Markup)", slug: "structured-data" },
+      { term: "Knowledge Graph", slug: "knowledge-graph" },
+      { term: "JSON-LD (Structured Data Format)", slug: "json-ld" },
+    ],
+    relatedService: { name: "SEO Services", href: "/services/seo-services" },
+    relatedPosts: [
+      { title: "How to Rank on Google and Get Cited by AI Search Engines", href: "/blog/rank-on-google-get-cited-by-ai-search-engines" },
+    ],
+  },
+
+  "ai-search-engine": {
+    term: "AI Search Engine",
+    slug: "ai-search-engine",
+    category: "SEO & GEO",
+    shortDefinition:
+      "A search platform that generates direct answers using AI instead of listing links — including ChatGPT, Perplexity, Google AI Overviews, and Microsoft Copilot.",
+    definition: [
+      "An AI search engine is a search platform that uses large language models to synthesise a direct answer to a query, rather than returning a ranked list of links. The user asks a question and receives a generated response that cites sources — fundamentally changing the search interaction from 'choose from these ten links' to 'here is the answer, and here is where it came from.'",
+      "The major AI search engines are Perplexity (a dedicated AI search product serving over 100 million queries per month), ChatGPT with browsing (used by tens of millions), Google AI Overviews (appearing on roughly 47% of informational searches), and Microsoft Copilot (powered by Bing's index and OpenAI models). Each has its own crawling, indexing, and citation mechanics.",
+      "The key difference from traditional search: in traditional search, success means ranking high so users click your link. In AI search, success means being cited as a source in the generated answer — the user may never visit your site directly. This shift requires a different optimisation strategy (GEO) that focuses on making your content citable rather than just clickable.",
+    ],
+    whyItMatters: "AI search engines represent the fastest-growing segment of search. If your content strategy only targets traditional Google rankings, you are missing the users who now get their answers directly from AI — without ever scrolling through a page of links.",
+    relatedTerms: [
+      { term: "Generative Engine Optimisation (GEO)", slug: "geo" },
+      { term: "AI Citation", slug: "ai-citation" },
+      { term: "AI Overviews", slug: "ai-overviews" },
+      { term: "AI Crawlers", slug: "ai-crawlers" },
+      { term: "llms.txt", slug: "llms-txt" },
+    ],
+    relatedService: { name: "SEO Services", href: "/services/seo-services" },
+    relatedPosts: [
+      { title: "How to Rank on Google and Get Cited by AI Search Engines", href: "/blog/rank-on-google-get-cited-by-ai-search-engines" },
+    ],
+  },
+
+  "content-freshness": {
+    term: "Content Freshness",
+    slug: "content-freshness",
+    category: "SEO & GEO",
+    shortDefinition:
+      "A ranking signal based on how recently content was published or updated — AI search engines cite recently updated content up to 3.2x more often than stale pages.",
+    definition: [
+      "Content freshness refers to how recently a web page's content was created or meaningfully updated. Both traditional search engines and AI search engines use freshness as a quality signal — recently updated content is more likely to contain accurate, current information. Google's freshness algorithm (Query Deserves Freshness, or QDF) actively boosts recent content for time-sensitive queries.",
+      "For AI search engines, freshness is even more critical. A study of Perplexity citation patterns found that content updated within 30 days was cited 3.2 times more often than content not updated in over a year. AI engines have a strong preference for current information because their generated answers need to be accurate — citing outdated statistics or deprecated practices damages the user's trust in the AI platform itself.",
+      "Practical freshness strategies: update key pages with new data points, statistics, and examples on a regular cycle. Add dateModified to your Article schema markup so crawlers know when content was last refreshed. Avoid superficial updates (changing one word does not fool anyone) — add genuinely new information. Consistency also matters: if your homepage says you founded the company in 2020 but your about page says 2021, AI engines note the inconsistency and may reduce citation confidence.",
+    ],
+    whyItMatters: "Stale content gets cited less by AI engines and ranked lower by Google. Regular, meaningful updates to your key pages signal that your information is current and trustworthy — directly increasing both traditional rankings and AI citation rates.",
+    relatedTerms: [
+      { term: "Generative Engine Optimisation (GEO)", slug: "geo" },
+      { term: "AI Citation", slug: "ai-citation" },
+      { term: "E-E-A-T", slug: "e-e-a-t" },
+      { term: "Technical SEO", slug: "technical-seo" },
+      { term: "Structured Data (Schema Markup)", slug: "structured-data" },
+    ],
+    relatedService: { name: "SEO Services", href: "/services/seo-services" },
+    relatedPosts: [
+      { title: "How to Rank on Google and Get Cited by AI Search Engines", href: "/blog/rank-on-google-get-cited-by-ai-search-engines" },
+    ],
+  },
+
+  "topical-authority": {
+    term: "Topical Authority",
+    slug: "topical-authority",
+    category: "SEO & GEO",
+    shortDefinition:
+      "A site's perceived expertise on a specific subject, built by creating comprehensive, interlinked content that covers a topic cluster in depth — a key signal for both Google and AI search engines.",
+    definition: [
+      "Topical authority is the degree to which search engines and AI systems recognise your website as a credible, comprehensive source on a particular subject. It is built over time by publishing depth and breadth of content around a topic — not just one blog post about AI automation, but a cluster of content covering subtopics, use cases, FAQs, glossary terms, and case studies that demonstrate genuine expertise.",
+      "Google evaluates topical authority through content depth (do you cover the topic thoroughly?), internal linking (are your pages on the topic connected to each other?), external signals (do other authoritative sites link to you on this topic?), and user engagement (do visitors stay and explore?). A site with 50 well-interlinked pages on SEO has more topical authority on SEO than a site with one comprehensive guide and nothing else.",
+      "For AI search engines, topical authority is equally important. When Perplexity or ChatGPT needs to cite a source on a specific topic, it prefers sites that have demonstrated sustained, deep coverage. A glossary, blog posts, case studies, and service pages all covering the same domain — with internal links connecting them — create a content graph that signals unmistakable expertise to both traditional and AI search.",
+    ],
+    whyItMatters: "You cannot rank well or get cited by AI on topics where your site has thin coverage. Topical authority is what separates sites that dominate a niche from sites that occasionally appear for individual keywords. It is the compound interest of content strategy.",
+    relatedTerms: [
+      { term: "Semantic SEO", slug: "semantic-seo" },
+      { term: "Internal Linking", slug: "internal-linking" },
+      { term: "E-E-A-T", slug: "e-e-a-t" },
+      { term: "Entity SEO", slug: "entity-seo" },
+      { term: "Generative Engine Optimisation (GEO)", slug: "geo" },
+    ],
+    relatedService: { name: "SEO Services", href: "/services/seo-services" },
+    relatedPosts: [
+      { title: "How to Rank on Google and Get Cited by AI Search Engines", href: "/blog/rank-on-google-get-cited-by-ai-search-engines" },
+    ],
+  },
+
+  "entity-disambiguation": {
+    term: "Entity Disambiguation",
+    slug: "entity-disambiguation",
+    category: "SEO & GEO",
+    shortDefinition:
+      "The process of establishing a unique, verifiable identity for a person, company, or concept so search engines and AI systems can distinguish it from other entities with similar names.",
+    definition: [
+      "Entity disambiguation is the practice of providing enough structured signals that search engines and AI systems can uniquely identify who or what you are — distinguishing you from every other entity with a similar name. For a person, this means establishing a specific combination of name, company, location, expertise, and cross-platform presence that is unmistakably yours.",
+      "The tools for disambiguation include: Person and Organization schema with sameAs links to authoritative profiles (LinkedIn, GitHub, Crunchbase), an llms.txt file that explicitly defines your entity for AI crawlers, consistent NAP (Name, Address, Phone) information across your site and external directories, and a Knowledge Panel strategy that connects your website to Google's Knowledge Graph.",
+      "AI search engines rely heavily on entity disambiguation when deciding what to cite. If Perplexity encounters three consultants named 'Aryan' who work in AI, it needs structured signals to determine which one is the expert in AI automation for healthcare in Bengaluru. The more unambiguous your entity signals, the more confidently an AI engine can cite you — and the less likely it is to confuse you with someone else or hallucinate incorrect details about you.",
+    ],
+    whyItMatters: "If search engines and AI systems cannot uniquely identify you, they cannot confidently cite you. Entity disambiguation is the foundation that makes your llms.txt, schema markup, and content strategy work — without it, you are just another name in a noisy web.",
+    relatedTerms: [
+      { term: "Entity SEO", slug: "entity-seo" },
+      { term: "sameAs (Schema Property)", slug: "sameas" },
+      { term: "Knowledge Graph", slug: "knowledge-graph" },
+      { term: "llms.txt", slug: "llms-txt" },
+      { term: "Generative Engine Optimisation (GEO)", slug: "geo" },
+    ],
+    relatedService: { name: "SEO Services", href: "/services/seo-services" },
+    relatedPosts: [
+      { title: "How to Rank on Google and Get Cited by AI Search Engines", href: "/blog/rank-on-google-get-cited-by-ai-search-engines" },
+    ],
+  },
+
+  "google-search-console": {
+    term: "Google Search Console",
+    slug: "google-search-console",
+    category: "SEO & GEO",
+    shortDefinition:
+      "Google's free tool for monitoring your site's search performance, submitting sitemaps, diagnosing indexing issues, and understanding which queries drive traffic to your pages.",
+    definition: [
+      "Google Search Console (GSC) is a free platform provided by Google that lets website owners monitor, maintain, and troubleshoot their site's presence in Google Search results. It shows you which queries your site appears for, how many clicks and impressions each page receives, your average position for each keyword, and any crawl or indexing errors Google has detected.",
+      "Key GSC features for SEO: the Performance report shows your top queries and pages with click-through rates. The Coverage report reveals which pages are indexed and which have errors. The URL Inspection tool lets you check how Google sees any specific page — including whether your structured data is valid. The Sitemaps section lets you submit and monitor your XML sitemap. The Core Web Vitals report flags pages with performance issues.",
+      "For GEO specifically, GSC is essential for understanding your baseline. While it does not directly track AI citations, it shows you which pages Google considers most authoritative — which strongly correlates with AI citation likelihood. Submitting your sitemap through GSC ensures Google discovers all your pages, and the structured data validation helps confirm your schema markup is being parsed correctly.",
+    ],
+    whyItMatters: "You cannot improve what you cannot measure. Google Search Console is the single most important free tool for understanding how Google sees your site — and since Google's AI Overviews draw from the same index, GSC insights directly inform your GEO strategy.",
+    relatedTerms: [
+      { term: "Technical SEO", slug: "technical-seo" },
+      { term: "Sitemap (XML Sitemap)", slug: "sitemap" },
+      { term: "Core Web Vitals", slug: "core-web-vitals" },
+      { term: "Crawl Budget", slug: "crawl-budget" },
+      { term: "Structured Data (Schema Markup)", slug: "structured-data" },
+    ],
+    relatedService: { name: "SEO Services", href: "/services/seo-services" },
+    relatedPosts: [
+      { title: "How to Rank on Google and Get Cited by AI Search Engines", href: "/blog/rank-on-google-get-cited-by-ai-search-engines" },
+    ],
+  },
+
 };
 
 export async function generateStaticParams() {
