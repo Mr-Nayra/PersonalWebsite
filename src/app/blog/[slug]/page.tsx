@@ -115,7 +115,7 @@ export default async function BlogPostPage({ params }: { params: Promise<Params>
       </section>
 
       {/* Content */}
-      <section className="section-padding">
+      <section className="section-padding overflow-x-clip">
         <div className="container">
           <div className="lg:flex gap-12">
             {/* Sidebar — AskAI + ToC */}
